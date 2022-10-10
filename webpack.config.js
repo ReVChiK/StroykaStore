@@ -1,6 +1,7 @@
 const path = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
 
@@ -11,15 +12,11 @@ module.exports = {
     },
     output:{
         path: path.resolve(__dirname, 'dist'),
-        filename: '[contenthash].js'
+        filename: './assets/js/[contenthash].js'
     },
 
     devServer:{
-        static:{
-            directory: path.join(__dirname, 'dist')
-        },
-        compress: true,
-        port: 8000
+        port: 3000
     },
 
     module:{
@@ -27,19 +24,17 @@ module.exports = {
             {
                 test: /\.s[ac]ss$/i,
                 use:[
-                    // Creates `style` nodes from JS strings
-                    "style-loader",
-                    // Translates CSS into CommonJS
-                    "css-loader",
-                    // Compiles Sass to CSS
-                    "sass-loader",
+                    MiniCssExtractPlugin.loader,
+                    'css-loader',
+                    'postcss-loader',
+                    'sass-loader'
                 ]
             },
             {
                 test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader',
                 options:{
-                    name: '[path][name].[ext]',
+                    name: './assets/img/icon/[contenthash].[ext]',
                     content: ''
                 }
             }
@@ -50,6 +45,9 @@ module.exports = {
         new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             template: './src/index.html'
+        }),
+        new MiniCssExtractPlugin({
+            filename: './assets/css/[contenthash].css'
         })
     ]
 }
