@@ -34,9 +34,13 @@ module.exports = {
                 test: /\.(png|jpe?g|gif)$/i,
                 loader: 'file-loader',
                 options:{
-                    name: './assets/img/icon/[contenthash].[ext]',
+                    name: './assets/images/[contenthash].[ext]',
                     content: ''
                 }
+            },
+            {
+                test: /\.svg$/,
+                loader: 'svg-inline-loader'
             }
         ]
     },

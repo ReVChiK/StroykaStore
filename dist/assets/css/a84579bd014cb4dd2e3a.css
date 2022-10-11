@@ -1,0 +1,191 @@
+/*!***************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/sass/style.sass ***!
+  \***************************************************************************************************************************************************************/
+@import url(https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap);
+/*!*******************************************************************************************************************************************************************!*\
+  !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/postcss-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./src/assets/sass/style.sass (1) ***!
+  \*******************************************************************************************************************************************************************/
+*, *:before, *:after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+     -moz-text-size-adjust: none;
+      -ms-text-size-adjust: none;
+          text-size-adjust: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+#page {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+#page .header {
+  width: 100%;
+}
+#page .header-container__top_menu {
+  font-family: "Manrope", sans-serif;
+  background-color: #F6F6F6;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+#page .header-container__top_menu .top-menu__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_geo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_geo .geo-cities {
+  margin-left: 8px;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 145%;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_geo .geo-cities .cities-name {
+  color: #5D6066;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_geo .geo-cities .cities-name:hover {
+  cursor: pointer;
+  color: #2F323A;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_listing__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_listing__content .listing-item:nth-last-child(n+2) {
+  margin-right: 24px;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_listing__content .listing-item_link {
+  text-decoration: none;
+  color: #5D6066;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 145%;
+}
+#page .header-container__top_menu .top-menu__content .top-menu_listing__content .listing-item_link:hover {
+  cursor: pointer;
+  color: #2F323A;
+}
+#page .header-container__menu {
+  width: 100%;
+  font-family: "Manrope", sans-serif;
+  margin-top: 16px;
+}
+#page .header-container__menu .menu__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+#page .header-container__menu .menu__content .menu-logo {
+  width: 180px;
+  height: 46px;
+}
+#page .header-container__menu .menu__content .menu-search {
+  margin-left: 114px;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog {
+  font-family: "Manrope", sans-serif;
+  outline: none;
+  border: none;
+  background-color: #FCEC41;
+  padding: 12px 20.5px 12px 20.5px;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog .btn-catalog__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog .btn-catalog__content_icon .line {
+  display: block;
+  background-color: #2F323A;
+  height: 2.5px;
+  border-radius: 8px;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog .btn-catalog__content_icon .line:nth-last-child(n+2) {
+  margin-bottom: 6px;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog .btn-catalog__content_icon .line-top {
+  width: 8px;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog .btn-catalog__content_icon .line-middle {
+  width: 16px;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog .btn-catalog__content_icon .line-bottom {
+  width: 12px;
+}
+#page .header-container__menu .menu__content .menu-search_button #btn-catalog .btn-catalog__content_text {
+  margin-left: 8px;
+  font-weight: 500;
+  color: #171B24;
+  font-size: 18px;
+  line-height: 136%;
+}
