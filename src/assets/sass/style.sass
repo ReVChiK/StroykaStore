@@ -53,6 +53,13 @@
                 width: 100%
                 font-family: 'Manrope', sans-serif
                 margin-top: 16px
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 1px
+                    background-color: #E8E9EA
+                    margin-top: 16px
                 .menu__content
                     display: flex
                     align-items: center
@@ -70,6 +77,14 @@
                                 border: none
                                 background-color: #FCEC41
                                 padding: 12px 20.5px 12px 20.5px
+                                transition: background-color .2s linear
+                                &:hover
+                                    background-color: #2F323A
+                                    cursor: pointer
+                                    &:hover .btn-catalog__content_text
+                                        color: white
+                                    &:hover .line
+                                        background-color: white
                                 .btn-catalog__content
                                     display: flex
                                     align-items: center
@@ -93,6 +108,84 @@
                                         color: #171B24
                                         font-size: 18px
                                         line-height: 136%
-                                                
-                                      
-
+                    .search-input
+                        margin-left: 16px
+                        position: relative
+                        #search
+                            font-family: 'Manrope', sans-serif
+                            outline: none
+                            border: none
+                            background-color: #F6F6F6
+                            padding-left: 12px
+                            font-size: 18px
+                            font-weight: 500
+                            border-bottom: 1px solid #D1D1D3
+                            color: #454950
+                            width: 444px
+                            height: 48px
+                            &:hover
+                                cursor: pointer
+                                border-bottom: 1px solid #8B8D92
+                            &::placeholder
+                                font-weight: 500
+                                font-size: 18px
+                                color: #8B8D92                        
+                        &_icon
+                            position: absolute
+                            top: 11px
+                            left: 91%
+                            z-index: 9999
+                            &:hover
+                                cursor: pointer   
+                    .menu-custom_panel
+                        margin-left: 16px
+                        &__content
+                            display: flex
+                            align-items: center
+                            .menu-item
+                                font-family: 'Manrope', sans-serif
+                                width: 82px
+                                height: 48px
+                                text-align: center
+                                &__img
+                                    display: block
+                                    margin: 0 auto
+                                &__link
+                                    .item-link
+                                        font-family: 'Manrope', sans-serif
+                                        text-decoration: none
+                                        font-weight: 500
+                                        color: #454950
+                                        font-size: 15px
+                                        line-height: 145%
+                                        &:hover
+                                            color: #2F323A
+            &__bottom_menu
+                width: 100%
+                &::after
+                    content: ''
+                    display: block
+                    width: 100%
+                    height: 1px
+                    background-color: #E8E9EA
+                    margin-top: 10px
+                .menu__content
+                    max-width: 1160px
+                    margin: 0 auto
+                    .menu-navigation
+                        font-family: 'Manrope', sans-serif
+                        display: flex
+                        align-items: center
+                        margin-top: 10px
+                        &__item
+                            &:nth-last-child(n+2)
+                                margin-right: 30px
+                            .nav-item__link
+                                text-decoration: none
+                                font-weight: 500
+                                color: #454950
+                                font-size: 16px
+                                line-height: 150%
+                                &:hover
+                                    cursor: pointer
+                                    color: #171B24
