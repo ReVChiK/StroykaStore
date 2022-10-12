@@ -6,10 +6,18 @@ import profile from '../img/Profile.png';
 import order from '../img/Orders.png';
 import basket from '../img/Basket.png';
 
+import slide_1 from '../img/slide_1.png';
+
 function Add_Favicon(){
     var link = document.querySelector("link[rel~='shortcut']");
 
     link.href = browser_icon;
+}
+
+function set_background_slider_img(){
+    var slider_container = document.querySelector('.slider-container');
+
+    slider_container.style.backgroundImage = `url(${slide_1})`;
 }
 
 function Set_Img_Panel(){
@@ -45,6 +53,7 @@ function Webpack_Main(){
     Set_Logo();
     Set_search_Icon();
     Set_Img_Panel();
+    set_background_slider_img();
 }
 
 export default Webpack_Main;
