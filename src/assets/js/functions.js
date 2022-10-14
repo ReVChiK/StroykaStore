@@ -14,6 +14,59 @@ import grid from '../img/cards_socks/grid.png';
 import metal_tile from '../img/cards_socks/metal_tile.png';
 import paint from '../img/cards_socks/paint.png';
 
+import shower from '../img/categories_img/shower.png';
+import lumber from '../img/categories_img/lumber.png';
+import linoleum from '../img/categories_img/linoleum.png';
+import wallpapers from '../img/categories_img/wallpaper.png';
+import tools from '../img/categories_img/tools.png';
+import gfc from '../img/categories_img/gfc.png';
+import windows from '../img/categories_img/windows.png';
+import doors from '../img/categories_img/doors.png';
+import plumbing from '../img/categories_img/plumbing.png';
+import paints from '../img/categories_img/paints.png';
+import eg from '../img/categories_img/eg.png';
+import interior from '../img/categories_img/interior.png';
+
+// Tab-Images
+function Tab_Images_Set(){
+    var shower_img = document.querySelector('.img-shower');
+    shower_img.src = shower;
+
+    var lumber_img = document.querySelector('.img-lumber');
+    lumber_img.src = lumber;
+
+    var linoleum_img = document.querySelector('.img-linoleum');
+    linoleum_img.src = linoleum;
+
+    var wallpaper_img = document.querySelector('.img-wallpaper');
+    wallpaper_img.src = wallpapers;
+
+    var tools_img = document.querySelector('.img-tools');
+    tools_img.src = tools;
+
+    var gfc_img = document.querySelector('.img-gfc');
+    gfc_img.src = gfc;
+
+    var windows_img = document.querySelector('.img-windows');
+    windows_img.src = windows;
+
+    var doors_img = document.querySelector('.img-doors');
+    doors_img.src = doors;
+
+    var plumbing_img = document.querySelector('.img-plumbing');
+    plumbing_img.src = plumbing;
+
+    var paints_img = document.querySelector('.img-paints');
+    paints_img.src = paints;
+
+    var eg_img = document.querySelector('.img-eg');
+    eg_img.src = eg;
+
+    var interior_img = document.querySelector('.img-interior');
+    interior_img.src = interior;
+}
+// Tab-Images
+
 
 // Favicon
 function Add_Favicon(){
@@ -115,6 +168,7 @@ function Webpack_Main(){
     Set_Img_Panel();
     set_background_slider_img();
     Cards_Images();
+    Tab_Images_Set();
 }
 
 export default Webpack_Main;
