@@ -1,6 +1,8 @@
 import browser_icon from '../icons/free-icon-shop-4646941.png';
 import img_geolocation from '../img/geolocation.png';
+
 import Logo from '../img/Logo.svg';
+
 import search_icon from '../img/Search.png';
 import profile from '../img/Profile.png';
 import order from '../img/Orders.png';
@@ -26,6 +28,136 @@ import plumbing from '../img/categories_img/plumbing.png';
 import paints from '../img/categories_img/paints.png';
 import eg from '../img/categories_img/eg.png';
 import interior from '../img/categories_img/interior.png';
+
+import stoneware from '../img/products/stoneware.png';
+import grout from '../img/products/grout.png';
+import primer from '../img/products/primer.png';
+import drywall from '../img/products/drywall.png';
+import profile_ from '../img/products/profile.png';
+import roulette from '../img/products/roulette.png';
+import package_ from '../img/products/package.png';
+import angle from '../img/products/angle.png';
+import knauf from '../img/products/knauf.png';
+import screws from '../img/products/screws.png';
+import putty from '../img/products/putty.png';
+import tape from '../img/products/tape.png';
+
+import bever from '../img/brands/bever.png';
+import braer from '../img/brands/braer.png';
+import leonardo_stone from '../img/brands/leonardo_stone.png';
+import euro_block from '../img/brands/euro_block.png';
+import perfekta from '../img/brands/perfekta.png';
+import mstera from '../img/brands/mstera.png';
+import lcp from '../img/brands/lcp.png';
+import galen from '../img/brands/galen.png';
+import recke from '../img/brands/recke.png';
+import mod_format from '../img/brands/mod_format.png';
+import decra from '../img/brands/decra.png';
+import engles from '../img/brands/engels.png';
+
+import avatar_1 from '../img/reviews/avatars/Avatars_1.png';
+import avatar_2 from '../img/reviews/avatars/Avatars_2.png';
+import avatar_3 from '../img/reviews/avatars/Avatars_3.png';
+import avatar_4 from '../img/reviews/avatars/Avatars_4.png';
+
+import traced_img from '../img/reviews/traced.png';
+
+// Reviews-Avatars
+function Set_Avatars(){
+    let avatars_array = [avatar_1, avatar_2, avatar_3, avatar_4];
+
+    let avatar_imgs = document.querySelectorAll('.avatar-img');
+    for (let i = 0; i < avatar_imgs.length; i++){
+        avatar_imgs[i].src = avatars_array[i];
+    }
+
+    let traced_imgs = document.querySelectorAll('.trace-img');
+    for(let j = 0; j < traced_imgs.length; j++){
+        traced_imgs[j].src = traced_img;
+    }
+}
+// Reviews-Avatars
+
+// Brands-Image
+function Brands_Image_Set(){
+    var bever_img = document.querySelector('.bever');
+    bever_img.src = bever;
+
+    var braer_img = document.querySelector('.braer');
+    braer_img.src = braer;
+
+    var leonardo_stone_img = document.querySelector('.leonardo_stone');
+    leonardo_stone_img.src = leonardo_stone;
+
+    var euro_block_img = document.querySelector('.euro_block');
+    euro_block_img.src = euro_block;
+
+    var perfekta_img = document.querySelector('.perfekta');
+    perfekta_img.src = perfekta;
+
+    var mstera_img = document.querySelector('.mstera');
+    mstera_img.src = mstera;
+
+    var lcp_img = document.querySelector('.lcp');
+    lcp_img.src = lcp;
+
+    var galen_img = document.querySelector('.galen');
+    galen_img.src = galen;
+
+    var recke_img = document.querySelector('.recke');
+    recke_img.src = recke;
+
+    var mod_format_img = document.querySelector('.mod_format');
+    mod_format_img.src = mod_format;
+
+    var decra_img = document.querySelector('.decra');
+    decra_img.src = decra;
+
+    var engles_img = document.querySelector('.engles');
+    engles_img.src = engles;
+}
+// Brands-Image
+
+
+// Products-Image
+function Products_Image_Set(){
+    var stoneware_img = document.querySelector('.stonware');
+    stoneware_img.src = stoneware;
+
+    var grout_img = document.querySelector('.grout');
+    grout_img.src = grout;
+
+    var primer_img = document.querySelector('.primer');
+    primer_img.src = primer;
+
+    var drywall_img = document.querySelector('.drywall');
+    drywall_img.src = drywall;
+
+    var profile_img = document.querySelector('.profile_');
+    profile_img.src = profile_;
+
+    var roulette_img = document.querySelector('.roulette');
+    roulette_img.src = roulette;
+
+    var package_img = document.querySelector('.package_');
+    package_img.src = package_;
+
+    var angle_img = document.querySelector('.angle');
+    angle_img.src = angle;
+
+    var knauf_img = document.querySelector('.knauf');
+    knauf_img.src = knauf;
+
+    var screws_img = document.querySelector('.screws');
+    screws_img.src = screws;
+
+    var putty_img = document.querySelector('.putty');
+    putty_img.src = putty;
+
+    var tape_img = document.querySelector('.tape');
+    tape_img.src = tape;
+}
+// Products-Image
 
 // Tab-Images
 function Tab_Images_Set(){
@@ -169,6 +301,9 @@ function Webpack_Main(){
     set_background_slider_img();
     Cards_Images();
     Tab_Images_Set();
+    Products_Image_Set();
+    Brands_Image_Set();
+    Set_Avatars();
 }
 
 export default Webpack_Main;
