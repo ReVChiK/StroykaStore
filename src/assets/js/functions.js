@@ -1,7 +1,10 @@
 import browser_icon from '../icons/free-icon-shop-4646941.png';
 import img_geolocation from '../img/geolocation.png';
+import footer_geolocation from '../img/footer_geolocation.png';
+import email from '../img/email.png';
 
 import Logo from '../img/Logo.svg';
+import Footer_Logo from '../img/Footer_Logo.svg';
 
 import search_icon from '../img/Search.png';
 import profile from '../img/Profile.png';
@@ -61,6 +64,32 @@ import avatar_3 from '../img/reviews/avatars/Avatars_3.png';
 import avatar_4 from '../img/reviews/avatars/Avatars_4.png';
 
 import traced_img from '../img/reviews/traced.png';
+
+import about_fon from '../img/about/about_fon.png';
+
+import visa from '../img/footer_cards/Visa.png';
+import mastercard from '../img/footer_cards/MasterCard.png';
+import maestro from '../img/footer_cards/Maestro.png';
+import mir from '../img/footer_cards/Mir.png';
+
+// Footer Cards Pay
+function Set_Cards_Pay_Img(){
+    let cards_imgs_array = [visa, mastercard, maestro, mir];
+
+    let cards_imgs = document.querySelectorAll('.footer-card-img');
+
+    for(let i = 0; i < cards_imgs.length; i++){
+        cards_imgs[i].src = cards_imgs_array[i];
+    }
+}
+// Footer Cards Pay
+
+// About-Img
+function Set_About_Fon(){
+    var about_fon_img = document.querySelector('.about-container');
+    about_fon_img.style.backgroundImage = `url(${about_fon})`;
+}
+// About-Img
 
 // Reviews-Avatars
 function Set_Avatars(){
@@ -274,6 +303,9 @@ function Set_Img_Panel(){
 function Set_Logo(){
     var logo = document.querySelector('.menu-logo');
     logo.innerHTML = Logo;
+
+    var footer_logo = document.querySelector('.footer-item__logo');
+    footer_logo.innerHTML = Footer_Logo;
 }
 // Logotype
 
@@ -289,8 +321,18 @@ function Set_search_Icon(){
 function Add_Img_Geolocation(){
     var geo_img = document.querySelector('.img-geolocation');
     geo_img.src = img_geolocation;
+
+    var footer_geo_img = document.querySelector('.geolocation-img');
+    footer_geo_img.src = footer_geolocation;
 }
 // Geolocation Cities
+
+// Email Image
+function Set_email_Footer(){
+    var footer_email_img = document.querySelector('.email-img');
+    footer_email_img.src = email;
+}
+// Email Image
 
 function Webpack_Main(){
     Add_Favicon();
@@ -304,6 +346,9 @@ function Webpack_Main(){
     Products_Image_Set();
     Brands_Image_Set();
     Set_Avatars();
+    Set_About_Fon();
+    Set_email_Footer();
+    Set_Cards_Pay_Img();
 }
 
 export default Webpack_Main;
