@@ -3,8 +3,12 @@ import img_geolocation from '../img/geolocation.png';
 import footer_geolocation from '../img/footer_geolocation.png';
 import email from '../img/email.png';
 
+import geolocation_arrow from '../img/arrow.svg';
+
 import Logo from '../img/Logo.svg';
 import Footer_Logo from '../img/Footer_Logo.svg';
+
+import geo_btn_close from '../img/Close.svg';
 
 import search_icon from '../img/Search.png';
 import profile from '../img/Profile.png';
@@ -71,6 +75,13 @@ import visa from '../img/footer_cards/Visa.png';
 import mastercard from '../img/footer_cards/MasterCard.png';
 import maestro from '../img/footer_cards/Maestro.png';
 import mir from '../img/footer_cards/Mir.png';
+
+// Geolocation-Close-Btn
+function Geo_btn_Close(){
+    var geo_btn_exit = document.querySelector('.geolocation-btn__close');
+    geo_btn_exit.innerHTML = geo_btn_close;
+}
+// Geolocation-Close-Btn
 
 // Footer Cards Pay
 function Set_Cards_Pay_Img(){
@@ -311,9 +322,11 @@ function Set_Logo(){
 
 // Search Input Icon
 function Set_search_Icon(){
-    var input_search_icon = document.querySelector('.input-icon');
+    var input_search_icon = document.querySelectorAll('.input-icon');
 
-    input_search_icon.src = search_icon;
+    for(let i = 0; i < input_search_icon.length; i++){
+        input_search_icon[i].src = search_icon;
+    }
 }
 // Search Input Icon
 
@@ -324,6 +337,12 @@ function Add_Img_Geolocation(){
 
     var footer_geo_img = document.querySelector('.geolocation-img');
     footer_geo_img.src = footer_geolocation;
+
+    let geolocation_cities_icon = document.querySelectorAll('.list-item__content_icon');
+
+    for(let i = 0; i < geolocation_cities_icon.length; i++){
+        geolocation_cities_icon[i].innerHTML = geolocation_arrow;
+    }
 }
 // Geolocation Cities
 
@@ -349,6 +368,7 @@ function Webpack_Main(){
     Set_About_Fon();
     Set_email_Footer();
     Set_Cards_Pay_Img();
+    Geo_btn_Close();
 }
 
 export default Webpack_Main;

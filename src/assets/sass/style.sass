@@ -6,6 +6,93 @@
 
 #page
     width: 100%
+    .geolocation
+        width: 100%
+        height: 100%
+        font-family: 'Manrope', sans-serif
+        background-color: rgba(23, 27, 36, .6)
+        position: fixed
+        z-index: 99999
+        display: none
+        &-btn__close
+            position: absolute
+            right: 20px
+            top: 20px
+            width: 52px
+            height: auto
+            &:hover
+                cursor: pointer
+        &-content
+            max-width: 572px
+            margin: 0 auto
+            background-color: #fff
+            margin-top: 252px
+            &__title
+                max-width: 500px
+                margin: 0 auto
+                text-align: center
+                padding-top: 36px
+                h3
+                    font-weight: 600
+                    font-size: 34px
+                    color: #2F323A
+                    line-height: 130%
+            &__input
+                position: relative
+                margin-top: 24px
+                #geo-choose-cities
+                    font-family: 'Manrope', sans-serif
+                    display: block
+                    outline: none
+                    border: none
+                    width: 500px
+                    margin: 0 auto
+                    font-size: 18px
+                    border-bottom: 1px solid #D1D1D3
+                    background: #F6F6F6
+                    color: #454950
+                    padding: 12px 16px 12px 16px
+                    &::placeholder
+                        font-weight: 500
+                        font-size: 18px
+                        line-height: 136%
+                        color: #8B8D92
+                .geo-input_icon
+                    position: absolute
+                    right: 10%
+                    top: 12px
+                    &:hover
+                        cursor: pointer
+            &__list
+                margin-top: 24px
+                padding-bottom: 36px
+                &_content
+                    display: flex
+                    justify-content: space-between
+                    align-items: center
+                    max-width: 500px
+                    margin: 0 auto
+                    .list-item
+                        width: 156px
+                        &:nth-last-child(n+2)
+                            margin-right: 16px
+                        &__content
+                            display: flex
+                            align-items: center
+                            &:nth-last-child(n+2)
+                                margin-bottom: 16px
+                            &_icon
+                                display: none
+                                width: 16px
+                                margin-right: 4px
+                                height: auto
+                            &_city
+                                font-weight: 500
+                                color: #2F323A
+                                font-size: 16px
+                                line-height: 150%
+                                &:hover
+                                    cursor: pointer    
     .header
         width: 100%
         &-container
@@ -307,6 +394,7 @@
                 margin-top: 16px
                 &_content
                     display: flex
+                    justify-content: space-between
                     align-items: center
                     flex-wrap: wrap
                     .card-item
@@ -385,8 +473,6 @@
                                             cursor: pointer
                                             background-color: #2F323A
                                             color: white
-                    .item_2, .item_4
-                        margin-left: 12px
     .categories
         width: 100%
         margin-top: 80px
