@@ -23,6 +23,9 @@ import grid from '../img/cards_socks/grid.png';
 import metal_tile from '../img/cards_socks/metal_tile.png';
 import paint from '../img/cards_socks/paint.png';
 
+import btn_add_card from '../img/cards_socks/Add.svg';
+import btn_remove_card from '../img/cards_socks/Remove.svg';
+
 import shower from '../img/categories_img/shower.png';
 import lumber from '../img/categories_img/lumber.png';
 import linoleum from '../img/categories_img/linoleum.png';
@@ -259,6 +262,13 @@ function Cards_Images(){
     foarm_img.src = foarm;
     grid_img.src = grid;
     metal_tile_img.src = metal_tile;
+
+    var btn_add = document.querySelector('.btn-add');
+    var btn_remove = document.querySelector('.btn-remove');
+
+    btn_add.innerHTML = btn_add_card;
+    btn_remove.innerHTML = btn_remove_card;
+
 }
 // Cards-Images
 

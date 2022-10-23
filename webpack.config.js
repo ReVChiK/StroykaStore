@@ -50,6 +50,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/brands.html',
+            filename: './pages/brands.html'
+        }),
         new MiniCssExtractPlugin({
             filename: './assets/css/[contenthash].css'
         })
