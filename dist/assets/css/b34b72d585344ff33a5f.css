@@ -741,6 +741,60 @@ input {
   background-color: #2F323A;
   color: white;
 }
+#page .stocks-container__cards_content .card-item__content_data .data-button__score {
+  display: none;
+  margin-top: 16px;
+}
+#page .stocks-container__cards_content .card-item__content_data .data-button__score_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 262px;
+  margin: 0 auto;
+  font-family: "Manrope", sans-serif;
+  border: 1px solid #D1D1D3;
+}
+#page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-add, #page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-remove {
+  width: 48px;
+  height: 48px;
+  padding: 11.5px;
+  outline: none;
+  border: none;
+  background-color: #fff;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+#page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-add:hover, #page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-remove:hover {
+  cursor: pointer;
+  background-color: #2F323A;
+}
+#page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-add:hover:hover svg path, #page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-remove:hover:hover svg path {
+  stroke: #fff;
+}
+#page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-add {
+  border-right: 1px solid #D1D1D3;
+}
+#page .stocks-container__cards_content .card-item__content_data .data-button__score_content .btn-remove {
+  border-left: 1px solid #D1D1D3;
+}
+#page .stocks-container__cards_content .card-item__content_data .data-button__score_content .card-quantity .quantity {
+  max-width: 152px;
+  margin: 0 auto;
+  height: 50px;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #171B24;
+}
 #page .categories {
   width: 100%;
   margin-top: 80px;

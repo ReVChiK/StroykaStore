@@ -263,11 +263,16 @@ function Cards_Images(){
     grid_img.src = grid;
     metal_tile_img.src = metal_tile;
 
-    var btn_add = document.querySelector('.btn-add');
-    var btn_remove = document.querySelector('.btn-remove');
+    var btn_add = document.querySelectorAll('.btn-add');
+    var btn_remove = document.querySelectorAll('.btn-remove');
 
-    btn_add.innerHTML = btn_add_card;
-    btn_remove.innerHTML = btn_remove_card;
+    for(let i = 0; i < btn_add.length; i++){
+        btn_add[i].innerHTML = btn_add_card;
+    }
+
+    for(let j = 0; j < btn_remove.length; j++){
+        btn_remove[j].innerHTML = btn_remove_card;
+    }
 
 }
 // Cards-Images

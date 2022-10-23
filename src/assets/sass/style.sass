@@ -473,6 +473,47 @@
                                             cursor: pointer
                                             background-color: #2F323A
                                             color: white
+                                .data-button__score
+                                    display: none
+                                    margin-top: 16px
+                                    &_content
+                                        display: flex
+                                        justify-content: space-between
+                                        align-items: center
+                                        max-width: 262px
+                                        margin: 0 auto
+                                        font-family: 'Manrope', sans-serif
+                                        border: 1px solid #D1D1D3
+                                        .btn-add, .btn-remove
+                                            width: 48px
+                                            height: 48px
+                                            padding: 11.5px
+                                            outline: none
+                                            border: none
+                                            background-color: #fff
+                                            transition: background-color .2s linear
+                                            &:hover
+                                                cursor: pointer
+                                                background-color: #2F323A
+                                                &:hover svg path
+                                                    stroke: #fff              
+                                        .btn-add
+                                            border-right: 1px solid #D1D1D3
+                                        .btn-remove
+                                            border-left: 1px solid #D1D1D3
+                                        .card-quantity
+            
+                                            .quantity
+                                                max-width: 152px
+                                                margin: 0 auto
+                                                height: 50px
+                                                outline: none
+                                                border: none
+                                                text-align: center
+                                                font-weight: 500
+                                                font-size: 18px
+                                                line-height: 136%
+                                                color: #171B24
     .categories
         width: 100%
         margin-top: 80px
