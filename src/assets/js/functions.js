@@ -279,34 +279,40 @@ function Cards_Images(){
 
 // Slider Images
 function set_background_slider_img(){
-    var slider_container = document.querySelector('.slider-container');
+    var slider_container = document.querySelectorAll('.slider-container');
 
     let count = 1;
 
-    let slider_btn_left = document.querySelector('.slider-btn_left');
+    let slider_btn_left = document.querySelectorAll('.slider-btn_left');
 
-    let slider_btn_right = document.querySelector('.slider-btn_right');
+    let slider_btn_right = document.querySelectorAll('.slider-btn_right');
 
-    slider_btn_left.addEventListener('click', function(){
-        count -= 1;
-        if(count % 2 == 0){
-            slider_container.style.backgroundImage = `url(${slide_2})`;
-        }else{
-            slider_container.style.backgroundImage = `url(${slide_1})`;
+    for(let i = 0; i < slider_btn_left.length; i++){
+        slider_btn_left[i].addEventListener('click', function(){
+            count -= 1;
+            if(count % 2 == 0){
+                slider_container[i].style.backgroundImage = `url(${slide_2})`;
+            }else{
+                slider_container[i].style.backgroundImage = `url(${slide_1})`;
+            }
+        })
+    }
+
+    for(let j = 0; j < slider_btn_right.length; j++){
+        slider_btn_right[j].addEventListener('click', function(){
+            count += 1
+            if(count % 2 == 1){
+                slider_container[j].style.backgroundImage = `url(${slide_1})`;
+            }else{
+                slider_container[j].style.backgroundImage = `url(${slide_2})`;
+            }
+        })
+    }
+
+    for(let n = 0; n < slider_container.length; n++){
+        if(count > 0 && count < 2){
+            slider_container[n].style.backgroundImage = `url(${slide_1})`;
         }
-    })
-
-    slider_btn_right.addEventListener('click', function(){
-        count += 1
-        if(count % 2 == 1){
-            slider_container.style.backgroundImage = `url(${slide_1})`;
-        }else{
-            slider_container.style.backgroundImage = `url(${slide_2})`;
-        }
-    })
-
-    if(count > 0 && count < 2){
-        slider_container.style.backgroundImage = `url(${slide_1})`;
     }
 
 }
@@ -314,8 +320,11 @@ function set_background_slider_img(){
 
 // Custom-Panel-Images
 function Set_Img_Panel(){
-    var img_profile = document.querySelector('.menu-profile');
-    img_profile.src = profile;
+    var img_profile = document.querySelectorAll('.menu-profile');
+    for(let i = 0; i < img_profile.length; i++){
+        img_profile[i].src = profile;
+    }
+    // img_profile.src = profile;
 
     var img_orders = document.querySelector('.menu-orders');
     img_orders.src = order;
@@ -327,11 +336,16 @@ function Set_Img_Panel(){
 
 // Logotype
 function Set_Logo(){
-    var logo = document.querySelector('.menu-logo');
-    logo.innerHTML = Logo;
+    var logo = document.querySelectorAll('.menu-logo');
+    for(let i = 0; i < logo.length; i++){
+        logo[i].innerHTML = Logo;
+    }
 
-    var footer_logo = document.querySelector('.footer-item__logo');
-    footer_logo.innerHTML = Footer_Logo;
+    var footer_logo = document.querySelectorAll('.footer-item__logo');
+    for(let j = 0; j < footer_logo.length; j ++){
+        footer_logo[j].innerHTML = Footer_Logo;
+    }
+    // footer_logo.innerHTML = Footer_Logo;
 }
 // Logotype
 
@@ -350,8 +364,11 @@ function Add_Img_Geolocation(){
     var geo_img = document.querySelector('.img-geolocation');
     geo_img.src = img_geolocation;
 
-    var footer_geo_img = document.querySelector('.geolocation-img');
-    footer_geo_img.src = footer_geolocation;
+    var footer_geo_img = document.querySelectorAll('.geolocation-img');
+    for(let i = 0; i < footer_geo_img.length; i++){
+        footer_geo_img[i].src = footer_geolocation;
+    }
+    // footer_geo_img.src = footer_geolocation;
 
     let geolocation_cities_icon = document.querySelectorAll('.list-item__content_icon');
 

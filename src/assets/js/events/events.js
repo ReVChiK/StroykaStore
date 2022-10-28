@@ -16,24 +16,30 @@ function Hover_Elements(){
 
 function Open_Modal_Window(){
 
-    let modal_window = document.querySelector('.geolocation');
+    let modal_window = document.querySelectorAll('.geolocation');
 
-    let modal_btn_open = document.querySelector('.cities-name');
+    let modal_btn_open = document.querySelectorAll('.cities-name');
 
-    modal_btn_open.addEventListener('click', ()=>{
-        modal_window.style.display = 'block';
-    })
+    for(let i = 0; i < modal_btn_open.length; i++){
+        modal_btn_open[i].addEventListener('click', ()=>{
+            modal_window[i].style.display = 'block';
+        })
+    }
+
 }
 
 function Close_Modal_Window(){
 
-    let modal_window = document.querySelector('.geolocation');
+    let modal_window = document.querySelectorAll('.geolocation');
 
-    let modal_btn_close = document.querySelector('.geolocation-btn__close');
+    let modal_btn_close = document.querySelectorAll('.geolocation-btn__close');
 
-    modal_btn_close.addEventListener('click', ()=>{
-        modal_window.style.display = 'none';
-    })
+    for(let i = 0; i < modal_btn_close.length; i++){
+        modal_btn_close[i].addEventListener('click', ()=>{
+            modal_window[i].style.display = 'none';
+        })
+    }
+
 }
 
 function Socks_Card_Quantity(){
