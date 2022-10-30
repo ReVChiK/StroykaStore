@@ -5,6 +5,8 @@ import email from '../img/email.png';
 
 import geolocation_arrow from '../img/arrow.svg';
 
+import footer_img_links from '../img/arrow_footer.svg';
+
 import Logo from '../img/Logo.svg';
 import Footer_Logo from '../img/Footer_Logo.svg';
 
@@ -81,8 +83,11 @@ import mir from '../img/footer_cards/Mir.png';
 
 // Geolocation-Close-Btn
 function Geo_btn_Close(){
-    var geo_btn_exit = document.querySelector('.geolocation-btn__close');
-    geo_btn_exit.innerHTML = geo_btn_close;
+    var geo_btn_exit = document.querySelectorAll('.geolocation-btn__close');
+
+    for(let i = 0; i < geo_btn_exit.length; i++){
+        geo_btn_exit[i].innerHTML = geo_btn_close;
+    }
 }
 // Geolocation-Close-Btn
 
@@ -123,6 +128,7 @@ function Set_Avatars(){
 
 // Brands-Image
 function Brands_Image_Set(){
+    // Переписать данный ужас
     var bever_img = document.querySelector('.bever');
     bever_img.src = bever;
 
@@ -368,7 +374,6 @@ function Add_Img_Geolocation(){
     for(let i = 0; i < footer_geo_img.length; i++){
         footer_geo_img[i].src = footer_geolocation;
     }
-    // footer_geo_img.src = footer_geolocation;
 
     let geolocation_cities_icon = document.querySelectorAll('.list-item__content_icon');
 
@@ -378,10 +383,23 @@ function Add_Img_Geolocation(){
 }
 // Geolocation Cities
 
+// Footer Arrow
+function Set_Footer_Arrow(){
+    let footer_icon_arrows = document.querySelectorAll('.footer-nav__content_icon');
+
+    for(let i = 0; i < footer_icon_arrows.length; i++){
+        footer_icon_arrows[i].innerHTML = footer_img_links;
+    }
+}
+// Footer Arrow
+
 // Email Image
 function Set_email_Footer(){
-    var footer_email_img = document.querySelector('.email-img');
-    footer_email_img.src = email;
+    var footer_email_img = document.querySelectorAll('.email-img');
+
+    for(let i = 0; i < footer_email_img.length; i++){
+        footer_email_img[i].src = email;
+    }
 }
 // Email Image
 
@@ -399,6 +417,7 @@ function Webpack_Main(){
     Set_Avatars();
     Set_About_Fon();
     Set_email_Footer();
+    Set_Footer_Arrow();
     Set_Cards_Pay_Img();
     Geo_btn_Close();
 }

@@ -5,11 +5,25 @@ function Hover_Elements(){
     let geolocation_item_icons = document.querySelectorAll('.list-item__content_icon');
 
     for(let i = 0; i < geolocation_items.length; i++){
-        geolocation_items[i].onmouseover = function(){
+        geolocation_items[i].onmouseover = ()=>{
             geolocation_item_icons[i].style.display = 'block';
         };
-        geolocation_items[i].onmouseout = function(){
+        geolocation_items[i].onmouseout = ()=>{
             geolocation_item_icons[i].style.display = 'none';
+        }
+    }
+}
+
+function Hover_Elements_Footer(){
+    let footer_nav_links = document.querySelectorAll('.footer-nav__content_item');
+    let footer_icons = document.querySelectorAll('.footer-nav__content_icon');
+
+    for(let i = 0; i < footer_nav_links.length; i++){
+        footer_nav_links[i].onmouseover = ()=>{
+            footer_icons[i].style.display = 'block';
+        };
+        footer_nav_links[i].onmouseout = ()=>{
+            footer_icons[i].style.display = 'none';
         }
     }
 }
@@ -80,6 +94,7 @@ function Socks_Card_Quantity(){
 
 function Main(){
     Hover_Elements();
+    Hover_Elements_Footer();
     Open_Modal_Window();
     Close_Modal_Window();
     Socks_Card_Quantity();
