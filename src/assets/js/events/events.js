@@ -1,4 +1,14 @@
 
+function Home_Page(){
+    let logotype = document.querySelectorAll('.menu-logo');
+
+    for(let i = 0; i < logotype.length; i++){
+        logotype[i].addEventListener('click', ()=>{
+            window.open('../../../index.html', '_self');
+        })
+    }
+}
+
 function Hover_Elements(){
     let geolocation_items = document.querySelectorAll('.list-item__content_city');
 
@@ -93,10 +103,16 @@ function Socks_Card_Quantity(){
 }
 
 function Main(){
+    Home_Page();
+
     Hover_Elements();
+
     Hover_Elements_Footer();
+
     Open_Modal_Window();
+
     Close_Modal_Window();
+
     Socks_Card_Quantity();
 }
 

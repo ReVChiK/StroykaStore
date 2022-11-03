@@ -1,4 +1,5 @@
-import browser_icon from '../icons/free-icon-shop-4646941.png';
+import browser_icon from '../icons/favicon.png';
+
 import img_geolocation from '../img/geolocation.png';
 import footer_geolocation from '../img/footer_geolocation.png';
 import email from '../img/email.png';
@@ -105,8 +106,11 @@ function Set_Cards_Pay_Img(){
 
 // About-Img
 function Set_About_Fon(){
-    var about_fon_img = document.querySelector('.about-container');
-    about_fon_img.style.backgroundImage = `url(${about_fon})`;
+    var about_fon_img = document.querySelectorAll('.about-container');
+
+    for(let i = 0; i < about_fon_img.length; i++){
+        about_fon_img[i].style.backgroundImage = `url(${about_fon})`;
+    }
 }
 // About-Img
 
@@ -128,123 +132,51 @@ function Set_Avatars(){
 
 // Brands-Image
 function Brands_Image_Set(){
-    // Переписать данный ужас
-    var bever_img = document.querySelector('.bever');
-    bever_img.src = bever;
+   
+    var brands_img = document.querySelectorAll('.icons-item__brand');
 
-    var braer_img = document.querySelector('.braer');
-    braer_img.src = braer;
+    let array_brands_icon = [bever, braer, leonardo_stone, euro_block,
+                            perfekta, mstera, lcp, galen, recke,
+                            mod_format, decra, engles
+    ];
+    
+    for(let i = 0; i < brands_img.length; i++){
+        brands_img[i].src = array_brands_icon[i];
+    }
 
-    var leonardo_stone_img = document.querySelector('.leonardo_stone');
-    leonardo_stone_img.src = leonardo_stone;
-
-    var euro_block_img = document.querySelector('.euro_block');
-    euro_block_img.src = euro_block;
-
-    var perfekta_img = document.querySelector('.perfekta');
-    perfekta_img.src = perfekta;
-
-    var mstera_img = document.querySelector('.mstera');
-    mstera_img.src = mstera;
-
-    var lcp_img = document.querySelector('.lcp');
-    lcp_img.src = lcp;
-
-    var galen_img = document.querySelector('.galen');
-    galen_img.src = galen;
-
-    var recke_img = document.querySelector('.recke');
-    recke_img.src = recke;
-
-    var mod_format_img = document.querySelector('.mod_format');
-    mod_format_img.src = mod_format;
-
-    var decra_img = document.querySelector('.decra');
-    decra_img.src = decra;
-
-    var engles_img = document.querySelector('.engles');
-    engles_img.src = engles;
 }
 // Brands-Image
 
 
 // Products-Image
 function Products_Image_Set(){
-    var stoneware_img = document.querySelector('.stonware');
-    stoneware_img.src = stoneware;
 
-    var grout_img = document.querySelector('.grout');
-    grout_img.src = grout;
+    let product_img_el = document.querySelectorAll('.product-img');
 
-    var primer_img = document.querySelector('.primer');
-    primer_img.src = primer;
+    let product_img_array = [stoneware, grout, primer, drywall, profile_,
+                            roulette, package_, angle, knauf, screws,
+                            putty, tape
+    ];
 
-    var drywall_img = document.querySelector('.drywall');
-    drywall_img.src = drywall;
-
-    var profile_img = document.querySelector('.profile_');
-    profile_img.src = profile_;
-
-    var roulette_img = document.querySelector('.roulette');
-    roulette_img.src = roulette;
-
-    var package_img = document.querySelector('.package_');
-    package_img.src = package_;
-
-    var angle_img = document.querySelector('.angle');
-    angle_img.src = angle;
-
-    var knauf_img = document.querySelector('.knauf');
-    knauf_img.src = knauf;
-
-    var screws_img = document.querySelector('.screws');
-    screws_img.src = screws;
-
-    var putty_img = document.querySelector('.putty');
-    putty_img.src = putty;
-
-    var tape_img = document.querySelector('.tape');
-    tape_img.src = tape;
+    for(let i = 0; i < product_img_el.length; i++){
+        product_img_el[i].src = product_img_array[i];
+    }
 }
 // Products-Image
 
 // Tab-Images
 function Tab_Images_Set(){
-    var shower_img = document.querySelector('.img-shower');
-    shower_img.src = shower;
 
-    var lumber_img = document.querySelector('.img-lumber');
-    lumber_img.src = lumber;
+    let tab_imgs_el = document.querySelectorAll('.tab-item__img_icon ');
 
-    var linoleum_img = document.querySelector('.img-linoleum');
-    linoleum_img.src = linoleum;
+    let tab_img_array = [shower, lumber, linoleum, wallpapers, tools,
+                        gfc, windows, doors, plumbing, paints, eg, interior
+    ];
 
-    var wallpaper_img = document.querySelector('.img-wallpaper');
-    wallpaper_img.src = wallpapers;
+    for(let i = 0; i < tab_imgs_el.length; i++){
+        tab_imgs_el[i].src = tab_img_array[i];
+    }
 
-    var tools_img = document.querySelector('.img-tools');
-    tools_img.src = tools;
-
-    var gfc_img = document.querySelector('.img-gfc');
-    gfc_img.src = gfc;
-
-    var windows_img = document.querySelector('.img-windows');
-    windows_img.src = windows;
-
-    var doors_img = document.querySelector('.img-doors');
-    doors_img.src = doors;
-
-    var plumbing_img = document.querySelector('.img-plumbing');
-    plumbing_img.src = plumbing;
-
-    var paints_img = document.querySelector('.img-paints');
-    paints_img.src = paints;
-
-    var eg_img = document.querySelector('.img-eg');
-    eg_img.src = eg;
-
-    var interior_img = document.querySelector('.img-interior');
-    interior_img.src = interior;
 }
 // Tab-Images
 
@@ -259,15 +191,15 @@ function Add_Favicon(){
 
 // Cards-Images
 function Cards_Images(){
-    var paint_img = document.querySelector('.paint-img');
-    var foarm_img = document.querySelector('.foam-img');
-    var grid_img = document.querySelector('.grid-img');
-    var metal_tile_img = document.querySelector('.metal_tile-img');
 
-    paint_img.src = paint;
-    foarm_img.src = foarm;
-    grid_img.src = grid;
-    metal_tile_img.src = metal_tile;
+    let stock_icons_array = [paint, foarm, grid, metal_tile];
+
+    let stocks_img = document.querySelectorAll('.card-img');
+    
+
+    for(let k = 0; k < stocks_img.length; k++){
+        stocks_img[k].src = stock_icons_array[k];
+    }
 
     var btn_add = document.querySelectorAll('.btn-add');
     var btn_remove = document.querySelectorAll('.btn-remove');
@@ -326,17 +258,15 @@ function set_background_slider_img(){
 
 // Custom-Panel-Images
 function Set_Img_Panel(){
-    var img_profile = document.querySelectorAll('.menu-profile');
-    for(let i = 0; i < img_profile.length; i++){
-        img_profile[i].src = profile;
+
+    let menu_icons = document.querySelectorAll('.menu-icon');
+
+    let menu_icons_array = [profile, order, basket];
+
+    for(let i = 0; i < menu_icons.length; i++){
+        menu_icons[i].src = menu_icons_array[i];
     }
-    // img_profile.src = profile;
 
-    var img_orders = document.querySelector('.menu-orders');
-    img_orders.src = order;
-
-    var img_basket = document.querySelector('.menu-basket');
-    img_basket.src = basket;
 }
 // Custom-Panel-Images
 
@@ -367,10 +297,14 @@ function Set_search_Icon(){
 
 // Geolocation Cities
 function Add_Img_Geolocation(){
-    var geo_img = document.querySelector('.img-geolocation');
-    geo_img.src = img_geolocation;
+    var geo_img = document.querySelectorAll('.img-geolocation');
+
+    for(let j = 0; j < geo_img.length; j++){
+        geo_img[j].src = img_geolocation;
+    }
 
     var footer_geo_img = document.querySelectorAll('.geolocation-img');
+    
     for(let i = 0; i < footer_geo_img.length; i++){
         footer_geo_img[i].src = footer_geolocation;
     }

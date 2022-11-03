@@ -292,6 +292,9 @@ input {
   width: 180px;
   height: 46px;
 }
+#page .header-container__menu .menu__content .menu-logo:hover {
+  cursor: pointer;
+}
 #page .header-container__menu .menu__content .menu-search {
   margin-left: 114px;
 }
