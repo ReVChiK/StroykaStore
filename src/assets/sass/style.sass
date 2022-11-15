@@ -736,6 +736,91 @@
                             border: 1px solid #5D6066
                         &:nth-last-child(n+1)
                             margin-bottom: 16px
+    .brands-kinds
+        width: 100%
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            &_content
+                font-family: 'Manrope', sans-serif
+                margin-top: 80px
+                .brands-kinds__top_menu
+                    display: flex
+                    flex-wrap: wrap
+                    .kind
+                        &:nth-last-child(n+2)
+                            margin-right: 8px
+                        &-btn
+                            font-family: 'Manrope', sans-serif
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 136%
+                            padding: 4px 12px
+                            color: #171B24
+                            background-color: #fff
+                            border: 1px solid #D1D1D3
+                            transition: background-color .2s linear
+                            &:hover
+                                cursor: pointer
+                                background-color: #FBE303
+                                
+                        .all
+                            padding: 6px 14px
+                            background-color: #FBE303
+                .brands-kinds__bottom_menu
+                    display: flex
+                    align-items: center
+                    flex-wrap: wrap
+                    margin-top: 8px
+                    .kind
+                        &:nth-last-child(n+2)
+                            margin-right: 8px
+                        &-btn
+                            font-family: 'Manrope', sans-serif
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 136%
+                            padding: 4px 12px
+                            color: #171B24
+                            background-color: #fff
+                            border: 1px solid #D1D1D3
+                            transition: background-color .2s linear
+                            &:hover
+                                cursor: pointer
+                                background-color: #FBE303
+                .brands-list
+                    margin-bottom: 80px
+                    &__item
+                        margin-top: 28px
+                        &::after
+                            display: block
+                            content: ""
+                            width: 100%
+                            height: 1px 
+                            margin: 0 auto
+                            background-color: #E8E9EA
+                            margin-top: 28px
+                            
+                        &_content
+                            display: flex
+                            .brands-letter
+                                width: 180px
+                                font-weight: 600
+                                font-size: 34px
+                                line-height: 130%
+                                color: #333333
+                            .brands__item_list
+                                width: 180px
+                                margin-left: 16px
+                                .item_list
+                                    &:nth-last-child(n+2)
+                                        margin-bottom: 12px
+                                    &__link
+                                        text-decoration: none
+                                        font-weight: 500
+                                        font-size: 16px
+                                        line-height: 150%
+                                        color: #2F323A
     .reviews
         width: 100%
         background-color: #F6F6F6
