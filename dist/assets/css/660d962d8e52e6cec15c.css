@@ -476,6 +476,35 @@ input {
   cursor: pointer;
   color: #171B24;
 }
+#page .brands-navigation {
+  width: 100%;
+  margin-top: 40px;
+}
+#page .brands-navigation__container {
+  max-width: 1360px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#page .brands-navigation__container_content {
+  font-family: "Manrope", sans-serif;
+  padding-top: 40px;
+  margin-left: 100px;
+  padding-bottom: 90px;
+}
+#page .brands-navigation__container_content .brands_content__nav p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #454950;
+}
+#page .brands-navigation__container_content .brands_content__title h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  color: #171B24;
+  margin-top: 20px;
+}
 #page .slider {
   width: 100%;
 }

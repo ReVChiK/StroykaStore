@@ -55,6 +55,8 @@ import screws from '../img/products/screws.png';
 import putty from '../img/products/putty.png';
 import tape from '../img/products/tape.png';
 
+import brands_nav_back from '../img/brands/brands_background.png';
+
 import bever from '../img/brands/bever.png';
 import braer from '../img/brands/braer.png';
 import leonardo_stone from '../img/brands/leonardo_stone.png';
@@ -146,6 +148,15 @@ function Brands_Image_Set(){
 
 }
 // Brands-Image
+
+function Set_Background_Brands_Nav(){
+    let brand_nav_background = document.querySelectorAll('.brands-navigation__container');
+
+    for(let i = 0; i < brand_nav_background.length; i++){
+        brand_nav_background[i].style.background = `url(${brands_nav_back})`;
+    }
+
+}
 
 
 // Products-Image
@@ -348,6 +359,7 @@ function Webpack_Main(){
     Tab_Images_Set();
     Products_Image_Set();
     Brands_Image_Set();
+    Set_Background_Brands_Nav();
     Set_Avatars();
     Set_About_Fon();
     Set_email_Footer();
