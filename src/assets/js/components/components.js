@@ -90,9 +90,6 @@ function Brands_List(){
     for(let j = 0; j < brands_kinds_link.length; j++){
         brands_kinds_link[j].textContent = arr_list[j];
     }
-
-    console.log(brands_letters.length);
-    console.log(arr_letter.length);
     
 }
 

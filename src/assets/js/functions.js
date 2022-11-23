@@ -63,6 +63,8 @@ import del_push_icon from '../img/delivery/icons/delivery-icons-push.svg';
 import del_box_icon from '../img/delivery/icons/delivery-icons-box.svg';
 import del_geolocation_icon from '../img/delivery/icons/delivery-icons-geolocation.svg';
 
+import del_arrow from '../img/delivery/icons/delivery_arrow.svg';
+
 import bever from '../img/brands/bever.png';
 import braer from '../img/brands/braer.png';
 import leonardo_stone from '../img/brands/leonardo_stone.png';
@@ -180,6 +182,14 @@ function Delivery_Set_Icons(){
 
     for(let i = 0; i < del_rule_order__icons.length; i++){
         del_rule_order__icons[i].innerHTML = del_icons_arr[i];
+    }
+}
+
+function Delivery_Set_Icon_Arrow(){
+    let arrow_icons_dom = document.querySelectorAll('.point__icon');
+
+    for(let i = 0; i < arrow_icons_dom.length; i++){
+        arrow_icons_dom[i].innerHTML = del_arrow;
     }
 }
 
@@ -387,6 +397,7 @@ function Webpack_Main(){
     Set_Background_Brands_Nav();
     Set_Background_Delivery_Nav();
     Delivery_Set_Icons();
+    Delivery_Set_Icon_Arrow();
     Set_Avatars();
     Set_About_Fon();
     Set_email_Footer();

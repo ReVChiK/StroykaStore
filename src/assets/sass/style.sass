@@ -353,7 +353,6 @@
                     color: #2F323A
             &_content
                 display: flex
-                // align-items: center
                 margin-top: 32px
                 .rule-order
                     max-width: 278px
@@ -368,7 +367,56 @@
                         line-height: 150%
                         color: #2F323A
                         margin-top: 12px
-
+    .delivery-questions
+        width: 100%
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            border: 1px solid #D1D1D3
+            margin-top: 80px
+            margin-bottom: 80px
+            &_content
+                max-width: 768px
+                margin: 0 auto
+                font-family: 'Manrope', sans-serif
+                margin-bottom: 80px
+                .questions__title
+                    margin-top: 80px
+                    margin-bottom: 20px
+                    h1
+                        font-weight: 600
+                        font-size: 34px
+                        line-height: 130%
+                        color: #2F323A
+                .point
+                    display: flex
+                    background-color: #F6F6F6
+                    &:nth-last-child(n+2)
+                        margin-bottom: 12px
+                    &__title
+                        width: 687px
+                        margin-left: 20px
+                        margin-top: 16px
+                        margin-bottom: 16px
+                        p
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 136%
+                            color: #2F323A
+                        &_description
+                            display: none
+                            margin-top: 16px
+                            p
+                                font-weight: 400
+                                font-size: 16px
+                                line-height: 150%
+                    &__icon
+                        width: 25px
+                        height: 24px
+                        margin-top: 16px
+                        margin-left: 16px
+                        &:hover
+                            cursor: pointer
     .slider
         width: 100%
         &-container

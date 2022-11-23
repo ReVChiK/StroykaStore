@@ -15,6 +15,21 @@ module.exports = {
         filename: './assets/js/[contenthash].js'
     },
 
+    optimization:{
+        moduleIds: 'deterministic',
+        runtimeChunk: 'single',
+        splitChunks:{
+            cacheGroups:{
+                vendor:{
+                    test: /[\\/]node_modules[\\/]/,
+                    name: 'vendors',
+                    chunks: 'all'
+                }
+            }
+        }
+        
+    },
+
     devServer:{
         port: 3000
     },
