@@ -56,6 +56,12 @@ import putty from '../img/products/putty.png';
 import tape from '../img/products/tape.png';
 
 import brands_nav_back from '../img/brands/brands_background.png';
+import delivery_nav_back from '../img/delivery/delivery_fon.png';
+
+import del_basket_icon from '../img/delivery/icons/delivery-icons-basket.svg';
+import del_push_icon from '../img/delivery/icons/delivery-icons-push.svg';
+import del_box_icon from '../img/delivery/icons/delivery-icons-box.svg';
+import del_geolocation_icon from '../img/delivery/icons/delivery-icons-geolocation.svg';
 
 import bever from '../img/brands/bever.png';
 import braer from '../img/brands/braer.png';
@@ -156,6 +162,25 @@ function Set_Background_Brands_Nav(){
         brand_nav_background[i].style.background = `url(${brands_nav_back})`;
     }
 
+}
+
+function Set_Background_Delivery_Nav(){
+    let delivery_nav_background = document.querySelectorAll('.delivery-navigation__container');
+
+    for(let i = 0; i < delivery_nav_background.length; i++){
+        delivery_nav_background[i].style.background = `url(${delivery_nav_back})`;
+    }
+}
+
+function Delivery_Set_Icons(){
+    let del_icons_arr = [del_basket_icon, del_push_icon,
+                        del_box_icon, del_geolocation_icon];
+    
+    let del_rule_order__icons = document.querySelectorAll('.rule-order__icon');
+
+    for(let i = 0; i < del_rule_order__icons.length; i++){
+        del_rule_order__icons[i].innerHTML = del_icons_arr[i];
+    }
 }
 
 
@@ -360,6 +385,8 @@ function Webpack_Main(){
     Products_Image_Set();
     Brands_Image_Set();
     Set_Background_Brands_Nav();
+    Set_Background_Delivery_Nav();
+    Delivery_Set_Icons();
     Set_Avatars();
     Set_About_Fon();
     Set_email_Footer();

@@ -505,6 +505,85 @@ input {
   color: #171B24;
   margin-top: 20px;
 }
+#page .delivery-navigation {
+  width: 100%;
+}
+#page .delivery-navigation__container {
+  max-width: 1360px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#page .delivery-navigation__container_content {
+  font-family: "Manrope", sans-serif;
+  margin-top: 40px;
+  padding-top: 40px;
+  padding-bottom: 60px;
+  margin-left: 100px;
+}
+#page .delivery-navigation__container_content .delivery_content__nav p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #454950;
+}
+#page .delivery-navigation__container_content .delivery_content__title {
+  margin-top: 20px;
+}
+#page .delivery-navigation__container_content .delivery_content__title h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  color: #171B24;
+}
+#page .delivery-navigation__container_content .delivery_content__description {
+  max-width: 520px;
+  margin-top: 20px;
+}
+#page .delivery-navigation__container_content .delivery_content__description p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #2F323A;
+}
+#page .delivery-rules {
+  width: 100%;
+}
+#page .delivery-rules__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  font-family: "Manrope", sans-serif;
+  margin-top: 80px;
+}
+#page .delivery-rules__container_title h1 {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 130%;
+  color: #2F323A;
+}
+#page .delivery-rules__container_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 32px;
+}
+#page .delivery-rules__container_content .rule-order {
+  max-width: 278px;
+}
+#page .delivery-rules__container_content .rule-order:nth-last-child(n+2) {
+  margin-right: 16px;
+}
+#page .delivery-rules__container_content .rule-order__icon {
+  width: 80px;
+  height: 80px;
+}
+#page .delivery-rules__container_content .rule-order__desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2F323A;
+  margin-top: 12px;
+}
 #page .slider {
   width: 100%;
 }

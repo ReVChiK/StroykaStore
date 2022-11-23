@@ -54,6 +54,10 @@ module.exports = {
             template: './src/pages/brands.html',
             filename: './pages/brands.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/delivery.html',
+            filename: './pages/delivery.html'
+        }),
         new MiniCssExtractPlugin({
             filename: './assets/css/[contenthash].css'
         })
