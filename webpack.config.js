@@ -62,6 +62,7 @@ module.exports = {
 
     plugins:[
         new CleanWebpackPlugin(),
+
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
@@ -72,6 +73,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/pages/delivery.html',
             filename: './pages/delivery.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/refund.html',
+            filename: './pages/refund.html'
         }),
         new MiniCssExtractPlugin({
             filename: './assets/css/[contenthash].css'

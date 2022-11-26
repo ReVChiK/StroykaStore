@@ -649,6 +649,84 @@ input {
 #page .delivery-questions__container_content .point__icon:hover {
   cursor: pointer;
 }
+#page .refund-navigation {
+  width: 100%;
+}
+#page .refund-navigation__container {
+  max-width: 1360px;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#page .refund-navigation__container_content {
+  font-family: "Manrope", sans-serif;
+  padding-top: 40px;
+  margin-top: 40px;
+  margin-left: 100px;
+  padding-bottom: 60px;
+}
+#page .refund-navigation__container_content .refund_content__nav p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #454950;
+}
+#page .refund-navigation__container_content .refund_content__title {
+  margin-top: 20px;
+}
+#page .refund-navigation__container_content .refund_content__title h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  color: #171B24;
+}
+#page .refund-navigation__container_content .refund_content__description {
+  max-width: 520px;
+  margin-top: 20px;
+}
+#page .refund-navigation__container_content .refund_content__description p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+  color: #2F323A;
+}
+#page .refund-kinds {
+  width: 100%;
+}
+#page .refund-kinds__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-top: 80px;
+  margin-bottom: 80px;
+}
+#page .refund-kinds__container_item:nth-last-child(n+2) {
+  margin-bottom: 80px;
+}
+#page .refund-kinds__container_item .item__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-family: "Manrope", sans-serif;
+}
+#page .refund-kinds__container_item .item__content-refund_title {
+  width: 376px;
+}
+#page .refund-kinds__container_item .item__content-refund_title .ref-title {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 130%;
+  color: #2F323A;
+}
+#page .refund-kinds__container_item .item__content-refund_desc {
+  width: 768px;
+  margin-left: 16px;
+}
+#page .refund-kinds__container_item .item__content-refund_desc .ref-desc {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2F323A;
+}
 #page .slider {
   width: 100%;
 }
