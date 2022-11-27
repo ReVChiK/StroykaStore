@@ -727,6 +727,169 @@ input {
   line-height: 150%;
   color: #2F323A;
 }
+#page .documentation-navigation, #page .contacts-navigation {
+  width: 100%;
+}
+#page .documentation-navigation__container, #page .contacts-navigation__container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+#page .documentation-navigation__container_content, #page .contacts-navigation__container_content {
+  font-family: "Manrope", sans-serif;
+  margin-top: 40px;
+}
+#page .documentation-navigation__container_content .documentation_content__nav p, #page .documentation-navigation__container_content .contacts_content__nav p, #page .contacts-navigation__container_content .documentation_content__nav p, #page .contacts-navigation__container_content .contacts_content__nav p {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  color: #454950;
+}
+#page .documentation-navigation__container_content .documentation_content__title, #page .documentation-navigation__container_content .contacts_content__title, #page .contacts-navigation__container_content .documentation_content__title, #page .contacts-navigation__container_content .contacts_content__title {
+  margin-top: 20px;
+}
+#page .documentation-navigation__container_content .documentation_content__title h1, #page .documentation-navigation__container_content .contacts_content__title h1, #page .contacts-navigation__container_content .documentation_content__title h1, #page .contacts-navigation__container_content .contacts_content__title h1 {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  color: #171B24;
+}
+#page .documentation-certification {
+  width: 100%;
+}
+#page .documentation-certification__container {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+#page .documentation-certification__container_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+#page .documentation-certification__container_content .certification {
+  font-family: "Manrope", sans-serif;
+  width: 376px;
+  border: 1px solid #E8E9EA;
+}
+#page .documentation-certification__container_content .certification:nth-last-child(n+2) {
+  margin-right: 16px;
+}
+#page .documentation-certification__container_content .certification__top {
+  background-color: #2F323A;
+  padding-top: 37px;
+}
+#page .documentation-certification__container_content .certification__top_document {
+  width: 260px;
+  background-color: #fff;
+  margin-left: 50px;
+}
+#page .documentation-certification__container_content .certification__top_document-title {
+  max-width: 220px;
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 90px;
+}
+#page .documentation-certification__container_content .certification__top_document-title p {
+  text-align: center;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #2F323A;
+}
+#page .documentation-certification__container_content .certification__bottom_content {
+  max-width: 344px;
+  margin: 0 auto;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+#page .documentation-certification__container_content .certification__bottom_content-title h2 {
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 136%;
+  color: #2F323A;
+}
+#page .documentation-certification__container_content .certification__bottom_content-file {
+  margin-top: 4px;
+}
+#page .documentation-certification__container_content .certification__bottom_content-file p {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2F323A;
+}
+#page .documentation-certification__container_content .certification__bottom_content-button {
+  margin-top: 16px;
+}
+#page .documentation-certification__container_content .certification__bottom_content-button .btn-file_download {
+  font-family: "Manrope", sans-serif;
+  width: 100%;
+  border: none;
+  background-color: #FCEC41;
+  padding: 12px 136px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #171B24;
+  -webkit-transition: background-color 0.2s linear;
+  transition: background-color 0.2s linear;
+}
+#page .documentation-certification__container_content .certification__bottom_content-button .btn-file_download:hover {
+  cursor: pointer;
+  background-color: #2F323A;
+  color: white;
+}
+#page .contacts-map {
+  width: 100%;
+}
+#page .contacts-map__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  height: 340px;
+  margin-top: 40px;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+#page .contacts-info {
+  width: 100%;
+}
+#page .contacts-info__container {
+  max-width: 1160px;
+  margin: 0 auto;
+  margin-top: 80px;
+  font-family: "Manrope", sans-serif;
+}
+#page .contacts-info__container_title h1 {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 130%;
+  color: #2F323A;
+}
+#page .contacts-info__container_content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+  margin-bottom: 80px;
+}
+#page .contacts-info__container_content .info-item:nth-last-child(n+2) {
+  margin-right: 16px;
+}
+#page .contacts-info__container_content .info-item p {
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 150%;
+  color: #2F323A;
+}
+#page .contacts-info__container_content .info-address {
+  width: 376px;
+}
+#page .contacts-info__container_content .info-doc {
+  width: 474px;
+}
+#page .contacts-info__container_content .info-email {
+  width: 278px;
+}
 #page .slider {
   width: 100%;
 }

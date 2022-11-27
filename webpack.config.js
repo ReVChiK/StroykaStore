@@ -78,6 +78,14 @@ module.exports = {
             template: './src/pages/refund.html',
             filename: './pages/refund.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/documentation.html',
+            filename: './pages/documentation.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/contacts.html',
+            filename: './pages/contacts.html'
+        }),
         new MiniCssExtractPlugin({
             filename: './assets/css/[contenthash].css'
         })

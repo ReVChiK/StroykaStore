@@ -67,6 +67,8 @@ import del_arrow from '../img/delivery/icons/delivery_arrow.svg';
 
 import refund_container_back from '../img/refund/refund_background.png';
 
+import contact_map_img from '../img/contacts/contacts-map.png';
+
 import bever from '../img/brands/bever.png';
 import braer from '../img/brands/braer.png';
 import leonardo_stone from '../img/brands/leonardo_stone.png';
@@ -200,6 +202,14 @@ function Refund_Set_Background(){
 
     for(let i = 0; i < ref_back.length; i++){
         ref_back[i].style.background = `url(${refund_container_back})`;
+    }
+}
+
+function Set_Map_Img_Contacts(){
+    let container_map_img = document.querySelectorAll('.contacts-map__container');
+
+    for(let i = 0; i < container_map_img.length; i++){
+        container_map_img[i].style.background = `url(${contact_map_img})`;
     }
 }
 
@@ -409,6 +419,7 @@ function Webpack_Main(){
     Delivery_Set_Icons();
     Delivery_Set_Icon_Arrow();
     Refund_Set_Background();
+    Set_Map_Img_Contacts();
     Set_Avatars();
     Set_About_Fon();
     Set_email_Footer();
