@@ -96,6 +96,7 @@ import mastercard from '../img/footer_cards/MasterCard.png';
 import maestro from '../img/footer_cards/Maestro.png';
 import mir from '../img/footer_cards/Mir.png';
 
+
 // Geolocation-Close-Btn
 function Geo_btn_Close(){
     var geo_btn_exit = document.querySelectorAll('.geolocation-btn__close');

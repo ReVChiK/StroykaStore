@@ -71,6 +71,7 @@ function Socks_Card_Quantity(){
 
     let panels_card_quantity = document.querySelectorAll('.data-button__score');
 
+
     for(let i = 0; i < card_buy_btns.length; i++){
         card_buy_btns[i].addEventListener('click', ()=>{
             card_buy_btns[i].parentElement.style.display = 'none';
