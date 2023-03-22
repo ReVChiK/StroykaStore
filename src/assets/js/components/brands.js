@@ -1,5 +1,5 @@
 
-function Brands_Kinds(){
+export function Brands_Kinds(){
     let array_top_menu_kinds = [
         'Все', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
         'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
@@ -17,7 +17,7 @@ function Brands_Kinds(){
 
 }
 
-function Brands_List(){
+export function Brands_List(){
     let arr_letter = [
         'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
         'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T',
@@ -92,10 +92,3 @@ function Brands_List(){
     }
     
 }
-
-function Component(){
-    Brands_Kinds();
-    Brands_List();
-}
-
-export default Component;

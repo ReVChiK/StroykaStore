@@ -1,13 +1,13 @@
 import '../sass/style.sass';
 import Webpack_Main from './functions.js';
-import Component from './components/components.js';
-
 import Main from './events/events';
+import { Brands_Kinds, Brands_List } from './components/brands';
 
 function Index(){
     Webpack_Main();
     Main();
-    Component();
+    Brands_Kinds();
+    Brands_List();
 }
 
 window.addEventListener('DOMContentLoaded', Index);

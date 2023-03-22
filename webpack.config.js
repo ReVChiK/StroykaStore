@@ -1,4 +1,4 @@
-const path = require('path');
+const {resolve} = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
@@ -8,10 +8,10 @@ module.exports = {
     mode: 'development',
 
     entry:{
-        main: path.resolve(__dirname, './src/assets/js/index.js')
+        main: resolve(__dirname, './src/assets/js/index.js')
     },
     output:{
-        path: path.resolve(__dirname, 'dist'),
+        path: resolve(__dirname, 'dist'),
         filename: './assets/js/[contenthash].js'
     },
 
@@ -50,6 +50,14 @@ module.exports = {
                 loader: 'file-loader',
                 options:{
                     name: './assets/images/[contenthash].[ext]',
+                    content: ''
+                }
+            },
+            {
+                test: /\.pdf$/i,
+                loader: 'file-loader',
+                options:{
+                    name: './assets/docs/[name].[ext]',
                     content: ''
                 }
             },

@@ -1,17 +1,9 @@
+// png
 import browser_icon from '../icons/favicon.png';
 
 import img_geolocation from '../img/geolocation.png';
 import footer_geolocation from '../img/footer_geolocation.png';
 import email from '../img/email.png';
-
-import geolocation_arrow from '../img/arrow.svg';
-
-import footer_img_links from '../img/arrow_footer.svg';
-
-import Logo from '../img/Logo.svg';
-import Footer_Logo from '../img/Footer_Logo.svg';
-
-import geo_btn_close from '../img/Close.svg';
 
 import search_icon from '../img/Search.png';
 import profile from '../img/Profile.png';
@@ -25,9 +17,6 @@ import foarm from '../img/cards_socks/foam.png';
 import grid from '../img/cards_socks/grid.png';
 import metal_tile from '../img/cards_socks/metal_tile.png';
 import paint from '../img/cards_socks/paint.png';
-
-import btn_add_card from '../img/cards_socks/Add.svg';
-import btn_remove_card from '../img/cards_socks/Remove.svg';
 
 import shower from '../img/categories_img/shower.png';
 import lumber from '../img/categories_img/lumber.png';
@@ -58,16 +47,7 @@ import tape from '../img/products/tape.png';
 import brands_nav_back from '../img/brands/brands_background.png';
 import delivery_nav_back from '../img/delivery/delivery_fon.png';
 
-import del_basket_icon from '../img/delivery/icons/delivery-icons-basket.svg';
-import del_push_icon from '../img/delivery/icons/delivery-icons-push.svg';
-import del_box_icon from '../img/delivery/icons/delivery-icons-box.svg';
-import del_geolocation_icon from '../img/delivery/icons/delivery-icons-geolocation.svg';
-
-import del_arrow from '../img/delivery/icons/delivery_arrow.svg';
-
 import refund_container_back from '../img/refund/refund_background.png';
-
-import contact_map_img from '../img/contacts/contacts-map.png';
 
 import bever from '../img/brands/bever.png';
 import braer from '../img/brands/braer.png';
@@ -96,6 +76,34 @@ import mastercard from '../img/footer_cards/MasterCard.png';
 import maestro from '../img/footer_cards/Maestro.png';
 import mir from '../img/footer_cards/Mir.png';
 
+// png
+
+//docs
+import linkFilePath from '../docs/Политика обработки персональных данных.pdf';
+//docs
+
+// svg
+
+import geolocation_arrow from '../img/arrow.svg';
+import geo_btn_close from '../img/Close.svg';
+
+import footer_img_links from '../img/arrow_footer.svg';
+
+import Logo from '../img/Logo.svg';
+import Footer_Logo from '../img/Footer_Logo.svg';
+
+import btn_add_card from '../img/cards_socks/Add.svg';
+import btn_remove_card from '../img/cards_socks/Remove.svg';
+
+import del_basket_icon from '../img/delivery/icons/delivery-icons-basket.svg';
+import del_push_icon from '../img/delivery/icons/delivery-icons-push.svg';
+import del_box_icon from '../img/delivery/icons/delivery-icons-box.svg';
+import del_geolocation_icon from '../img/delivery/icons/delivery-icons-geolocation.svg';
+
+import del_arrow from '../img/delivery/icons/delivery_arrow.svg';
+
+// svg
+
 
 // Geolocation-Close-Btn
 function Geo_btn_Close(){
@@ -106,6 +114,16 @@ function Geo_btn_Close(){
     }
 }
 // Geolocation-Close-Btn
+
+// Sign-In
+function SignIn_Button_Icon_Close(){
+    var signIn_btn_exit = document.querySelectorAll('.sign-in__btn_close');
+
+    signIn_btn_exit.forEach(element => {
+        element.innerHTML = geo_btn_close;
+    });
+}
+// Sign-In
 
 // Footer Cards Pay
 function Set_Cards_Pay_Img(){
@@ -203,14 +221,6 @@ function Refund_Set_Background(){
 
     for(let i = 0; i < ref_back.length; i++){
         ref_back[i].style.background = `url(${refund_container_back})`;
-    }
-}
-
-function Set_Map_Img_Contacts(){
-    let container_map_img = document.querySelectorAll('.contacts-map__container');
-
-    for(let i = 0; i < container_map_img.length; i++){
-        container_map_img[i].style.background = `url(${contact_map_img})`;
     }
 }
 
@@ -404,9 +414,20 @@ function Set_email_Footer(){
 }
 // Email Image
 
+// Documentation Link File-Path
+function setLinkFilePath(){
+    let fileLink = document.querySelectorAll('.politic');
+    fileLink.forEach(element => {
+        element.href = linkFilePath;
+    });
+}
+// Documentation Link File-Path
+
 function Webpack_Main(){
     Add_Favicon();
+
     Add_Img_Geolocation();
+    
     Set_Logo();
     Set_search_Icon();
     Set_Img_Panel();
@@ -414,19 +435,26 @@ function Webpack_Main(){
     Cards_Images();
     Tab_Images_Set();
     Products_Image_Set();
+
     Brands_Image_Set();
     Set_Background_Brands_Nav();
+
     Set_Background_Delivery_Nav();
     Delivery_Set_Icons();
     Delivery_Set_Icon_Arrow();
+
     Refund_Set_Background();
-    Set_Map_Img_Contacts();
+
     Set_Avatars();
     Set_About_Fon();
     Set_email_Footer();
     Set_Footer_Arrow();
     Set_Cards_Pay_Img();
+
     Geo_btn_Close();
+    SignIn_Button_Icon_Close();
+
+    setLinkFilePath();
 }
 
 export default Webpack_Main;
