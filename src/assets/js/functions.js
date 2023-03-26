@@ -125,6 +125,16 @@ function SignIn_Button_Icon_Close(){
 }
 // Sign-In
 
+// Sign-Up
+function SignUp_Button_Icon_Close(){
+    var signUp_btn_exit = document.querySelectorAll('.sign-up__btn_close');
+
+    signUp_btn_exit.forEach(element => {
+        element.innerHTML = geo_btn_close;
+    });
+}
+// Sign-Up
+
 // Footer Cards Pay
 function Set_Cards_Pay_Img(){
     let cards_imgs_array = [visa, mastercard, maestro, mir];
@@ -452,7 +462,9 @@ function Webpack_Main(){
     Set_Cards_Pay_Img();
 
     Geo_btn_Close();
+
     SignIn_Button_Icon_Close();
+    SignUp_Button_Icon_Close();
 
     setLinkFilePath();
 }

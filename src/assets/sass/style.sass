@@ -203,6 +203,88 @@
                         background-color: #FCEC41
                     .btn__create_account
                         border: 1px solid #D1D1D3
+    .sign-up
+        width: 100%
+        height: 100%
+        font-family: 'Manrope', sans-serif
+        background-color: rgba(23, 27, 36, .6)
+        position: fixed
+        z-index: 99999
+        // display: none
+        &__btn_close
+            position: absolute
+            right: 20px
+            top: 20px
+            width: 52px
+            height: auto
+            &:hover
+                cursor: pointer
+        &__content
+            max-width: 572px
+            margin: 0 auto
+            background-color: #fff
+            margin-top: 205px
+            &_container
+                max-width: 500px
+                margin: 0 auto
+                padding-top: 36px
+                padding-bottom: 36px
+                &-title
+                    font-weight: 600
+                    font-size: 34px
+                    line-height: 130%
+                    text-align: center
+                    h1
+                        color: #2F323A
+                &-data
+                    margin-top: 24px
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-column-gap: 16px
+                    grid-row-gap: 24px
+                    .data__item
+                        max-width: 242px
+                        label
+                            font-weight: 500
+                            font-size: 16px
+                            line-height: 150%
+                            color: #2F323A
+                        input
+                            font-family: 'Manrope', sans-serif
+                            display: block
+                            width: 100%
+                            outline: none
+                            background-color: #F6F6F6
+                            padding-left: 16px
+                            padding-top: 12px
+                            padding-bottom: 12px
+                            border: none
+                            border-bottom: 1px solid #D1D1D3
+                            font-size: 18px
+                            font-weight: 500
+                            line-height: 136%
+                            color: #8B8D92
+                            margin-top: 8px
+                &-buttons
+                    margin-top: 24px
+                    .btn
+                        display: block
+                        width: 100%
+                        outline: none
+                        border: none
+                        text-align: center
+                        padding-top: 12px
+                        padding-bottom: 12px
+                        font-weight: 500
+                        font-size: 18px
+                        line-height: 136%
+                        color: #171B24
+                        &:hover
+                            cursor: pointer
+                        &:nth-last-child(n+2)
+                            margin-bottom: 12px
+                    .btn__sign_up
+                        background-color: #FCEC41
 
     .header
         width: 100%
