@@ -337,6 +337,7 @@ input {
   background-color: rgba(23, 27, 36, 0.6);
   position: fixed;
   z-index: 99999;
+  display: none;
 }
 #page .sign-up__btn_close {
   position: absolute;
@@ -702,6 +703,155 @@ input {
 #page .header-container__bottom_menu .menu__content .menu-navigation__item .nav-item__link:hover {
   cursor: pointer;
   color: #171B24;
+}
+#page .profile {
+  width: 100%;
+}
+#page .profile-container {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+#page .profile-container__content {
+  font-family: "Manrope", sans-serif;
+  max-width: 768px;
+  margin: 0 auto;
+}
+#page .profile-container__content_title {
+  font-weight: 700;
+  font-size: 48px;
+  line-height: 120%;
+  margin-top: 40px;
+}
+#page .profile-container__content_title h1 {
+  color: #171B24;
+}
+#page .profile-container__content_data {
+  border: 1px solid #D1D1D3;
+  margin-top: 40px;
+}
+#page .profile-container__content_data-content {
+  max-width: 696px;
+  margin: 0 auto;
+  padding-top: 36px;
+  padding-bottom: 36px;
+}
+#page .profile-container__content_data-content__title {
+  font-weight: 600;
+  font-size: 34px;
+  line-height: 130%;
+}
+#page .profile-container__content_data-content__title h3 {
+  color: #2F323A;
+}
+#page .profile-container__content_data-content__personInfo {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  grid-row-gap: 24px;
+  margin-top: 24px;
+}
+#page .profile-container__content_data-content__personInfo .personInfo__item {
+  max-width: 340px;
+}
+#page .profile-container__content_data-content__personInfo .personInfo__item label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2F323A;
+}
+#page .profile-container__content_data-content__personInfo .personInfo__item input {
+  font-family: "Manrope", sans-serif;
+  display: block;
+  width: 100%;
+  outline: none;
+  background-color: #F6F6F6;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  border-bottom: 1px solid #D1D1D3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 136%;
+  color: #8B8D92;
+  margin-top: 8px;
+}
+#page .profile-container__content_data-content__personEmail {
+  margin-top: 24px;
+}
+#page .profile-container__content_data-content__personEmail .personEmail__item label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2F323A;
+}
+#page .profile-container__content_data-content__personEmail .personEmail__item input {
+  font-family: "Manrope", sans-serif;
+  display: block;
+  width: 100%;
+  outline: none;
+  background-color: #F6F6F6;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  border-bottom: 1px solid #D1D1D3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 136%;
+  color: #8B8D92;
+  margin-top: 8px;
+}
+#page .profile-container__content_data-content__personPassword {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 16px;
+  margin-top: 24px;
+}
+#page .profile-container__content_data-content__personPassword .personPassword__item {
+  max-width: 340px;
+}
+#page .profile-container__content_data-content__personPassword .personPassword__item label {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  color: #2F323A;
+}
+#page .profile-container__content_data-content__personPassword .personPassword__item input {
+  font-family: "Manrope", sans-serif;
+  display: block;
+  width: 100%;
+  outline: none;
+  background-color: #F6F6F6;
+  padding-left: 16px;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border: none;
+  border-bottom: 1px solid #D1D1D3;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 136%;
+  color: #8B8D92;
+  margin-top: 8px;
+}
+#page .profile-container__content_data-content__saveButton {
+  margin-top: 24px;
+}
+#page .profile-container__content_data-content__saveButton button {
+  display: block;
+  max-width: 143px;
+  outline: none;
+  border: none;
+  text-align: center;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 136%;
+  color: #171B24;
+  background-color: #FCEC41;
+}
+#page .profile-container__content_data-content__saveButton button:hover {
+  cursor: pointer;
 }
 #page .brands-navigation {
   width: 100%;

@@ -94,6 +94,10 @@ module.exports = {
             template: './src/pages/contacts.html',
             filename: './pages/contacts.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/profile.html',
+            filename: './pages/profile.html'
+        }),
         new MiniCssExtractPlugin({
             filename: './assets/css/[contenthash].css'
         })
