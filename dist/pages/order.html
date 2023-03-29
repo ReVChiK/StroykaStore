@@ -1,14 +1,13 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="" type="image/x-icon">
-    <title>Стройка Стор - Доставка</title>
+    <title>Стройка Стор - Заказы</title>
 <script defer src=".././assets/js/a727bd5d805e24aedcb7.js"></script><script defer src=".././assets/js/cfc3d6565da2a352db47.js"></script><link href=".././assets/css/05b0df263156d43557ba.css" rel="stylesheet"></head>
 <body>
-    
     <div id="page">
 
         <div class="geolocation">
@@ -117,6 +116,98 @@
             </div>
         </div>
 
+        <div class="sign-in">
+            <div class="sign-in__btn_close"></div>
+            <div class="sign-in__content">
+
+                <div class="sign-in__content_container">
+
+                    <div class="sign-in__content_container-title">
+                        <h1>Вход</h1>
+                    </div>
+
+                    <div class="sign-in__content_container-data">
+
+                        <div class="sign-in__content_container-data__email">
+                            <label for="email">E-mail</label>
+                            <input id="sign-in__data_email" class="input__email" name="email" type="email" placeholder="youmail@mail.com" required>
+                        </div>
+
+                        <div class="sign-in__content_container-data__password">
+                            <label for="password">Пароль</label>
+                            <input id="sign-in__data_password" class="input__password" name="password" type="password" 
+                            min="8"
+                            max="16"
+                            placeholder="****************" required>
+                            <div class="button__password_forget">
+                                <a href="#" class="btn__forget_password">Забыли пароль?</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="sign-in__content_container-buttons">
+                        <button class="btn btn__sign_in">
+                            Войти
+                        </button>
+                        <button class="btn btn__create_account">
+                            Создать учетную запись
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sign-up">
+            <div class="sign-up__btn_close"></div>
+            <div class="sign-up__content">
+
+                <div class="sign-up__content_container">
+
+                    <div class="sign-up__content_container-title">
+                        <h1>Регистрация</h1>
+                    </div>
+
+                    <div class="sign-up__content_container-data">
+
+                        <div class="sign-up__content_container-data__name data__item">
+                            <label for="name">Имя</label>
+                            <input id="sign-up__data_name" class="input__name" name="name" type="text" placeholder="Богдан" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__email data__item">
+                            <label for="email">E-mail</label>
+                            <input id="sign-up__data_email" class="input__email" name="email" type="email" 
+                            placeholder="youmail@mail.com" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__password data__item">
+                            <label for="password">Новый пароль</label>
+                            <input id="sign-up__data_password" class="input__password" name="password" type="password" 
+                            placeholder="****************" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__confirm-password data__item">
+                            <label for="confirm-password">Подтверждение пароля</label>
+                            <input id="sign-up__data_confirm-password"class="input__confirm_password" name="confirm-password" type="password" 
+                            placeholder="****************" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="sign-up__content_container-buttons">
+                        <button class="btn btn__sign_up">
+                            Зарегистрироваться
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
         <header class="header">
             <div class="header-container">
 
@@ -197,7 +288,7 @@
                                         <img class="menu-icon menu-profile" src="" alt="profile">
                                     </div>
                                     <div class="menu-item__link">
-                                        <a class="item-link" href="#">Профиль</a>
+                                        <a class="item-link menu__link_profile" href="#">Профиль</a>
                                     </div>
 
                                 </div>
@@ -207,7 +298,7 @@
                                         <img class="menu-icon menu-orders" src="" alt="orders">
                                     </div>
                                     <div class="menu-item__link">
-                                        <a class="item-link" href="#">Заказы</a>
+                                        <a class="item-link menu__link_order" href="#">Заказы</a>
                                     </div>
                                 </div>
 
@@ -216,7 +307,7 @@
                                         <img class="menu-icon menu-basket" src="" alt="basket">
                                     </div>
                                     <div class="menu-item__link">
-                                        <a class="item-link" href="#">Корзина</a>
+                                        <a class="item-link menu__link_basket" href="#">Корзина</a>
                                     </div>
                                 </div>
                             </div>
@@ -264,153 +355,83 @@
             </div>
         </header>
 
-        <div class="delivery-navigation">
-            <div class="delivery-navigation__container">
-                <div class="delivery-navigation__container_content">
+        <div class="order-navigation">
+            <div class="order-navigation__container">
+                <div class="order-navigation__container_content">
 
-                    <div class="delivery_content__nav">
-                        <p>Главная → Доставка</p>
+                    <div class="order_content__nav">
+                        <p>Главная → Все заказы</p>
                     </div>
-                    
-                    <div class="delivery_content__title">
-                        <h1>Доставка</h1>
-                    </div>
-                    
-                    <div class="delivery_content__description">
-                        <p>Доставка осуществляется курьерами поставщика или службой курьеров Достависта. Также товар можно забрать самостоятельно от поставщика</p>
+
+                    <div class="order_content__title">
+                        <h1>Заказы</h1>
                     </div>
                 </div>
             </div>
         </div>
 
-        <div class="delivery-rules">
-            <div class="delivery-rules__container">
+        <div class="order-list">
+            <div class="order-list__container">
+                <div class="order-list__container_content">
 
-                <div class="delivery-rules__container_title">
-                    <h1>Как сделать заказ: 4 простых шага</h1>
-                </div>
-
-                <div class="delivery-rules__container_content content-rules">
-
-                    <div class="rule-order">
-                        <div class="rule-order__icon"></div>
-                        <div class="rule-order__desc">
-                            Добавьте нужные товары в корзину и оплатите заказ
-                        </div>
-                    </div>
-
-                    <div class="rule-order">
-                        <div class="rule-order__icon"></div>
-                        <div class="rule-order__desc">
-                            Получите уведомления о подтверждении вашего заказа
-                        </div>
-                    </div>
-
-                    <div class="rule-order">
-                        <div class="rule-order__icon"></div>
-                        <div class="rule-order__desc">
-                            После подтверждения мы сформируем ваш заказ
-                        </div>
-                    </div>
-
-                    <div class="rule-order">
-                        <div class="rule-order__icon"></div>
-                        <div class="rule-order__desc">
-                            Заберите из пунктов <br> выдачи
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-        </div>
-
-        <div class="delivery-questions">
-            <div class="delivery-questions__container">
-                <div class="delivery-questions__container_content">
-
-                    <div class="questions__title">
-                        <h1>Часто задаваемые вопросы</h1>
-                    </div>
-
-                    <div class="point">
-
-                        <div class="point__title">
-                            <p>Водитель уведомит меня о начале доставки доставки?</p>
-                            <div class="point__title_description">
-                                <p>
-                                    Есть товары, которые можно купить сразу на сервисе, и товары, для покупки которых нужно перейти на сайт магазина. Условия их получения отличаются.
-                                    <br>
-                                    <br>
-                                    В этом разделе описаны условия для товаров, которые можно купить. Также некоторые товары, которые продаются на Маркете, доставляются непосредственно продавцами и имеют пометку об этом. Для таких товаров могут быть доступны не все возможности, описанные ниже.
-                                </p>
+                    <div class="order-list__container_content-item">
+                        <div class="item__content">
+    
+                            <div class="item__content_img">
+                                <img src="#" alt="Изображение заказа">
                             </div>
+    
+                            <div class="item__content_data">
+                                <div class="data__content">
+    
+                                    <div class="data__content_name">
+                                        <p>
+                                            Плита OSB-3 Kronospan 2500 х 1250 х 9 мм, хвойные породы
+                                        </p>
+                                    </div>
+    
+                                    <div class="data__content_price">
+                                        <h4>995 <span>₽</span> </h4>
+                                    </div>
+    
+                                    <div class="data__content_amount">
+                                        <p>2 <span>шт.</span></p>
+                                    </div>
+    
+                                </div>
+                            </div>
+    
+                            <div class="item__content_info">
+                                <div class="info__content">
+    
+                                    <div class="info__content_item">
+                                        
+                                        <div class="info__content_item-data info__upper">
+                                            <p>
+                                                Заказ от 24 марта
+                                            </p>
+                                        </div>
+    
+                                        <div class="info__content_item-key info__bottom">
+                                            <p>34078988-0047</p>
+                                        </div>
+                                    </div>
+    
+                                    <div class="info__content_item">
+    
+                                        <div class="info__content_item-title info__upper">
+                                            <p>Статус</p>
+                                        </div>
+    
+                                        <div class="info__content_item-status info__bottom">
+                                            <p>Оплачен</p>
+                                        </div>
+                                    </div>
+    
+                                </div>
+                            </div>
+    
                         </div>
-
-                        <div class="point__icon"></div>
-                    </div>
-
-                    <div class="point">
-
-                        <div class="point__title">
-                            <p>Мне нужна помощь в разгрузке товара (дополнительная услуга), что делать?</p>
-                        </div>
-
-                        <div class="point__icon"></div>
-                    </div>
-
-                    <div class="point">
-
-                        <div class="point__title">
-                            <p>
-                                Заказ доставили, что то от меня требуется?
-                            </p>
-                        </div>
-
-                        <div class="point__icon"></div>
-                    </div>
-
-                    <div class="point">
-
-                        <div class="point__title">
-                            <p>
-                                Что делать если товар не тот, или ненадлежащего качества?
-                            </p>
-                        </div>
-
-                        <div class="point__icon"></div>
-                    </div>
-
-                    <div class="point">
-
-                        <div class="point__title">
-                            <p>
-                                У меня крупный заказ (5 и более тонн груза), у вас есть доставка и разгрузка манипулятором?
-                            </p>
-                        </div>
-
-                        <div class="point__icon"></div>
-                    </div>
-
-                    <div class="point">
-
-                        <div class="point__title">
-                            <p>
-                                Сколько времени дается на самостоятельную разгрузку товара?
-                            </p>
-                        </div>
-
-                        <div class="point__icon"></div>
-                    </div>
-
-                    <div class="point">
-
-                        <div class="point__title">
-                            <p>
-                                Ваша доставка опоздала, как можно помочь вам улучшить свой уровень сервиса?
-                            </p>
-                        </div>
-
-                        <div class="point__icon"></div>
                     </div>
 
                 </div>
@@ -588,6 +609,5 @@
         </footer>
 
     </div>
-
 </body>
 </html>

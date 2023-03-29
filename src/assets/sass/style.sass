@@ -613,20 +613,21 @@
                 margin-left: 100px
                 padding-bottom: 90px
                 .brands_content__nav
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 150%
                     p
-                        font-weight: 400
-                        font-size: 16px
-                        line-height: 150%
                         color: #454950
                 .brands_content__title
+                    font-weight: 700
+                    font-size: 48px
+                    line-height: 120%
+                    margin-top: 20px
                     h1
-                        font-weight: 700
-                        font-size: 48px
-                        line-height: 120%
                         color: #171B24
-                        margin-top: 20px
-    .delivery-navigation
+    .order-navigation
         width: 100%
+        margin-top: 40px
         &__container
             max-width: 1360px
             margin: 0 auto
@@ -634,22 +635,119 @@
             background-size: cover
             &_content
                 font-family: 'Manrope', sans-serif
+                padding-top: 40px
+                padding-bottom: 60px
+                margin-left: 100px
+                .order_content__nav
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 150%
+                    p
+                        color: #454950
+                .order_content__title
+                    font-weight: 700
+                    font-size: 48px
+                    line-height: 120%
+                    margin-top: 20px
+                    h1
+                        color: #171B24
+    .order-list
+        width: 100%
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            &_content
+                width: 100%
                 margin-top: 40px
+                padding-bottom: 40px
+                &-item
+                    &:nth-last-child(n+2)
+                        margin-bottom: 16px
+                    border: 1px solid #E8E9EA
+                    .item__content
+                        font-family: 'Manrope', sans-serif
+                        display: flex
+                        &_img
+                            img
+                                width: 180px
+                                height: auto
+                        &_data
+                            width: 588px
+                            border-left: 1px solid #E8E9EA
+                            .data__content
+                                max-width: 556px
+                                margin: 0 auto
+                                margin-top: 16px
+                                &_name
+                                    font-weight: 500
+                                    font-size: 16px
+                                    line-height: 150%
+                                    p
+                                        color: #2F323A
+                                &_price
+                                    font-weight: 700
+                                    font-size: 20px
+                                    line-height: 140%
+                                    margin-top: 12px
+                                    h4
+                                        color: #171B24
+                                &_amount
+                                    font-weight: 500
+                                    font-size: 16px
+                                    line-height: 150%
+                                    margin-top: 12px
+                                    p
+                                       color: #2F323A 
+                        &_info
+                            width: 392px
+                            border-left: 1px solid #E8E9EA
+                            .info__content
+                                max-width: 360px
+                                margin: 0 auto
+                                margin-top: 16px
+                                display: grid
+                                grid-template-columns: repeat(2, 1fr)
+                                grid-column-gap: 16px
+                                &_item
+                                    width: 180px
+                                    .info__upper
+                                        font-weight: 700
+                                        font-size: 18px
+                                        line-height: 136%
+                                        p
+                                            color: #2F323A
+                                    .info__bottom
+                                        font-weight: 400
+                                        font-size: 16px
+                                        line-height: 140%
+                                        margin-top: 4px
+                                        p
+                                            color: #2F323A
+    .delivery-navigation
+        width: 100%
+        margin-top: 40px
+        &__container
+            max-width: 1360px
+            margin: 0 auto
+            background-repeat: no-repeat
+            background-size: cover
+            &_content
+                font-family: 'Manrope', sans-serif
                 padding-top: 40px
                 padding-bottom: 60px
                 margin-left: 100px
                 .delivery_content__nav
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 150%
                     p
-                        font-weight: 400
-                        font-size: 16px
-                        line-height: 150%
                         color: #454950
                 .delivery_content__title
+                    font-weight: 700
+                    font-size: 48px
+                    line-height: 120%
                     margin-top: 20px
                     h1
-                        font-weight: 700
-                        font-size: 48px
-                        line-height: 120%
                         color: #171B24
                 .delivery_content__description
                     max-width: 520px

@@ -98,6 +98,10 @@ module.exports = {
             template: './src/pages/profile.html',
             filename: './pages/profile.html'
         }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/order.html',
+            filename: './pages/order.html'
+        }),
         new MiniCssExtractPlugin({
             filename: './assets/css/[contenthash].css'
         })

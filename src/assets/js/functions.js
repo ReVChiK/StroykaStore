@@ -46,6 +46,7 @@ import tape from '../img/products/tape.png';
 
 import brands_nav_back from '../img/brands/brands_background.png';
 import delivery_nav_back from '../img/delivery/delivery_fon.png';
+import order_nav_back from '../img/order/order_Background.png';
 
 import refund_container_back from '../img/refund/refund_background.png';
 
@@ -75,6 +76,8 @@ import visa from '../img/footer_cards/Visa.png';
 import mastercard from '../img/footer_cards/MasterCard.png';
 import maestro from '../img/footer_cards/Maestro.png';
 import mir from '../img/footer_cards/Mir.png';
+
+import order_item from '../img/order/order_item.png';
 
 // png
 
@@ -125,6 +128,20 @@ function SignIn_Button_Icon_Close(){
 }
 // Sign-In
 
+// Sign-In CLose Modal
+function SignIn_Close_Modal(){
+    var signIn_btn_close = document.querySelectorAll('.sign-in__btn_close');
+
+    var signInModal = document.querySelectorAll('.sign-in');
+
+    for(let i = 0; i < signIn_btn_close.length; i++){
+        signIn_btn_close[i].addEventListener('click', ()=>{
+            signInModal[i].style.display = 'none'
+        })
+    }
+}
+// Sign-In Close Modal
+
 // Sign-Up
 function SignUp_Button_Icon_Close(){
     var signUp_btn_exit = document.querySelectorAll('.sign-up__btn_close');
@@ -134,6 +151,20 @@ function SignUp_Button_Icon_Close(){
     });
 }
 // Sign-Up
+
+// Sign-Up Close Modal
+function SignUp_Close_Modal(){
+    var signUp_btn_close = document.querySelectorAll('.sign-up__btn_close');
+
+    var signUpModal = document.querySelectorAll('.sign-up');
+
+    for(let i = 0; i < signUp_btn_close.length; i++){
+        signUp_btn_close[i].addEventListener('click', ()=>{
+            signUpModal[i].style.display = 'none'
+        })
+    }
+}
+// Sign-Up Close Modal
 
 // Footer Cards Pay
 function Set_Cards_Pay_Img(){
@@ -205,6 +236,22 @@ function Set_Background_Delivery_Nav(){
     for(let i = 0; i < delivery_nav_background.length; i++){
         delivery_nav_background[i].style.background = `url(${delivery_nav_back})`;
     }
+}
+
+function Set_Background_Order_Nav(){
+    let order_nav_background = document.querySelectorAll('.order-navigation__container');
+
+    order_nav_background.forEach(element => {
+        element.style.background = `url(${order_nav_back})`
+    });
+}
+
+function OrderItem_Img(){
+    let orderItemImg = document.querySelectorAll('.item__content_img img');
+
+    orderItemImg.forEach(element => {
+        element.src = order_item
+    });
 }
 
 function Delivery_Set_Icons(){
@@ -455,6 +502,9 @@ function Webpack_Main(){
 
     Refund_Set_Background();
 
+    Set_Background_Order_Nav();
+    OrderItem_Img();
+
     Set_Avatars();
     Set_About_Fon();
     Set_email_Footer();
@@ -465,6 +515,9 @@ function Webpack_Main(){
 
     SignIn_Button_Icon_Close();
     SignUp_Button_Icon_Close();
+
+    SignIn_Close_Modal();
+    SignUp_Close_Modal();
 
     setLinkFilePath();
 }
