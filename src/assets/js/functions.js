@@ -104,19 +104,53 @@ import del_box_icon from '../img/delivery/icons/delivery-icons-box.svg';
 import del_geolocation_icon from '../img/delivery/icons/delivery-icons-geolocation.svg';
 
 import del_arrow from '../img/delivery/icons/delivery_arrow.svg';
-
 // svg
 
+// functions
+import { SetLogo, SetSvgIcon, SetSvgIcons } from './components/svg';
+import { SetBackgroundFon, SetSrcImg, SetSrcOnlyOnceImg, Slider } from './components/img';
+import Set_Link_Path_File from './components/file';
+// functions
 
-// Geolocation-Close-Btn
-function Geo_btn_Close(){
-    var geo_btn_exit = document.querySelectorAll('.geolocation-btn__close');
+// Structure
 
-    for(let i = 0; i < geo_btn_exit.length; i++){
-        geo_btn_exit[i].innerHTML = geo_btn_close;
-    }
-}
-// Geolocation-Close-Btn
+let cards_imgs_array = [
+    visa, mastercard, maestro, mir
+];
+
+let avatars_array = [
+    avatar_1, avatar_2, avatar_3, avatar_4
+];
+
+let array_brands_icon = [
+    bever, braer, leonardo_stone, 
+    euro_block, perfekta, mstera, 
+    lcp, galen, recke, mod_format, 
+    decra, engles
+];
+
+let del_icons_arr = [
+    del_basket_icon, del_push_icon,
+    del_box_icon, del_geolocation_icon
+];
+
+let product_img_array = [
+    stoneware, grout, primer, drywall, profile_,
+    roulette, package_, angle, knauf, screws,
+    putty, tape
+];
+
+let tab_img_array = [
+    shower, lumber, linoleum, wallpapers, tools,
+    gfc, windows, doors, plumbing, paints, eg, interior
+];
+
+let stock_icons_array = [paint, foarm, grid, metal_tile];
+
+let menu_icons_array = [profile, order, basket];
+
+// Structure
+
 
 // Sign-In
 function SignIn_Button_Icon_Close(){
@@ -166,155 +200,6 @@ function SignUp_Close_Modal(){
 }
 // Sign-Up Close Modal
 
-// Footer Cards Pay
-function Set_Cards_Pay_Img(){
-    let cards_imgs_array = [visa, mastercard, maestro, mir];
-
-    let cards_imgs = document.querySelectorAll('.footer-card-img');
-
-    for(let i = 0; i < cards_imgs.length; i++){
-        cards_imgs[i].src = cards_imgs_array[i];
-    }
-}
-// Footer Cards Pay
-
-// About-Img
-function Set_About_Fon(){
-    var about_fon_img = document.querySelectorAll('.about-container');
-
-    for(let i = 0; i < about_fon_img.length; i++){
-        about_fon_img[i].style.backgroundImage = `url(${about_fon})`;
-    }
-}
-// About-Img
-
-// Reviews-Avatars
-function Set_Avatars(){
-    let avatars_array = [avatar_1, avatar_2, avatar_3, avatar_4];
-
-    let avatar_imgs = document.querySelectorAll('.avatar-img');
-    for (let i = 0; i < avatar_imgs.length; i++){
-        avatar_imgs[i].src = avatars_array[i];
-    }
-
-    let traced_imgs = document.querySelectorAll('.trace-img');
-    for(let j = 0; j < traced_imgs.length; j++){
-        traced_imgs[j].src = traced_img;
-    }
-}
-// Reviews-Avatars
-
-// Brands-Image
-function Brands_Image_Set(){
-   
-    var brands_img = document.querySelectorAll('.icons-item__brand');
-
-    let array_brands_icon = [bever, braer, leonardo_stone, euro_block,
-                            perfekta, mstera, lcp, galen, recke,
-                            mod_format, decra, engles
-    ];
-    
-    for(let i = 0; i < brands_img.length; i++){
-        brands_img[i].src = array_brands_icon[i];
-    }
-
-}
-// Brands-Image
-
-function Set_Background_Brands_Nav(){
-    let brand_nav_background = document.querySelectorAll('.brands-navigation__container');
-
-    for(let i = 0; i < brand_nav_background.length; i++){
-        brand_nav_background[i].style.background = `url(${brands_nav_back})`;
-    }
-
-}
-
-function Set_Background_Delivery_Nav(){
-    let delivery_nav_background = document.querySelectorAll('.delivery-navigation__container');
-
-    for(let i = 0; i < delivery_nav_background.length; i++){
-        delivery_nav_background[i].style.background = `url(${delivery_nav_back})`;
-    }
-}
-
-function Set_Background_Order_Nav(){
-    let order_nav_background = document.querySelectorAll('.order-navigation__container');
-
-    order_nav_background.forEach(element => {
-        element.style.background = `url(${order_nav_back})`
-    });
-}
-
-function OrderItem_Img(){
-    let orderItemImg = document.querySelectorAll('.item__content_img img');
-
-    orderItemImg.forEach(element => {
-        element.src = order_item
-    });
-}
-
-function Delivery_Set_Icons(){
-    let del_icons_arr = [del_basket_icon, del_push_icon,
-                        del_box_icon, del_geolocation_icon];
-    
-    let del_rule_order__icons = document.querySelectorAll('.rule-order__icon');
-
-    for(let i = 0; i < del_rule_order__icons.length; i++){
-        del_rule_order__icons[i].innerHTML = del_icons_arr[i];
-    }
-}
-
-function Delivery_Set_Icon_Arrow(){
-    let arrow_icons_dom = document.querySelectorAll('.point__icon');
-
-    for(let i = 0; i < arrow_icons_dom.length; i++){
-        arrow_icons_dom[i].innerHTML = del_arrow;
-    }
-}
-
-function Refund_Set_Background(){
-    let ref_back = document.querySelectorAll('.refund-navigation__container');
-
-    for(let i = 0; i < ref_back.length; i++){
-        ref_back[i].style.background = `url(${refund_container_back})`;
-    }
-}
-
-
-// Products-Image
-function Products_Image_Set(){
-
-    let product_img_el = document.querySelectorAll('.product-img');
-
-    let product_img_array = [stoneware, grout, primer, drywall, profile_,
-                            roulette, package_, angle, knauf, screws,
-                            putty, tape
-    ];
-
-    for(let i = 0; i < product_img_el.length; i++){
-        product_img_el[i].src = product_img_array[i];
-    }
-}
-// Products-Image
-
-// Tab-Images
-function Tab_Images_Set(){
-
-    let tab_imgs_el = document.querySelectorAll('.tab-item__img_icon ');
-
-    let tab_img_array = [shower, lumber, linoleum, wallpapers, tools,
-                        gfc, windows, doors, plumbing, paints, eg, interior
-    ];
-
-    for(let i = 0; i < tab_imgs_el.length; i++){
-        tab_imgs_el[i].src = tab_img_array[i];
-    }
-
-}
-// Tab-Images
-
-
 // Favicon
 function Add_Favicon(){
     var link = document.querySelector("link[rel~='shortcut']");
@@ -323,195 +208,8 @@ function Add_Favicon(){
 }
 // Favicon
 
-// Cards-Images
-function Cards_Images(){
-
-    let stock_icons_array = [paint, foarm, grid, metal_tile];
-
-    let stocks_img = document.querySelectorAll('.card-img');
-    
-
-    for(let k = 0; k < stocks_img.length; k++){
-        stocks_img[k].src = stock_icons_array[k];
-    }
-
-    var btn_add = document.querySelectorAll('.btn-add');
-    var btn_remove = document.querySelectorAll('.btn-remove');
-
-    for(let i = 0; i < btn_add.length; i++){
-        btn_add[i].innerHTML = btn_add_card;
-    }
-
-    for(let j = 0; j < btn_remove.length; j++){
-        btn_remove[j].innerHTML = btn_remove_card;
-    }
-
-}
-// Cards-Images
-
-// Slider Images
-function set_background_slider_img(){
-    var slider_container = document.querySelectorAll('.slider-container');
-
-    let count = 1;
-
-    let slider_btn_left = document.querySelectorAll('.slider-btn_left');
-
-    let slider_btn_right = document.querySelectorAll('.slider-btn_right');
-
-    for(let i = 0; i < slider_btn_left.length; i++){
-        slider_btn_left[i].addEventListener('click', function(){
-            count -= 1;
-            if(count % 2 == 0){
-                slider_container[i].style.backgroundImage = `url(${slide_2})`;
-            }else{
-                slider_container[i].style.backgroundImage = `url(${slide_1})`;
-            }
-        })
-    }
-
-    for(let j = 0; j < slider_btn_right.length; j++){
-        slider_btn_right[j].addEventListener('click', function(){
-            count += 1
-            if(count % 2 == 1){
-                slider_container[j].style.backgroundImage = `url(${slide_1})`;
-            }else{
-                slider_container[j].style.backgroundImage = `url(${slide_2})`;
-            }
-        })
-    }
-
-    for(let n = 0; n < slider_container.length; n++){
-        if(count > 0 && count < 2){
-            slider_container[n].style.backgroundImage = `url(${slide_1})`;
-        }
-    }
-
-}
-// Slider Images
-
-// Custom-Panel-Images
-function Set_Img_Panel(){
-
-    let menu_icons = document.querySelectorAll('.menu-icon');
-
-    let menu_icons_array = [profile, order, basket];
-
-    for(let i = 0; i < menu_icons.length; i++){
-        menu_icons[i].src = menu_icons_array[i];
-    }
-
-}
-// Custom-Panel-Images
-
-// Logotype
-function Set_Logo(){
-    var logo = document.querySelectorAll('.menu-logo');
-    for(let i = 0; i < logo.length; i++){
-        logo[i].innerHTML = Logo;
-    }
-
-    var footer_logo = document.querySelectorAll('.footer-item__logo');
-    for(let j = 0; j < footer_logo.length; j ++){
-        footer_logo[j].innerHTML = Footer_Logo;
-    }
-    // footer_logo.innerHTML = Footer_Logo;
-}
-// Logotype
-
-// Search Input Icon
-function Set_search_Icon(){
-    var input_search_icon = document.querySelectorAll('.input-icon');
-
-    for(let i = 0; i < input_search_icon.length; i++){
-        input_search_icon[i].src = search_icon;
-    }
-}
-// Search Input Icon
-
-// Geolocation Cities
-function Add_Img_Geolocation(){
-    var geo_img = document.querySelectorAll('.img-geolocation');
-
-    for(let j = 0; j < geo_img.length; j++){
-        geo_img[j].src = img_geolocation;
-    }
-
-    var footer_geo_img = document.querySelectorAll('.geolocation-img');
-    
-    for(let i = 0; i < footer_geo_img.length; i++){
-        footer_geo_img[i].src = footer_geolocation;
-    }
-
-    let geolocation_cities_icon = document.querySelectorAll('.list-item__content_icon');
-
-    for(let i = 0; i < geolocation_cities_icon.length; i++){
-        geolocation_cities_icon[i].innerHTML = geolocation_arrow;
-    }
-}
-// Geolocation Cities
-
-// Footer Arrow
-function Set_Footer_Arrow(){
-    let footer_icon_arrows = document.querySelectorAll('.footer-nav__content_icon');
-
-    for(let i = 0; i < footer_icon_arrows.length; i++){
-        footer_icon_arrows[i].innerHTML = footer_img_links;
-    }
-}
-// Footer Arrow
-
-// Email Image
-function Set_email_Footer(){
-    var footer_email_img = document.querySelectorAll('.email-img');
-
-    for(let i = 0; i < footer_email_img.length; i++){
-        footer_email_img[i].src = email;
-    }
-}
-// Email Image
-
-// Documentation Link File-Path
-function setLinkFilePath(){
-    let fileLink = document.querySelectorAll('.politic');
-    fileLink.forEach(element => {
-        element.href = linkFilePath;
-    });
-}
-// Documentation Link File-Path
-
 function Webpack_Main(){
     Add_Favicon();
-
-    Add_Img_Geolocation();
-    
-    Set_Logo();
-    Set_search_Icon();
-    Set_Img_Panel();
-    set_background_slider_img();
-    Cards_Images();
-    Tab_Images_Set();
-    Products_Image_Set();
-
-    Brands_Image_Set();
-    Set_Background_Brands_Nav();
-
-    Set_Background_Delivery_Nav();
-    Delivery_Set_Icons();
-    Delivery_Set_Icon_Arrow();
-
-    Refund_Set_Background();
-
-    Set_Background_Order_Nav();
-    OrderItem_Img();
-
-    Set_Avatars();
-    Set_About_Fon();
-    Set_email_Footer();
-    Set_Footer_Arrow();
-    Set_Cards_Pay_Img();
-
-    Geo_btn_Close();
 
     SignIn_Button_Icon_Close();
     SignUp_Button_Icon_Close();
@@ -519,7 +217,59 @@ function Webpack_Main(){
     SignIn_Close_Modal();
     SignUp_Close_Modal();
 
-    setLinkFilePath();
+    SetSvgIcon(document.querySelectorAll('.geolocation-btn__close'), geo_btn_close);
+
+    SetSvgIcon(document.querySelectorAll('.point__icon'), del_arrow);
+
+    SetSvgIcon(document.querySelectorAll('.btn-add'), btn_add_card);
+    SetSvgIcon(document.querySelectorAll('.btn-remove'), btn_remove_card);
+
+    SetSvgIcon(document.querySelectorAll('.list-item__content_icon'), geolocation_arrow);
+    SetSvgIcon(document.querySelectorAll('.footer-nav__content_icon'), footer_img_links);
+
+    SetSvgIcons(document.querySelectorAll('.rule-order__icon'), del_icons_arr)
+
+    SetSrcImg(document.querySelectorAll('.footer-card-img'), cards_imgs_array);
+
+    SetSrcImg(document.querySelectorAll('.avatar-img'), avatars_array);
+
+    SetSrcImg(document.querySelectorAll('.icons-item__brand'), array_brands_icon)
+
+    SetSrcImg(document.querySelectorAll('.product-img'), product_img_array)
+
+    SetSrcImg(document.querySelectorAll('.tab-item__img_icon'), tab_img_array)
+
+    SetSrcImg(document.querySelectorAll('.card-img'), stock_icons_array)
+
+    SetSrcImg(document.querySelectorAll('.menu-icon'), menu_icons_array)
+
+    SetSrcOnlyOnceImg(document.querySelectorAll('.trace-img'), traced_img)
+
+    SetSrcOnlyOnceImg(document.querySelectorAll('.item__content_img img'), order_item)
+
+    SetSrcOnlyOnceImg(document.querySelectorAll('.input-icon'), search_icon);
+
+    SetSrcOnlyOnceImg(document.querySelectorAll('.img-geolocation'), img_geolocation);
+    SetSrcOnlyOnceImg(document.querySelectorAll('.geolocation-img'), footer_geolocation);
+
+    SetSrcOnlyOnceImg(document.querySelectorAll('.email-img'), email);
+
+    SetBackgroundFon(document.querySelectorAll('.about-container'), about_fon)
+
+    SetBackgroundFon(document.querySelectorAll('.brands-navigation__container'), brands_nav_back)
+
+    SetBackgroundFon(document.querySelectorAll('.delivery-navigation__container'), delivery_nav_back)
+
+    SetBackgroundFon(document.querySelectorAll('.order-navigation__container'), order_nav_back)
+
+    SetBackgroundFon(document.querySelectorAll('.refund-navigation__container'), refund_container_back)
+
+    Slider(document.querySelectorAll('.slider-container'), document.querySelectorAll('.slider-btn_left'), document.querySelectorAll('.slider-btn_right'), slide_1, slide_2);
+
+    SetLogo(document.querySelectorAll('.menu-logo'), Logo)
+    SetLogo(document.querySelectorAll('.footer-item__logo'), Footer_Logo)
+
+    Set_Link_Path_File(document.querySelectorAll('.politic'), linkFilePath);
 }
 
 export default Webpack_Main;

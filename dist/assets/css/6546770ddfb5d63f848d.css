@@ -860,8 +860,6 @@ input {
 #page .brands-navigation__container {
   max-width: 1360px;
   margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 #page .brands-navigation__container_content {
   font-family: "Manrope", sans-serif;
@@ -893,8 +891,6 @@ input {
 #page .order-navigation__container {
   max-width: 1360px;
   margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 #page .order-navigation__container_content {
   font-family: "Manrope", sans-serif;
@@ -1021,8 +1017,6 @@ input {
 #page .delivery-navigation__container {
   max-width: 1360px;
   margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 #page .delivery-navigation__container_content {
   font-family: "Manrope", sans-serif;
@@ -1166,8 +1160,6 @@ input {
 #page .refund-navigation__container {
   max-width: 1360px;
   margin: 0 auto;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 #page .refund-navigation__container_content {
   font-family: "Manrope", sans-serif;
@@ -1360,8 +1352,6 @@ input {
   margin: 0 auto;
   height: 340px;
   margin-top: 40px;
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 #page .contacts-info {
   width: 100%;
@@ -1410,10 +1400,6 @@ input {
   max-width: 1360px;
   margin: 0 auto;
   margin-top: 40px;
-  background-blend-mode: multiply;
-  background: linear-gradient(73.49deg, #F6F6F6 12.24%, rgba(255, 255, 255, 0) 49.34%);
-  background-size: cover;
-  background-repeat: no-repeat;
   -webkit-transition: background-image 0.2s ease-in-out;
   transition: background-image 0.2s ease-in-out;
 }
