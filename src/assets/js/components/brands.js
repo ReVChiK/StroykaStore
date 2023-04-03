@@ -1,11 +1,11 @@
-import { TextContent } from "./text";
+import {SetAtrributes_BrandList, SetAttribute_ButtonList, TextContent } from "./text";
 
 // Structure
 let array_top_menu_kinds = [
     'Все', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
     'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
     'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Z',
-    'А', 'Б', 'В', 'Г', 'Д', 'Е', 'Ж', 'З', 'И',
+    'А', 'Б', 'Г', 'Д', 'Е', 'Ж', 'З', 'И',
     'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У',
     'Ф', 'Ш', 'Э', 'Я'
 ]
@@ -76,12 +76,55 @@ export function Brands_Kinds(){
 
     TextContent(document.querySelectorAll('.kind-btn'), array_top_menu_kinds);
 
+    SetAttribute_ButtonList(document.querySelectorAll('.kind-btn'), array_top_menu_kinds)
+
 }
 
 export function Brands_List(){
     
     TextContent(document.querySelectorAll('.brands-letter'), arr_letter);
 
+    SetAtrributes_BrandList(document.querySelectorAll('.brands-list__item'), arr_letter)
+
     TextContent(document.querySelectorAll('.item_list__link'), arr_list);
     
+}
+
+export function SortBrands(selector_btn, selector_brands){
+
+    for(let i = 0; i < selector_btn.length; i++){
+
+        selector_btn[i].onclick = (e)=>{
+
+            let elem = e.target;
+
+            if(elem.getAttribute('data-button-letter') === 'Все'){
+                selector_brands.forEach(element => {
+                    element.style.display = 'block';
+                });
+
+                selector_btn.forEach(btn=>{
+                    btn.children[0].classList.remove('active');
+                })
+
+                elem.classList.add('active');
+            }else{
+                if(elem.getAttribute('data-button-letter') === selector_brands[i-1].getAttribute('data-letter')){
+                    selector_brands.forEach(elem=>{
+                        elem.style.display = 'none';
+                    })
+
+                    selector_btn.forEach(btn=>{
+                        btn.children[0].classList.remove('active');
+                    })
+
+                    elem.classList.add('active');
+
+                    selector_brands[i-1].style.display = 'block';
+                }
+            }
+
+        }
+    }
+
 }

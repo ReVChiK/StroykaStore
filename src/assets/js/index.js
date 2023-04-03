@@ -1,18 +1,24 @@
 import '../sass/style.sass';
-import Webpack_Main from './functions.js';
-import Main from './events/events';
-import { Brands_Kinds, Brands_List } from './components/brands';
-import { OpenSignInWindow, OpenSignUpWindow } from './components/profile';
+
+import Events from './events/events';
+import Functions from './functions.js';
+
+import Profile from './components/profile';
+
+function IndexProfile(){
+    let profile = new Profile()
+    profile.OpenSignInWindow();
+    profile.SignIn_Close_Modal();
+
+    profile.OpenSignUpWindow();
+    profile.SignUp_Close_Modal();
+}
 
 function Index(){
-    Webpack_Main();
-    Main();
+    Functions();
+    Events();
 
-    Brands_Kinds();
-    Brands_List();
-
-    OpenSignInWindow();
-    OpenSignUpWindow();
+    IndexProfile();
 }
 
 window.addEventListener('DOMContentLoaded', Index);

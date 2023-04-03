@@ -162,20 +162,6 @@ function SignIn_Button_Icon_Close(){
 }
 // Sign-In
 
-// Sign-In CLose Modal
-function SignIn_Close_Modal(){
-    var signIn_btn_close = document.querySelectorAll('.sign-in__btn_close');
-
-    var signInModal = document.querySelectorAll('.sign-in');
-
-    for(let i = 0; i < signIn_btn_close.length; i++){
-        signIn_btn_close[i].addEventListener('click', ()=>{
-            signInModal[i].style.display = 'none'
-        })
-    }
-}
-// Sign-In Close Modal
-
 // Sign-Up
 function SignUp_Button_Icon_Close(){
     var signUp_btn_exit = document.querySelectorAll('.sign-up__btn_close');
@@ -186,20 +172,6 @@ function SignUp_Button_Icon_Close(){
 }
 // Sign-Up
 
-// Sign-Up Close Modal
-function SignUp_Close_Modal(){
-    var signUp_btn_close = document.querySelectorAll('.sign-up__btn_close');
-
-    var signUpModal = document.querySelectorAll('.sign-up');
-
-    for(let i = 0; i < signUp_btn_close.length; i++){
-        signUp_btn_close[i].addEventListener('click', ()=>{
-            signUpModal[i].style.display = 'none'
-        })
-    }
-}
-// Sign-Up Close Modal
-
 // Favicon
 function Add_Favicon(){
     var link = document.querySelector("link[rel~='shortcut']");
@@ -208,14 +180,11 @@ function Add_Favicon(){
 }
 // Favicon
 
-function Webpack_Main(){
+function Functions(){
     Add_Favicon();
 
     SignIn_Button_Icon_Close();
     SignUp_Button_Icon_Close();
-
-    SignIn_Close_Modal();
-    SignUp_Close_Modal();
 
     SetSvgIcon(document.querySelectorAll('.geolocation-btn__close'), geo_btn_close);
 
@@ -272,4 +241,4 @@ function Webpack_Main(){
     Set_Link_Path_File(document.querySelectorAll('.politic'), linkFilePath);
 }
 
-export default Webpack_Main;
+export default Functions;
