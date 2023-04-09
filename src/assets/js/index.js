@@ -7,11 +7,15 @@ import Profile from './components/profile';
 
 function IndexProfile(){
     let profile = new Profile()
-    profile.OpenSignInWindow();
+
+    profile.redirectProfile();
+
     profile.SignIn_Close_Modal();
 
     profile.OpenSignUpWindow();
     profile.SignUp_Close_Modal();
+
+    profile.userData_Profile();
 }
 
 function Index(){

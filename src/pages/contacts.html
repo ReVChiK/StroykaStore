@@ -21,7 +21,7 @@
 
                 <div class="geolocation-content__input">
                     <input id="geo-choose-cities" type="text" placeholder="Поиск">
-                    <div class="geo-input_icon">
+                    <div class="geo-input_icon geo-input__search">
                         <img class="input-icon" src="" alt="search-icon">
                     </div>
                 </div>
@@ -32,27 +32,37 @@
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Москва</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Екатеринбург</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Челябинск</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Уфа</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Воронеж</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
                             
                         </ul>
@@ -60,27 +70,37 @@
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Санкт-Петербург</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Казань</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Самара</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Омск</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Пермь</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                         </ul>
@@ -88,32 +108,134 @@
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Новосибирск</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Нижний Новгород</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Ростов-на-Дону</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Красноярск</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                             <div class="list-item__content">
                                 <div class="list-item__content_icon"></div>
-                                <li class="list-item__content_city">Волгоград</li>
+                                <li class="list-item__content_city">
+                                    <p class="city"></p>
+                                </li>
                             </div>
 
                         </ul>
                     </div>
                 </div>
+            </div>
+        </div>
+
+        <div class="sign-in">
+            <div class="sign-in__btn_close"></div>
+            <div class="sign-in__content">
+
+                <div class="sign-in__content_container">
+
+                    <div class="sign-in__content_container-title">
+                        <h1>Вход</h1>
+                    </div>
+
+                    <div class="sign-in__content_container-data">
+
+                        <div class="sign-in__content_container-data__email">
+                            <label for="email">E-mail</label>
+                            <input id="sign-in__data_email" class="input__email sign-in__input_email" name="email" type="email" placeholder="youmail@mail.com" required>
+                        </div>
+
+                        <div class="sign-in__content_container-data__password">
+                            <label for="password">Пароль</label>
+                            <input id="sign-in__data_password" class="input__password sign-in__input_password" name="password" type="password" 
+                            min="8"
+                            max="16"
+                            placeholder="****************" required>
+                            <div class="button__password_forget">
+                                <a href="#" class="btn__forget_password">Забыли пароль?</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="sign-in__content_container-buttons">
+                        <button class="btn btn__sign_in">
+                            Войти
+                        </button>
+                        <button class="btn btn__create_account">
+                            Создать учетную запись
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sign-up">
+            <div class="sign-up__btn_close"></div>
+            <div class="sign-up__content">
+
+                <div class="sign-up__content_container">
+
+                    <div class="sign-up__content_container-title">
+                        <h1>Регистрация</h1>
+                    </div>
+
+                    <div class="sign-up__content_container-data">
+
+                        <div class="sign-up__content_container-data__name data__item">
+                            <label for="name">Имя</label>
+                            <input id="sign-up__data_name" class="input__name sign-up__input_name sign-up__input" name="name" type="text" placeholder="Богдан" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__email data__item">
+                            <label for="email">E-mail</label>
+                            <input id="sign-up__data_email" class="input__email sign-up__input_email sign-up__input" name="email" type="email" 
+                            placeholder="youmail@mail.com" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__password data__item">
+                            <label for="password">Новый пароль</label>
+                            <input id="sign-up__data_password" class="input__password sign-up__inputNew_password sign-up__input" name="password" type="password" 
+                            placeholder="****************" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__confirm-password data__item">
+                            <label for="confirm-password">Подтверждение пароля</label>
+                            <input id="sign-up__data_confirm-password"class="input__confirm_password sign-up__inputConfirm_password sign-up__input" name="confirm-password" type="password" 
+                            placeholder="****************" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="sign-up__content_container-buttons">
+                        <button class="btn btn__sign_up">
+                            Зарегистрироваться
+                        </button>
+                    </div>
+
+                </div>
+
             </div>
         </div>
 
@@ -197,7 +319,7 @@
                                         <img class="menu-icon menu-profile" src="" alt="profile">
                                     </div>
                                     <div class="menu-item__link">
-                                        <a class="item-link" href="#">Профиль</a>
+                                        <a class="item-link menu__link_profile" href="#">Профиль</a>
                                     </div>
 
                                 </div>
@@ -207,7 +329,7 @@
                                         <img class="menu-icon menu-orders" src="" alt="orders">
                                     </div>
                                     <div class="menu-item__link">
-                                        <a class="item-link" href="#">Заказы</a>
+                                        <a class="item-link menu__link_order" href="./pages/order.html">Заказы</a>
                                     </div>
                                 </div>
 
@@ -216,7 +338,7 @@
                                         <img class="menu-icon menu-basket" src="" alt="basket">
                                     </div>
                                     <div class="menu-item__link">
-                                        <a class="item-link" href="#">Корзина</a>
+                                        <a class="item-link menu__link_basket" href="#">Корзина</a>
                                     </div>
                                 </div>
                             </div>
