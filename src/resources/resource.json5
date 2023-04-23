@@ -1,0 +1,14 @@
+{
+    products:[
+        {
+            name: 'Tomato',
+            description: 'red, smile',
+            price: 349
+        },
+        {
+            name: 'Potato',
+            description: 'dirty, but funny',
+            price: 129
+        }
+    ]
+}

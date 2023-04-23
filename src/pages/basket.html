@@ -1,13 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="" type="image/x-icon">
-    <title>Стройка Стор - Заказы</title>
-<script defer src=".././assets/js/bd32407b5df617ecfbc9.js"></script><script defer src=".././assets/js/d132df58d1d046d578aa.js"></script><script defer src=".././assets/js/9b7aad67d3adea42a8a7.js"></script><link href=".././assets/css/9e6c236b062a569e96a0.css" rel="stylesheet"></head>
+    <title>Стройка Стор - Корзина</title>
+</head>
 <body>
+    
     <div id="page">
 
         <div class="geolocation">
@@ -255,7 +256,7 @@
                         </div>
 
                         <div class="top-menu_listing">
-                            <ul class="top-menu_listing__content">
+                            <ul  class="top-menu_listing__content">
                                 <li class="listing-item">
                                     <a href="./brands.html" class="listing-item_link">Бренды</a>
                                 </li>
@@ -328,7 +329,7 @@
                                         <img class="menu-icon menu-orders" src="" alt="orders">
                                     </div>
                                     <div class="menu-item__link">
-                                        <a class="item-link menu__link_order" href="#">Заказы</a>
+                                        <a class="item-link menu__link_order" href="./pages/order.html">Заказы</a>
                                     </div>
                                 </div>
 
@@ -385,82 +386,137 @@
             </div>
         </header>
 
-        <div class="order-navigation">
-            <div class="order-navigation__container">
-                <div class="order-navigation__container_content">
+        <div class="basket-navigation">
+            <div class="basket-navigation__container">
+                <div class="basket-navigation__container_content">
 
-                    <div class="order_content__nav">
-                        <p>Главная → Все заказы</p>
+                    <div class="basket_content__nav">
+                        <p>Главная → Корзина</p>
                     </div>
 
-                    <div class="order_content__title">
-                        <h1>Заказы</h1>
+                    <div class="basket_content__title">
+                        <h1>Корзина</h1>
                     </div>
+
                 </div>
             </div>
         </div>
 
-        <div class="order-list">
-            <div class="order-list__container">
-                <div class="order-list__container_content">
+        <div class="basket-list">
+            <div class="basket-list__container">
+                <div class="basket-list__container_content">
 
-                    <div class="order-list__container_content-item">
-                        <div class="item__content">
+                    <div class="basket-list__panel">
+
+                        <div class="basket-list__panel_summary">
+                            <div class="basket-list__panel_summary-content">
+
+                                <div class="summary__title summary__item">
+                                    <h6>Итого</h6>
+                                </div>
     
-                            <div class="item__content_img">
-                                <img src="#" alt="Изображение заказа">
-                            </div>
+                                <div class="summary__amount summary__item">
+                                    <div class="summary__amount_content summary__item_content">
     
-                            <div class="item__content_data">
-                                <div class="data__content">
+                                        <div class="summary__amount_content-title summary__item_content-title">
+                                            <p>Количество товара</p>
+                                        </div>
     
-                                    <div class="data__content_name">
-                                        <p>
-                                            Плита OSB-3 Kronospan 2500 х 1250 х 9 мм, хвойные породы
-                                        </p>
+                                        <div class="summary__amount_content-amount summary__item_content-text">
+                                            <p>3 шт.</p>
+                                        </div>
                                     </div>
+                                </div>
     
-                                    <div class="data__content_price">
-                                        <h4>995 <span>₽</span> </h4>
+                                <div class="summary__price summary__item">
+                                    <div class="summary__price_content summary__item_content">
+    
+                                        <div class="summary__price_content-title summary__item_content-title">
+                                            <p>Товаров на сумму</p>
+                                        </div>
+    
+                                        <div class="summary__price_content-price summary__item_content-text">
+                                            <p>3160₽</p>
+                                        </div>
                                     </div>
+                                </div>
     
-                                    <div class="data__content_amount">
-                                        <p>2 <span>шт.</span></p>
+                                <div class="summary__provider summary__item">
+                                    <div class="summary__provider_content summary__item_content">
+    
+                                        <div class="summary__provider_content-title summary__item_content-title">
+                                            <p>Поставщик</p>
+                                        </div>
+    
+                                        <div class="summary__provider_content-provider summary__item_content-text">
+                                            <p>Аксон</p>
+                                        </div>
                                     </div>
-    
                                 </div>
                             </div>
-    
-                            <div class="item__content_info">
-                                <div class="info__content">
-    
-                                    <div class="info__content_item">
-                                        
-                                        <div class="info__content_item-data info__upper">
+
+                        </div>
+
+                        <div class="basket-list__panel_button">
+                            <div class="basket-list__panel_button-content">
+                                <button id="basket-order">Оформить заказ</button>
+                            </div>
+                        </div>
+
+                        <div class="basket-list__panel_description">
+
+                        </div>
+                    </div>
+
+                    <div class="basket-list__items">
+                        <div class="basket__item">
+                            <div class="basket__item_content">
+
+                                <div class="basket__item_content-preview">
+                                    <img src="#" alt="Товар">
+                                </div>
+
+                                <div class="basket__item_content-data">
+                                    <div class="basket__item_content-data__container">
+
+                                        <div class="basket__item_content-data__container_title">
                                             <p>
-                                                Заказ от 24 марта
+                                                Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)
                                             </p>
                                         </div>
-    
-                                        <div class="info__content_item-key info__bottom">
-                                            <p>34078988-0047</p>
+
+                                        <div class="basket__item_content-data__container_price">
+                                            <p>
+                                                449 ₽
+                                            </p>
+                                        </div>
+
+                                        <div class="basket__item_content-data__container_quantity">
+                                            <div class="quantity__content">
+                                                <button class="basket__btn_add"></button>
+                                                <div class="basket-quantity">
+                                                    <input class="quantity" type="text" value="1" placeholder="...">
+                                                </div>
+                                                <button class="basket__btn_remove"></button>
+                                            </div>
                                         </div>
                                     </div>
-    
-                                    <div class="info__content_item">
-    
-                                        <div class="info__content_item-title info__upper">
-                                            <p>Статус</p>
+                                </div>
+
+                                <div class="basket__item_content-code">
+                                    <div class="basket__item_content-code__container">
+
+                                        <div class="basket__product_code">
+                                            <p>Код товара:</p>
+                                            <div class="code">34078988-0047</div>
                                         </div>
-    
-                                        <div class="info__content_item-status info__bottom">
-                                            <p>Оплачен</p>
+
+                                        <div class="basket__product_button">
+                                            <button class="basket__code_btn-remove">Удалить товар</button>
                                         </div>
                                     </div>
-    
                                 </div>
                             </div>
-    
                         </div>
                     </div>
 
@@ -558,14 +614,14 @@
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="./brands.html" class="nav-item__link">Бренды</a>
+                                    <a href="./pages/brands.html" class="nav-item__link">Бренды</a>
                                 </li>
                             </div>
 
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="./contacts.html" class="nav-item__link">Контакты</a>
+                                    <a href="./pages/contacts.html" class="nav-item__link">Контакты</a>
                                 </li>
                             </div>
 
@@ -585,21 +641,21 @@
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="./delivery.html" class="nav-item__link">Доставка</a>
+                                    <a href="./pages/delivery.html" class="nav-item__link">Доставка</a>
                                 </li>
                             </div>
 
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="./refund.html" class="nav-item__link">Возврат</a>
+                                    <a href="./pages/refund.html" class="nav-item__link">Возврат</a>
                                 </li>
                             </div>
 
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="./documentation.html" class="nav-item__link">Документация</a>
+                                    <a href="./pages/documentation.html" class="nav-item__link">Документация</a>
                                 </li>
                             </div>
 
@@ -639,5 +695,5 @@
         </footer>
 
     </div>
+
 </body>
-</html>

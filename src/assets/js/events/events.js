@@ -1,7 +1,9 @@
-import { Brands_Kinds, Brands_List, SortBrands } from "../components/brands";
+import { Catalog_Providers_Component, Choose_Provider } from "../catalog";
+import { Brands_List, Brand_Button_BottomMenu, Brand_Button_TopMenu, SortBrands } from "../components/brands";
 import { ReviewsCarousel } from "../components/carousel";
 import { Delivery_Info } from "../components/delivery";
-import { Choose_Geolocation_Cities, Close_Modal_Window, Hover_Geolocation_Elements, Open_Modal_Window, searchGeo_List, Search_Gelocation_Cities, SetCities_Geolocation } from "../components/geolocation";
+import { Choose_Geolocation_Cities, Close_Modal_Window, Hover_Geolocation_Elements, Open_Modal_Window, Search_Gelocation_Cities, SetCities_Geolocation } from "../components/geolocation";
+import GetData from "../components/resource";
 import { Socks_Card_Quantity } from "../components/sockCard";
 
 function Home_Page(){
@@ -29,8 +31,11 @@ function Hover_Elements_Footer(){
 }
 
 function Brands(){
-    Brands_Kinds();
     Brands_List();
+
+    Brand_Button_TopMenu(document.querySelectorAll('#brands-top-menu'));
+    Brand_Button_BottomMenu(document.querySelectorAll('#brands-bottom-menu'));
+
     SortBrands(document.querySelectorAll('.kind'), document.querySelectorAll('.brands-list__item'));
 }
 
@@ -47,6 +52,11 @@ function Geo(){
     Choose_Geolocation_Cities(document.querySelectorAll('.cities-name'), document.querySelectorAll('.list-item__content_city'))
 }
 
+function Event_Catalog(){
+    Catalog_Providers_Component(document.querySelectorAll('.catalog-list__container_providers-content'));
+    Choose_Provider(document.querySelectorAll('.provider__item'));
+}
+
 function Events(){
     Home_Page();
     Hover_Elements_Footer();
@@ -59,6 +69,10 @@ function Events(){
     Socks_Card_Quantity();
 
     ReviewsCarousel();
+
+    Event_Catalog();
+
+    //GetData();
 }
 
 export default Events;

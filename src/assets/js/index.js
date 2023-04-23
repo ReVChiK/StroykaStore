@@ -4,6 +4,7 @@ import Events from './events/events';
 import Functions from './functions.js';
 
 import Profile from './components/profile';
+import { RedirectCatalog } from './catalog';
 
 function IndexProfile(){
     let profile = new Profile()
@@ -16,6 +17,7 @@ function IndexProfile(){
     profile.SignUp_Close_Modal();
 
     profile.userData_Profile();
+    profile.exitProfile();
 }
 
 function Index(){
@@ -23,6 +25,8 @@ function Index(){
     Events();
 
     IndexProfile();
+
+    RedirectCatalog();
 }
 
 window.addEventListener('DOMContentLoaded', Index);

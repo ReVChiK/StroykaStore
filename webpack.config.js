@@ -2,6 +2,7 @@ const {resolve} = require('path');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
+const json5 = require('json5');
 
 module.exports = {
 
@@ -64,6 +65,13 @@ module.exports = {
             {
                 test: /\.svg$/,
                 loader: 'svg-inline-loader'
+            },
+            {
+                test: /\.json5$/i,
+                type: 'json',
+                parser: {
+                    parse: json5.parse
+                }
             }
         ]
     },
@@ -74,6 +82,12 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/index.html'
         }),
+
+        new HtmlWebpackPlugin({
+            template: './src/catalog/catalog.html',
+            filename: './catalog/catalog.html'
+        }),
+
         new HtmlWebpackPlugin({
             template: './src/pages/brands.html',
             filename: './pages/brands.html'
@@ -101,6 +115,10 @@ module.exports = {
         new HtmlWebpackPlugin({
             template: './src/pages/order.html',
             filename: './pages/order.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: './src/pages/basket.html',
+            filename: './pages/basket.html'
         }),
         new MiniCssExtractPlugin({
             filename: './assets/css/[contenthash].css'

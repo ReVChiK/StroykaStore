@@ -77,7 +77,8 @@ import mastercard from '../img/footer_cards/MasterCard.png';
 import maestro from '../img/footer_cards/Maestro.png';
 import mir from '../img/footer_cards/Mir.png';
 
-import order_item from '../img/order/order_item.png';
+import basketBackground from '../img/basket/basketBack.png';
+import catalogFon from '../img/catalog/CatalogFon.png';
 
 // png
 
@@ -86,6 +87,8 @@ import linkFilePath from '../docs/Политика обработки персо
 //docs
 
 // svg
+
+import catalogIcon from '../icons/catalog/catalog-icon.svg';
 
 import geolocation_arrow from '../img/arrow.svg';
 import geo_btn_close from '../img/Close.svg';
@@ -104,12 +107,20 @@ import del_box_icon from '../img/delivery/icons/delivery-icons-box.svg';
 import del_geolocation_icon from '../img/delivery/icons/delivery-icons-geolocation.svg';
 
 import del_arrow from '../img/delivery/icons/delivery_arrow.svg';
+
+import basketInfoIcon from '../icons/basket/info.svg';
+import basketCarIcon from '../icons/basket/car.svg';
+import basketBoxIcon from '../icons/basket/box.svg';
 // svg
 
 // functions
-import { SetLogo, SetSvgIcon, SetSvgIcons } from './components/svg';
-import { SetBackgroundFon, SetSrcImg, SetSrcOnlyOnceImg, Slider } from './components/img';
-import Set_Link_Path_File from './components/file';
+import { SetLogo, SetSvgIcon, SetSvgIcons } from './abstract_components/svg';
+import { SetBackgroundFon, SetSrcImg, SetSrcOnlyOnceImg, Slider } from './abstract_components/img';
+import Set_Link_Path_File from './abstract_components/file';
+import { Add_Brand_Image } from './components/brands';
+import { Add_Category } from './components/categories';
+import { BasketDescription_Item } from './components/basket';
+import { ProductItem } from './components/product';
 // functions
 
 // Structure
@@ -148,6 +159,8 @@ let tab_img_array = [
 let stock_icons_array = [paint, foarm, grid, metal_tile];
 
 let menu_icons_array = [profile, order, basket];
+
+let basket_icons_array = [basketInfoIcon, basketCarIcon, basketBoxIcon];
 
 // Structure
 
@@ -193,8 +206,13 @@ function Functions(){
     SetSvgIcon(document.querySelectorAll('.btn-add'), btn_add_card);
     SetSvgIcon(document.querySelectorAll('.btn-remove'), btn_remove_card);
 
+    SetSvgIcon(document.querySelectorAll('.basket__btn_add'), btn_add_card);
+    SetSvgIcon(document.querySelectorAll('.basket__btn_remove'), btn_remove_card);
+
     SetSvgIcon(document.querySelectorAll('.list-item__content_icon'), geolocation_arrow);
     SetSvgIcon(document.querySelectorAll('.footer-nav__content_icon'), footer_img_links);
+
+    SetSvgIcon(document.querySelectorAll('.btn-catalog__content_icon'), catalogIcon);
 
     SetSvgIcons(document.querySelectorAll('.rule-order__icon'), del_icons_arr)
 
@@ -202,11 +220,7 @@ function Functions(){
 
     SetSrcImg(document.querySelectorAll('.avatar-img'), avatars_array);
 
-    SetSrcImg(document.querySelectorAll('.icons-item__brand'), array_brands_icon)
-
     SetSrcImg(document.querySelectorAll('.product-img'), product_img_array)
-
-    SetSrcImg(document.querySelectorAll('.tab-item__img_icon'), tab_img_array)
 
     SetSrcImg(document.querySelectorAll('.card-img'), stock_icons_array)
 
@@ -214,7 +228,7 @@ function Functions(){
 
     SetSrcOnlyOnceImg(document.querySelectorAll('.trace-img'), traced_img)
 
-    SetSrcOnlyOnceImg(document.querySelectorAll('.item__content_img img'), order_item)
+    SetSrcOnlyOnceImg(document.querySelectorAll('.item__content_img img'), paint)
 
     SetSrcOnlyOnceImg(document.querySelectorAll('.input-icon'), search_icon);
 
@@ -222,6 +236,8 @@ function Functions(){
     SetSrcOnlyOnceImg(document.querySelectorAll('.geolocation-img'), footer_geolocation);
 
     SetSrcOnlyOnceImg(document.querySelectorAll('.email-img'), email);
+
+    SetSrcOnlyOnceImg(document.querySelectorAll('.basket__item_content-preview img'), paint)
 
     SetBackgroundFon(document.querySelectorAll('.about-container'), about_fon)
 
@@ -233,12 +249,24 @@ function Functions(){
 
     SetBackgroundFon(document.querySelectorAll('.refund-navigation__container'), refund_container_back)
 
+    SetBackgroundFon(document.querySelectorAll('.basket-navigation__container'), basketBackground);
+
+    SetBackgroundFon(document.querySelectorAll('.catalog-navigation__container'), catalogFon);
+
     Slider(document.querySelectorAll('.slider-container'), document.querySelectorAll('.slider-btn_left'), document.querySelectorAll('.slider-btn_right'), slide_1, slide_2);
 
     SetLogo(document.querySelectorAll('.menu-logo'), Logo)
     SetLogo(document.querySelectorAll('.footer-item__logo'), Footer_Logo)
 
     Set_Link_Path_File(document.querySelectorAll('.politic'), linkFilePath);
+
+    Add_Brand_Image(document.querySelectorAll('#brands'), array_brands_icon.length, array_brands_icon);
+
+    Add_Category(document.querySelectorAll('#categories'), tab_img_array.length, tab_img_array);
+
+    BasketDescription_Item(document.querySelectorAll('.basket-list__panel_description'), basket_icons_array);
+
+    ProductItem(document.querySelectorAll('.products-container__cards_content'), product_img_array);
 }
 
 export default Functions;

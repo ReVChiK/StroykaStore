@@ -1,14 +1,4 @@
-import {SetAtrributes_BrandList, SetAttribute_ButtonList, TextContent } from "./text";
-
-// Structure
-let array_top_menu_kinds = [
-    'Все', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
-    'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
-    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Z',
-    'А', 'Б', 'Г', 'Д', 'Е', 'Ж', 'З', 'И',
-    'К', 'Л', 'М', 'Н', 'О', 'П', 'Р', 'С', 'Т', 'У',
-    'Ф', 'Ш', 'Э', 'Я'
-]
+import {SetAtrributes_BrandList, TextContent } from "../abstract_components/text";
 
 let arr_letter = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
@@ -70,15 +60,12 @@ let arr_list = [
     'Тритон', 'Уют', 'Фаско', 'Фертика', 'Формат', 'Фрекен Бок', 'Шахтинская плитка', 
     'Штрих', 'ЭКО', 'Эко НОМ', 'Эксперт', 'Яр краски', 'Ярославский антисептик'
 ]
-// Structure
 
-export function Brands_Kinds(){
-
-    TextContent(document.querySelectorAll('.kind-btn'), array_top_menu_kinds);
-
-    SetAttribute_ButtonList(document.querySelectorAll('.kind-btn'), array_top_menu_kinds)
-
-}
+const brands_kind = [
+    'bever', 'braer', 'leonardo_stone', 'euro_block',
+    'perfekta', 'mstera', 'lcp', 'galen', 'recke', 
+    'mod_format', 'decra', 'engles'
+]
 
 export function Brands_List(){
     
@@ -127,4 +114,85 @@ export function SortBrands(selector_btn, selector_brands){
         }
     }
 
+}
+
+export function Add_Brand_Image(parentSelector, len, arr_img){
+
+    for(let i = 0; i < len; i++){
+
+        parentSelector.forEach(selector=>{
+
+            const brandIconItem = document.createElement('div');
+            brandIconItem.classList.add('icons-item');
+            brandIconItem.setAttribute('data-brand-kind', brands_kind[i])
+
+            const brandImgItem = document.createElement('img');
+            brandImgItem.classList.add('icons-item__brand');
+            brandImgItem.src = `${arr_img[i]}`;
+            brandImgItem.alt = "brand";
+
+            brandIconItem.append(brandImgItem);
+
+            selector.appendChild(brandIconItem)
+
+        })
+    }
+
+}
+
+let array_top_menu_kind = [
+    'Все', 'A', 'B', 'C', 'D', 'E', 'F', 'G',
+    'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P',
+    'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'Z'
+]
+
+export function Brand_Button_TopMenu(parentSelector){
+    for(let i = 0; i < array_top_menu_kind.length; i++){
+        parentSelector.forEach(selector => {
+            
+            const buttonTopKind = document.createElement('div');
+            buttonTopKind.classList.add('kind');
+
+            const buttonTopKindLetter = document.createElement('button');
+
+            if(i == 0){
+                buttonTopKindLetter.classList.add('kind-btn', 'all', 'active');
+            }else{
+                buttonTopKindLetter.classList.add('kind-btn', 'default')
+            }
+
+            buttonTopKindLetter.textContent = array_top_menu_kind[i];
+            buttonTopKindLetter.setAttribute('data-button-letter', array_top_menu_kind[i]);
+
+            buttonTopKind.append(buttonTopKindLetter);
+
+            selector.appendChild(buttonTopKind);
+
+        });
+    }
+}
+
+let array_bottom_menu_kind = [
+    'А', 'Б', 'Г', 'Д', 'Е', 'Ж', 'З', 'И', 'К', 'Л', 'М', 
+    'Н', 'О', 'П', 'Р', 'С', 'Т', 'У', 'Ф', 'Ш', 'Э', 'Я'
+]
+
+export function Brand_Button_BottomMenu(parentSelector){
+    for(let i = 0; i < array_bottom_menu_kind.length; i++){
+        parentSelector.forEach(selector=>{
+
+            const buttonBottomKind = document.createElement('div');
+            buttonBottomKind.classList.add('kind');
+
+            const buttonBottomKindLetter = document.createElement('button');
+            buttonBottomKindLetter.classList.add('kind-btn', 'default')
+            buttonBottomKindLetter.textContent = array_bottom_menu_kind[i];
+            buttonBottomKindLetter.setAttribute('data-button-letter', array_bottom_menu_kind[i]);
+
+            buttonBottomKind.append(buttonBottomKindLetter);
+
+            selector.appendChild(buttonBottomKind);
+
+        })
+    }
 }

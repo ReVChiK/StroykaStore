@@ -201,6 +201,7 @@
                         background-color: #FCEC41
                     .btn__create_account
                         border: 1px solid #D1D1D3
+                        background-color: #fff
     .sign-up
         width: 100%
         height: 100%
@@ -363,25 +364,13 @@
                                     cursor: pointer
                                     &:hover .btn-catalog__content_text
                                         color: white
-                                    &:hover .line
-                                        background-color: white
+                                    &:hover svg path
+                                        stroke: #fff
                                 .btn-catalog__content
                                     display: flex
                                     align-items: center
                                     &_icon
-                                        .line
-                                            display: block
-                                            background-color: #2F323A
-                                            height: 2.5px
-                                            border-radius: 8px
-                                            &:nth-last-child(n+2)
-                                                margin-bottom: 6px
-                                        .line-top
-                                            width: 8px
-                                        .line-middle
-                                            width: 16px
-                                        .line-bottom
-                                            width: 12px
+                                        width: 25px
                                     &_text
                                         margin-left: 8px
                                         font-weight: 500
@@ -623,7 +612,7 @@
                             margin-top: 24px
                             button
                                 display: block
-                                max-width: 143px
+                                width: 143px
                                 outline: none
                                 border: none
                                 text-align: center
@@ -633,11 +622,37 @@
                                 line-height: 136%
                                 color: #171B24
                                 background-color: #FCEC41
+                                transition: all .2s linear
                                 &:hover
                                     cursor: pointer
+                                    background-color: #2F323A
+                                    color: #fff
+                        &__buttons
+                            margin-top: 24px
+                            &_container
+                                display: flex
+                                justify-content: space-between
+                                align-items: center
+                                button
+                                    display: block
+                                    width: 143px
+                                    outline: none
+                                    border: none
+                                    text-align: center
+                                    padding: 12px 24px
+                                    font-weight: 500
+                                    font-size: 18px
+                                    line-height: 136%
+                                    color: #171B24
+                                    background-color: #FCEC41
+                                    transition: all .2s linear
+                                    &:hover
+                                        cursor: pointer
+                                        background-color: #2F323A
+                                        color: #fff
     .edit
         display: none
-    .brands-navigation
+    .brands-navigation, .catalog-navigation
         width: 100%
         margin-top: 40px
         &__container
@@ -648,20 +663,20 @@
                 padding-top: 40px
                 margin-left: 100px
                 padding-bottom: 90px
-                .brands_content__nav
+                .brands_content__nav, .catalog_content__nav
                     font-weight: 400
                     font-size: 16px
                     line-height: 150%
                     p
                         color: #454950
-                .brands_content__title
+                .brands_content__title, .catalog_content__title
                     font-weight: 700
                     font-size: 48px
                     line-height: 120%
                     margin-top: 20px
                     h1
                         color: #171B24
-    .order-navigation
+    .order-navigation, .basket-navigation
         width: 100%
         margin-top: 40px
         &__container
@@ -672,28 +687,258 @@
                 padding-top: 40px
                 padding-bottom: 60px
                 margin-left: 100px
-                .order_content__nav
+                .order_content__nav, .basket_content__nav
                     font-weight: 400
                     font-size: 16px
                     line-height: 150%
                     p
                         color: #454950
-                .order_content__title
+                .order_content__title, .basket_content__title
                     font-weight: 700
                     font-size: 48px
                     line-height: 120%
                     margin-top: 20px
                     h1
                         color: #171B24
-    .order-list
+    .basket-list
         width: 100%
         &__container
             max-width: 1160px
             margin: 0 auto
             &_content
-                width: 100%
+                display: flex
                 margin-top: 40px
-                padding-bottom: 40px
+                .basket-list__panel
+                    max-width: 278px
+                    &_summary
+                        border: 1px solid #E8E9EA
+                        &-content
+                            font-family: 'Manrope', sans-serif
+                            max-width: 246px
+                            margin: 0 auto
+                            margin-top: 16px
+                            margin-bottom: 16px
+                            .summary__item
+                                &:nth-last-child(n+2)
+                                    margin-bottom: 12px
+                                &_content
+                                    display: flex
+                                    align-items: center
+                                    &-title
+                                        width: 170px
+                                        font-weight: 500
+                                        font-size: 16px
+                                        line-height: 150%
+                                        p
+                                            color: #333333
+                                    &-text
+                                        width: 66px
+                                        text-align: right
+                                        font-weight: 500
+                                        font-size: 16px
+                                        line-height: 150%
+                                        margin-left: 10px
+                                        p
+                                            color: #333333
+                            .summary__title
+                                font-weight: 700
+                                font-size: 18px
+                                line-height: 136%
+                                h6
+                                    color: #171B24
+                    &_button
+                        border-left: 1px solid #E8E9EA
+                        border-right: 1px solid #E8E9EA
+                        border-bottom: 1px solid #E8E9EA
+                        &-content
+                            max-width: 246px
+                            margin: 0 auto
+                            padding-top: 16px
+                            margin-bottom: 16px
+                            button
+                                font-family: 'Manrope', sans-serif
+                                width: 100%
+                                display: block
+                                outline: none
+                                border: none
+                                font-weight: 500
+                                font-size: 18px
+                                line-height: 136%
+                                color: #171B24
+                                padding: 12px 52px
+                                background-color: #FCEC41
+                                transition: background-color .2s linear
+                                &:hover
+                                    background-color: #2F323A
+                                    color: #fff
+                                    cursor: pointer
+                    &_description
+                        .description__item
+                            margin-top: 16px
+                            &_content
+                                font-family: 'Manrope', sans-serif
+                                display: flex
+                                &-icon
+                                    width: 24px
+                                &-text
+                                    max-width: 244px
+                                    margin-left: 10px
+                                    font-weight: 500
+                                    font-size: 15px
+                                    line-height: 145%
+                                    p
+                                        color: #454950
+                .basket-list__items
+                    margin-left: 16px
+                    .basket__item
+                        border: 1px solid #E8E9EA
+                        &:nth-last-child(n+2)
+                            margin-bottom: 16px
+                        &_content
+                            font-family: 'Manrope', sans-serif
+                            display: flex
+                            &-preview
+                                height: 208px
+                                img
+                                    max-width: 278px
+                                    height: auto
+                            &-data
+                                width: 294px
+                                height: 208px
+                                border-left: 1px solid #E8E9EA
+                                &__container
+                                    max-width: 262px
+                                    margin: 0 auto
+                                    margin-top: 16px
+                                    &_title
+                                        font-weight: 500
+                                        font-size: 16px
+                                        line-height: 150%
+                                        height: 72px
+                                        p
+                                            color: #2F323A
+                                    &_price
+                                        font-weight: 700
+                                        font-size: 20px
+                                        line-height: 140%
+                                        margin-top: 12px
+                                        p
+                                            color: #171B24
+                                    &_quantity
+                                        margin-top: 16px
+                                        .quantity__content
+                                            display: flex
+                                            align-items: center
+                                            border: 1px solid #D1D1D3
+                                            .basket__btn_add, .basket__btn_remove
+                                                width: 48px
+                                                padding: 12px
+                                                outline: none
+                                                border: none
+                                                background-color: #fff
+                                                transition: background-color .2s linear
+                                                &:hover
+                                                    cursor: pointer
+                                                    background-color: #2F323A
+                                                &:hover svg path
+                                                    stroke: #fff
+                                            .basket__btn_add
+                                                border-right: 1px solid #D1D1D3
+                                            .basket__btn_remove
+                                                border-left: 1px solid #D1D1D3
+                                            .basket-quantity
+                                                .quantity
+                                                    width: 166px
+                                                    margin: 0 auto
+                                                    height: 48px
+                                                    outline: none
+                                                    border: none
+                                                    text-align: center
+                                                    font-weight: 500
+                                                    font-size: 18px
+                                                    line-height: 136%
+                                                    color: #171B24
+                            &-code
+                                width: 294px
+                                height: 208px
+                                &__container
+                                    max-width: 262px
+                                    margin: 0 auto
+                                    margin-top: 16px
+                                    .basket__product_code
+                                        font-weight: 500
+                                        font-size: 16px
+                                        line-height: 150%
+                                        height: 72px
+                                        p
+                                            color: #2F323A
+                                        .code
+                                            color: #2F323A
+                                    .basket__product_button
+                                        margin-top: 56px
+                                        button
+                                            font-family: 'Manrope', sans-serif
+                                            width: 100%
+                                            display: block
+                                            outline: none
+                                            border: none
+                                            font-weight: 500
+                                            font-size: 18px
+                                            line-height: 136%
+                                            color: #171B24
+                                            padding: 12px 52px
+                                            background-color: unset
+                                            border: 1px solid #D1D1D3
+                                            transition: all .2s linear
+                                            &:hover
+                                                cursor: pointer
+                                                background-color: #b1b1b1c2
+    .catalog-list
+        width: 100%
+        margin-top: 80px
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            &_providers
+                &-content
+                    font-family: 'Manrope', sans-serif
+                    display: flex
+                    flex-wrap: wrap
+                    .provider__item
+                        max-width: 225px
+                        height: 40px
+                        font-weight: 500
+                        font-size: 18px
+                        line-height: 136%
+                        border: 1px solid #D1D1D3
+                        box-sizing: border-box
+                        background-color: #fff
+                        transition: all .2s linear
+                        &:nth-last-child(n+2)
+                            margin-right: 6px
+                            margin-bottom: 8px
+                        &:hover
+                            cursor: pointer
+                            border: 1px solid transparent
+                            background-color: #FBE303
+                        a
+                            display: block
+                            text-align: center
+                            text-decoration: none
+                            padding: 8px 12px
+                            color: #171B24
+
+                    .active
+                        border: 1px solid transparent
+                        background-color: #FBE303
+    .order-list
+        width: 100%
+        margin-top: 40px
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            &_content
+                width: 100%
                 &-item
                     &:nth-last-child(n+2)
                         margin-bottom: 16px
@@ -1169,18 +1414,18 @@
                                 &_icon
                                     font-size: 18px
             &__cards
-                margin-top: 16px
                 &_content
-                    display: flex
-                    justify-content: space-between
-                    align-items: center
-                    flex-wrap: wrap
+                    display: grid
+                    grid-template-columns: repeat(2, 1fr)
+                    grid-column-gap: 16px
+                    grid-row-gap: 16px
+                    margin-top: 16px
                     .card-item
                         font-family: 'Manrope', sans-serif
+                        max-width: 572px
+                        height: 208px
                         position: relative
                         border: 1px solid #E8E9EA
-                        &:nth-last-child(n+3)
-                            margin-bottom: 16px
                         &__content
                             display: flex
                             &_discount
@@ -1362,7 +1607,7 @@
     .products
         width: 100%
         font-family: 'Manrope', sans-serif
-        margin-top: 64px
+        margin-top: 80px
         &-container
             max-width: 1160px
             margin: 0 auto
@@ -1374,16 +1619,15 @@
                     color: #2F323A
             &__cards
                 &_content
-                    display: flex
-                    justify-content: space-between
-                    align-items: center
+                    display: grid
+                    grid-template-columns: repeat(4, 1fr)
+                    grid-column-gap: 16px
+                    grid-row-gap: 16px
                     margin-top: 20px
                     flex-wrap: wrap
                     .product-card_item
                         max-width: 278px
                         border: 1px solid #E8E9EA
-                        &:nth-last-child(n+1)
-                            margin-bottom: 16px
                         &__img
                             border-bottom: 1px solid #E8E9EA
                             .product-img
@@ -1405,6 +1649,8 @@
                                 margin-top: 12px
                                 font-size: 20px
                                 line-height: 140%
+                                span
+                                    margin-left: 4px
                         &__button
                             max-width: 246px
                             margin: 0 auto
@@ -1427,7 +1673,7 @@
                                     color: white
     .brands
         width: 100%
-        margin-top: 64px
+        margin-top: 80px
         &-container
             max-width: 1160px
             margin: 0 auto
@@ -1699,7 +1945,7 @@
     .footer
         width: 100%
         background-color: #2F323A
-        margin-top: 40px
+        margin-top: 80px
         &-container
             max-width: 1160px
             margin: 0 auto

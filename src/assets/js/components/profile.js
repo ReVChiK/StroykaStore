@@ -1,4 +1,3 @@
-
 import Swal from "sweetalert2";
 
 class Profile{
@@ -314,14 +313,49 @@ class Profile{
                     this.__userData.userConfirmPassword = profileConfirmPassword_Input[j].value;
                 }
 
+                if(profilePassword_Input[j].value != profileConfirmPassword_Input[j].value){
+                    Swal.fire({
+                        icon: 'warning',
+                        title: 'Пароли не совпадают',
+                        text: 'Пожалуйста, убедитесь, что пароли совпадают'
+                    })
+                }else{
+                    this.__userData.userPassword = profilePassword_Input[j].value;
+                    this.__userData.userConfirmPassword = profileConfirmPassword_Input[j].value;
+
+                    localStorage.setItem('user', JSON.stringify(this.__userData));
+
+                    window.location.reload();
+                }
+
                 console.log(this.__userData);
                 
-                localStorage.setItem('user', JSON.stringify(this.__userData));
-
-                window.location.reload();
             }
         }
 
+    }
+
+    exitProfile(){
+        let buttonExit = document.querySelectorAll('.profile__exit');
+        buttonExit.forEach(btn => {
+            btn.onclick = ()=>{
+                Swal.fire({
+                    title: 'Вы уверены?',
+                    text: 'Данные вашего аккаунта будут удалены!',
+                    icon: 'warning',
+                    showCancelButton: true,
+                    confirmButtonColor: '#008cf0',
+                    confirmButtonText: 'Да',
+                    cancelButtonText: 'Нет',
+                    cancelButtonColor: '#d33'
+                }).then(result=>{
+                    if(result.isConfirmed){
+                        localStorage.removeItem('user');
+                        window.open('../../../index.html', '_self')
+                    }
+                })
+            }
+        });
     }
 }
 
