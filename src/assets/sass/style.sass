@@ -917,6 +917,16 @@
                         &:nth-last-child(n+2)
                             margin-right: 6px
                             margin-bottom: 8px
+                        &:nth-last-child(2)
+                            margin-bottom: 0
+                        &:nth-last-child(3)
+                            margin-bottom: 0
+                        &:nth-last-child(4)
+                            margin-bottom: 0
+                        &:nth-last-child(5)
+                            margin-bottom: 0
+                        &:nth-last-child(6)
+                            margin-bottom: 0
                         &:hover
                             cursor: pointer
                             border: 1px solid transparent
@@ -931,6 +941,575 @@
                     .active
                         border: 1px solid transparent
                         background-color: #FBE303
+            &_products
+                margin-top: 80px
+                &-content
+                    font-family: 'Manrope', sans-serif
+                    display: grid
+                    grid-template-columns: repeat(4, 1fr)
+                    grid-column-gap: 16px
+                    grid-row-gap: 80px
+                    .catalog__product_item
+                        max-width: 278px
+                        &-preview
+                            width: 180px
+                            height: 180px
+                            background-color: #F6F6F6
+                            .item__preview_title
+                                max-width: 156px
+                                margin: 0 auto
+                                padding-top: 12px
+                                font-weight: 500
+                                font-size: 18px
+                                line-height: 136%
+                                text-align: center
+                                h6
+                                    color: #2F323A
+                            .item__preview_image
+                                margin-top: 16px
+                                img
+                                    width: 100%
+                                    height: auto
+                        &-list
+                            width: 100%
+                            margin-top: 20px
+                            .catalog__list_item
+                                display: flex
+                                align-items: center
+                                &:nth-last-child(n+2)
+                                    margin-bottom: 12px
+                                &-arrow
+                                    width: 16px
+                                    display: none
+                                    margin-right: 4px
+                                &-product
+                                    font-weight: 500
+                                    font-size: 16px
+                                    line-height: 150%
+                                    a
+                                        text-decoration: none
+                                        display: block
+                                        color: #2F323A
+    .categories-navigation, .product-navigation
+        width: 100%
+        margin-top: 40px
+        &__container
+            font-family: 'Manrope', sans-serif
+            max-width: 1160px
+            margin: 0 auto
+            &_nav
+                font-weight: 400
+                font-size: 16px
+                line-height: 150%
+                p
+                    color: #454950
+            &__title
+                font-weight: 700
+                font-size: 48px
+                line-height: 120%
+                margin-top: 20px
+                h1
+                    color: #171B24
+    .categories-list
+        width: 100%
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            &_content
+                display: flex
+                margin-top: 40px
+                .categories-list__options
+                    width: 278px
+                    height: 736px
+                    border: 1px solid #F6F6F6
+                    box-sizing: border-box
+                    margin-right: 16px
+                    position: relative
+                    &::after
+                        content: ""
+                        display: block
+                        position: absolute
+                        bottom: 139px
+                        width: 100%
+                        height: 1px
+                        background-color: #F6F6F6
+                    &_content
+                        font-family: 'Manrope', sans-serif
+                        max-width: 246px
+                        margin: 0 auto
+                        .options__price
+                            margin-top: 16px
+                            &_title
+                                font-weight: 700
+                                font-size: 18px
+                                line-height: 136%
+                                h6
+                                    color: #171B24
+                            &_inputs
+                                &-content
+                                    display: flex
+                                    align-items: center
+                                    input
+                                        font-family: 'Manrope', sans-serif
+                                        outline: none
+                                        border: none
+                                        -webkit-appearance: none
+                                        max-width: 117px
+                                        height: 48px
+                                        padding: 0
+                                        font-weight: 500
+                                        font-size: 18px
+                                        line-height: 136%
+                                        color: #8B8D92
+                                        padding: 12px 33px 12px 16px
+                                        border-bottom: 1px solid #D1D1D3
+                                        background-color: #F6F6F6
+                                        &::-webkit-inner-spin-button, ::-webkit-outer-spin-button
+                                            -webkit-appearance: none
+                                            margin: 0
+                                        &:nth-last-child(n+2)
+                                            margin-right: 12px
+                                        &::placeholder
+                                            font-weight: 500
+                                            font-size: 18px
+                                            line-height: 136%
+                                            color: #8B8D92
+                            &_ranges
+                                position: relative
+                                width: 100%
+                                height: 8px
+                                background-color: #E8E9EA
+                                margin-top: 18px
+                                margin-bottom: 6px
+                                .slider-track
+                                    width: 100%
+                                    height: 8px
+                                    position: absolute
+                                    margin: auto
+                                    top: 0
+                                    bottom: 0
+                                input[type="range"]
+                                    -webkit-appearance: none
+                                    -moz-appearance: none
+                                    appearance: none
+                                    width: 100%
+                                    outline: none
+                                    position: absolute
+                                    margin: auto
+                                    top: 0
+                                    bottom: 0
+                                    background-color: transparent
+                                    pointer-events: none
+                                    &::-webkit-slider-runnable-track
+                                        -webkit-appearance: none
+                                        height: 5px
+                                    &::-moz-range-track
+                                        -moz-appearance: none
+                                        height: 5px
+                                    &::-ms-track
+                                        appearance: none
+                                        height: 5px
+                                    &::-webkit-slider-thumb
+                                        -webkit-appearance: none
+                                        width: 20px
+                                        height: 20px
+                                        background-color: #fff
+                                        border: 1px solid #5D6066
+                                        box-sizing: border-box
+                                        cursor: pointer
+                                        margin-top: -9px
+                                        pointer-events: auto
+                        .options__brands, .options__providers
+                            margin-top: 32px
+                            &_title
+                                font-weight: 700
+                                font-size: 18px
+                                line-height: 136%
+                                h6
+                                    color: #171B24
+                            &_search
+                                position: relative
+                                input
+                                    font-family: "Manrope", sans-serif
+                                    width: 100%
+                                    height: 48px
+                                    padding: 0
+                                    outline: none
+                                    border: none
+                                    background-color: #F6F6F6
+                                    padding: 12px 45px 12px 16px
+                                    font-size: 18px
+                                    font-weight: 500
+                                    border-bottom: 1px solid #D1D1D3
+                                    color: #454950
+                                .options__brands_searchIcon
+                                    position: absolute
+                                    top: 11px
+                                    right: 16px
+                                    z-index: 999
+                                    &:hover
+                                        cursor: pointer
+                            &_list
+                                select
+                                    font-family: "Manrope", sans-serif
+                                    outline: none
+                                    width: 100%
+                                    font-weight: 500
+                                    font-size: 18px
+                                    line-height: 136%
+                                    color: #8B8D92
+                                    background-color: #F6F6F6
+                                    border: 1px solid #D1D1D3
+                                    padding: 12px 12px 12px 16px
+                            &_list
+                                .brands__list
+                                    height: 204px
+                                    overflow-y: auto
+                                    li
+                                        display: flex
+                                        align-items: center
+                                        height: 24px
+                                        &:nth-last-child(n+2)
+                                            margin-bottom: 12px
+                                        input
+                                            width: 24px
+                                            height: 24px
+                                            background-repeat: no-repeat
+                                            background-position-y: center center
+                                            &:hover
+                                                cursor: pointer
+                                        .checkBox__brand_name
+                                            font-weight: 500
+                                            font-size: 16px
+                                            line-height: 150%
+                                            margin-left: 8px
+                                            p
+                                                color: #2F323A
+                        .options__buttons
+                            margin-top: 32px
+                            &_item
+                                font-family: 'Manrope', sans-serif
+                                outline: none
+                                border: none
+                                display: block
+                                width: 100%
+                                font-weight: 500
+                                font-size: 18px
+                                line-height: 136%
+                                color: #171B24
+                                padding: 12px 74px
+                                background-color: #fff
+                                transition: all .2s linear
+                                &:hover
+                                    cursor: pointer
+                                &:nth-last-child(n+2)
+                                    margin-bottom: 12px
+                            .options__buttons_btn-accept
+                                background-color: #FCEC41
+                                &:hover
+                                    color: #fff
+                                    background-color: #2F323A
+                            .options__buttons_btn-reset
+                                border: 1px solid #D1D1D3
+                                box-sizing: border-box
+                                &:hover
+                                    color: #fff
+                                    background-color: #2F323A
+                                    border: 1px solid transparent
+                                        
+                        .options__price_item, .options__brands_item, .options__providers_item
+                            &:nth-last-child(n+2)
+                                margin-bottom: 12px
+                .categories-list__products
+                    max-width: 866px
+                    &_title
+                        &-content
+                            display: flex
+                            align-items: center
+                            button
+                                font-family: 'Manrope', sans-serif
+                                padding: 0
+                                display: block
+                                outline: none
+                                max-width: 98px
+                                height: 24px
+                                border: none
+                                font-weight: 500
+                                font-size: 16px
+                                line-height: 150%
+                                color: #8B8D92
+                                background-color: #fff
+                                transition: all .2s linear
+                                &:nth-last-child(n+2)
+                                    margin-right: 20px
+                                &:hover
+                                    color: #171B24
+                                    cursor: pointer
+                            .active
+                                color: #171B24
+                    &_content
+                        display: grid
+                        grid-template-columns: repeat(3, 1fr)
+                        grid-column-gap: 16px
+                        grid-row-gap: 16px
+                        margin-top: 16px
+                        .categories__item
+                            max-width: 278px
+                            height: 416px
+                            border: 1px solid #E8E9EA
+                            box-sizing: border-box
+                            &_image
+                                border-bottom: 1px solid #E8E9EA
+                                img
+                                    width: 100%
+                                    height: 208px
+                            &_data
+                                &-content
+                                    font-family: 'Manrope', sans-serif
+                                    max-width: 246px
+                                    margin: 0 auto
+                                    margin-top: 16px
+                                    .categories__data_text
+                                        font-weight: 500
+                                        font-size: 16px
+                                        line-height: 150%
+                                        height: 72px
+                                        overflow: hidden
+                                        text-overflow: ellipsis
+                                        a
+                                            display: block
+                                            text-decoration: none
+                                            color: #2F323A
+                                    .categories__data_price
+                                        font-weight: 700
+                                        font-size: 20px
+                                        line-height: 140%
+                                        margin-top: 12px
+                                        h6
+                                            color: #171B24
+                                            span
+                                                margin-left: 4px
+                            &_button
+                                margin-top: 16px
+                                &-content
+                                    max-width: 246px
+                                    margin: 0 auto
+                                    button
+                                        font-family: 'Manrope', sans-serif
+                                        width: 100%
+                                        outline: none
+                                        border: none
+                                        padding: 12px 80px
+                                        font-weight: 500
+                                        font-size: 18px
+                                        line-height: 136%
+                                        background-color: #FCEC41
+                                        color: #171B24
+                                        transition: all .2s linear
+                                        &:hover
+                                            color: #fff
+                                            background-color: #2F323A
+                                            cursor: pointer
+                    &_navigation
+                        margin-top: 16px
+                        &-content
+                            display: flex
+                            align-items: center
+                            .nav-btn
+                                font-family: 'Manrope', sans-serif
+                                display: block
+                                outline: none
+                                box-sizing: border-box
+                                width: 52px
+                                height: 52px
+                                padding: 14px
+                                font-weight: 500
+                                font-size: 18px
+                                line-height: 136%
+                                color: #2F323A
+                                border: 1px solid #E8E9EA
+                                background-color: #fff
+                                transition: all .2s linear
+                                &:hover
+                                    color: #fff
+                                    background-color: #2F323A
+                                    border: 1px solid transparent
+                                    cursor: pointer
+                            .nav-btn__forward
+                                transform: rotate(180deg)
+                            .nav-btn__arrow
+                                &:hover  
+                                    svg
+                                        path                                  
+                                            stroke: #fff
+    .product-preview
+        width: 100%
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            &_content
+                display: flex
+                border: 1px solid #E8E9EA
+                box-sizing: border-box
+                .product-preview__image
+                    width: 572px
+                    height: 428px
+                    border-right: 1px solid #E8E9EA
+                    box-sizing: border-box
+                .product-preview__info
+                    width: 588px
+                    height: 428px
+                    &_container
+                        max-width: 540px
+                        margin: 0 auto
+                        font-family: 'Manrope', sans-serif
+                        .preview__info_title
+                            font-weight: 600
+                            font-size: 34px
+                            line-height: 130%
+                            margin-top: 24px
+                            h1
+                                color: #171B24
+                        .preview__info_check
+                            &-content
+                                display: flex
+                                align-items: center
+                                &__icon
+                                    width: 16px
+                                &__text
+                                    font-weight: 500
+                                    font-size: 15px
+                                    line-height: 145%
+                                    margin-left: 5px
+                                    p
+                                        color: #3BAA35
+                        .preview__info_price
+                            font-weight: 600
+                            font-size: 24px
+                            line-height: 130%
+                            h6
+                                color: #171B24
+                                span
+                                    margin-left: 4px
+                        .preview__info_manipulation
+                            margin-top: 24px
+                            &-content
+                                display: flex
+                                button[id="product__preview_btn"]
+                                    font-family: 'Manrope', sans-serif
+                                    display: block
+                                    border: none
+                                    padding: 0
+                                    margin: 0
+                                    width: 246px
+                                    height: 48px
+                                    padding: 12px 80px
+                                    font-weight: 500
+                                    font-size: 18px
+                                    line-height: 136%
+                                    color: #171B24
+                                    background-color: #FCEC41
+                                    transition: all .2s linear
+                                    &:hover
+                                        background-color: #2F323A
+                                        color: #fff
+                                        cursor: pointer
+                                .manipulation__quantity
+                                    width: 144px
+                                    margin-left: 12px
+                                    &_content
+                                        display: flex
+                                        button
+                                            display: block
+                                            border: none
+                                            padding: 0
+                                            margin: 0
+                                            width: 48px
+                                            height: 48px
+                                            padding: 12px
+                                            border: 1px solid #D1D1D3
+                                            box-sizing: border-box
+                                            background-color: #fff
+                                            transition: all .2s linear
+                                            &:hover
+                                                cursor: pointer
+                                                border: 1px solid transparent
+                                                background-color: #2F323A
+                                            &:hover svg path
+                                                stroke: #fff
+                                        input
+                                            font-family: 'Manrope', sans-serif
+                                            outline: none
+                                            border: none
+                                            padding: 0
+                                            width: 48px
+                                            font-weight: 500
+                                            font-size: 18px
+                                            line-height: 136%
+                                            color: #171B24
+                                            text-align: center
+                                            border-top: 1px solid #D1D1D3
+                                            border-bottom: 1px solid #D1D1D3
+                                            &::-webkit-inner-spin-button
+                                                appearance: none
+                        .preview__info_providers
+                            margin-top: 35px
+                            &-content
+                                display: flex
+                                .providers__item
+                                    font-weight: 400
+                                    font-size: 16px
+                                    line-height: 150%
+                                    p
+                                        color: #454950
+                                &__providerName
+                                    margin-left: 2px
+                        .preview__info_description
+                            &-content
+                                display: flex
+                                justify-content: flex-start
+                                &__icon
+                                    width: 24px
+                                &__text
+                                    max-width: 504px
+                                    font-weight: 400
+                                    font-size: 16px
+                                    line-height: 150%
+                                    margin-left: 12px
+                                    p
+                                        color: #454950
+                        .preview__info_child
+                            &:nth-last-child(n+2)
+                                margin-bottom: 12px
+    .product-description
+        width: 100%
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            border: 1px solid #E8E9EA
+            box-sizing: border-box
+            &_content
+                font-family: 'Manrope', sans-serif
+                max-width: 768px
+                margin: 0 auto
+                margin-bottom: 60px
+                .product-description__title
+                    font-weight: 600
+                    font-size: 34px
+                    line-height: 130%
+                    margin-top: 60px
+                    h1
+                        color: #171B24
+                .product-description__text
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 150%
+                    margin-top: 20px
+                    p
+                        color: #2F323A
+    .product__item
+        &:nth-last-child(n+2)
+            margin-top: 40px
     .order-list
         width: 100%
         margin-top: 40px

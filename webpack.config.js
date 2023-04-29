@@ -89,6 +89,16 @@ module.exports = {
         }),
 
         new HtmlWebpackPlugin({
+            template: './src/catalog/categories/categories.html',
+            filename: './catalog/categories/categories.html'
+        }),
+
+        new HtmlWebpackPlugin({
+            template: './src/catalog/categories/product/product.html',
+            filename: './catalog/categories/product/product.html'
+        }),
+
+        new HtmlWebpackPlugin({
             template: './src/pages/brands.html',
             filename: './pages/brands.html'
         }),

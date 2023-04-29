@@ -35,18 +35,6 @@ export function Close_Modal_Window(){
 
 }
 
-export function Hover_Geolocation_Elements(selector_cities, selector_arrows){
-
-    for(let i = 0; i < selector_cities.length; i++){
-        selector_cities[i].onmouseover = ()=>{
-            selector_arrows[i].style.display = 'block';
-        };
-        selector_cities[i].onmouseout = ()=>{
-            selector_arrows[i].style.display = 'none';
-        }
-    }
-}
-
 export function SetCities_Geolocation(selector_cities){
     for(let i = 0; i < selector_cities.length; i++){
         selector_cities[i].children[0].textContent = geolocationCities[i]

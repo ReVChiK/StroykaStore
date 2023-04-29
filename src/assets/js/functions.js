@@ -80,6 +80,51 @@ import mir from '../img/footer_cards/Mir.png';
 import basketBackground from '../img/basket/basketBack.png';
 import catalogFon from '../img/catalog/CatalogFon.png';
 
+// catalog
+import catalog_plumbing from '../img/catalog/products/plumbing.png';
+import catalog_buildMaterials from '../img/catalog/products/building_materials.png';
+import catalog_floorCovering from '../img/catalog/products/floor_coverings.png';
+import catalog_cellingWallDecoration from '../img/catalog/products/ceiling_and_wall_decoration.png';
+import catalog_ceramicPlate from '../img/catalog/products/ceramic_plate.png';
+import catalog_doors_windows from '../img/catalog/products/doors_windows.png';
+import catalog_paintVarnishMaterails from '../img/catalog/products/paint_varnish_materials.png';
+import catalog_climate_heating from '../img/catalog/products/climate_heating.png';
+import catalog_tools from '../img/catalog/products/tools.png';
+import catalog_fasteners from '../img/catalog/products/fasteners_and_accessories.png';
+import catalog_light from '../img/catalog/products/light.png';
+import catalog_electro_tools from '../img/catalog/products/electro_tools.png';
+//catalog
+
+import categList_BrandIcon from '../img/catalog/catalog_categories/brands/brand_checked.png';;
+import categList_BrandIcon2 from '../img/catalog/catalog_categories/brands/brand_not_checked.png';
+
+import categBtn_Nav_Icon from '../icons/catalog/categories/Navigation_Icon.svg';
+
+// Categ Product Imgs
+import categProduct_Putty from '../img/catalog/catalog_categories/products/product_putty.png';
+// Categ Product Imgs
+
+// catalog_categories
+import catalogCategories_putty from '../img/catalog/catalog_categories/categories_putty.png';
+import catalogCategories_plaster from '../img/catalog/catalog_categories/categories_plaster.png';
+import catalogCategories_plaster2 from '../img/catalog/catalog_categories/categories_plaster_2.png';
+import catalogCategories_glue from '../img/catalog/catalog_categories/categories_glue.png';
+import catalogCategories_glue2 from '../img/catalog/catalog_categories/categories_glue_2.png';
+import catalogCategories_knauf from '../img/catalog/catalog_categories/categories_knauf.png';
+import catalogCategories_plaster3 from '../img/catalog/catalog_categories/categories_plaster_3.png';
+import catalogCategories_grout from '../img/catalog/catalog_categories/categories_grout.png';
+import catalogCategories_osnovit from '../img/catalog/catalog_categories/categories_osnovit.png';
+import catalogCategories_glue3 from '../img/catalog/catalog_categories/categories_glue_3.png';
+import catalogCategories_plaster4 from '../img/catalog/catalog_categories/categories_plaster_4.png';
+import catalogCategories_knauf2 from '../img/catalog/catalog_categories/categories_knauf_2.png';
+import catalogCategories_plaster5 from '../img/catalog/catalog_categories/categories_plaster_5.png';
+import catalogCategories_putty2 from '../img/catalog/catalog_categories/categories_putty_2.png';
+import catalogCategories_plaster6 from '../img/catalog/catalog_categories/categories_plaster_6.png';
+import catalogCategories_plaster7 from '../img/catalog/catalog_categories/categories_plaster_7.png';
+import catalogCategories_mixture from '../img/catalog/catalog_categories/categories_mixture.png';
+import catalogCategories_glue4 from '../img/catalog/catalog_categories/categories_glue_4.png';
+// catalog_categories
+
 // png
 
 //docs
@@ -111,6 +156,9 @@ import del_arrow from '../img/delivery/icons/delivery_arrow.svg';
 import basketInfoIcon from '../icons/basket/info.svg';
 import basketCarIcon from '../icons/basket/car.svg';
 import basketBoxIcon from '../icons/basket/box.svg';
+
+import productCheck_Icon from '../icons/catalog/categories/products/checkProduct.svg';
+
 // svg
 
 // functions
@@ -118,49 +166,61 @@ import { SetLogo, SetSvgIcon, SetSvgIcons } from './abstract_components/svg';
 import { SetBackgroundFon, SetSrcImg, SetSrcOnlyOnceImg, Slider } from './abstract_components/img';
 import Set_Link_Path_File from './abstract_components/file';
 import { Add_Brand_Image } from './components/brands';
-import { Add_Category } from './components/categories';
+import { Add_Category, Catalog_Categories_Component, categoriesList_Brands, categoriesList_Brand_Component, CategoriesList_Provider_Component, Categories_Range_Inputs } from './components/categories';
 import { BasketDescription_Item } from './components/basket';
 import { ProductItem } from './components/product';
+import { Catalog_Product } from './catalog';
 // functions
 
 // Structure
 
-let cards_imgs_array = [
+const cards_imgs_array = [
     visa, mastercard, maestro, mir
 ];
 
-let avatars_array = [
+const avatars_array = [
     avatar_1, avatar_2, avatar_3, avatar_4
 ];
 
-let array_brands_icon = [
+const array_brands_icon = [
     bever, braer, leonardo_stone, 
     euro_block, perfekta, mstera, 
     lcp, galen, recke, mod_format, 
     decra, engles
 ];
 
-let del_icons_arr = [
+const del_icons_arr = [
     del_basket_icon, del_push_icon,
     del_box_icon, del_geolocation_icon
 ];
 
-let product_img_array = [
+const product_img_array = [
     stoneware, grout, primer, drywall, profile_,
     roulette, package_, angle, knauf, screws,
     putty, tape
 ];
 
-let tab_img_array = [
+const tab_img_array = [
     shower, lumber, linoleum, wallpapers, tools,
     gfc, windows, doors, plumbing, paints, eg, interior
 ];
 
-let stock_icons_array = [paint, foarm, grid, metal_tile];
+const stock_icons_array = [paint, foarm, grid, metal_tile];
 
-let menu_icons_array = [profile, order, basket];
+const menu_icons_array = [profile, order, basket];
 
-let basket_icons_array = [basketInfoIcon, basketCarIcon, basketBoxIcon];
+const basket_icons_array = [basketInfoIcon, basketCarIcon, basketBoxIcon];
+
+const catalog_previews = [
+    catalog_plumbing, catalog_buildMaterials, catalog_floorCovering,
+    catalog_cellingWallDecoration, catalog_ceramicPlate, catalog_doors_windows,
+    catalog_paintVarnishMaterails, catalog_climate_heating, catalog_tools,
+    catalog_fasteners, catalog_light, catalog_electro_tools
+]
+
+const catalogCategories_previews_img = [
+    catalogCategories_putty, catalogCategories_plaster, catalogCategories_plaster2, catalogCategories_glue, catalogCategories_glue2, catalogCategories_knauf, catalogCategories_plaster3, catalogCategories_grout, catalogCategories_osnovit, catalogCategories_glue3, catalogCategories_plaster4, catalogCategories_knauf2, catalogCategories_plaster5, catalogCategories_putty2, catalogCategories_plaster6, catalogCategories_plaster7, catalogCategories_mixture, catalogCategories_glue4
+]
 
 // Structure
 
@@ -206,13 +266,25 @@ function Functions(){
     SetSvgIcon(document.querySelectorAll('.btn-add'), btn_add_card);
     SetSvgIcon(document.querySelectorAll('.btn-remove'), btn_remove_card);
 
+    SetSvgIcon(document.querySelectorAll('.manipulation__quantity_add'), btn_add_card);
+    SetSvgIcon(document.querySelectorAll('.manipulation__quantity_remove'), btn_remove_card);
+
+    SetSvgIcon(document.querySelectorAll('.preview__info_description-content__icon'), basketCarIcon);
+
     SetSvgIcon(document.querySelectorAll('.basket__btn_add'), btn_add_card);
     SetSvgIcon(document.querySelectorAll('.basket__btn_remove'), btn_remove_card);
 
     SetSvgIcon(document.querySelectorAll('.list-item__content_icon'), geolocation_arrow);
+
+    SetSvgIcon(document.querySelectorAll('.catalog__list_item-arrow'), geolocation_arrow);
+
     SetSvgIcon(document.querySelectorAll('.footer-nav__content_icon'), footer_img_links);
 
     SetSvgIcon(document.querySelectorAll('.btn-catalog__content_icon'), catalogIcon);
+
+    SetSvgIcon(document.querySelectorAll('.nav-btn__arrow'), categBtn_Nav_Icon)
+
+    SetSvgIcon(document.querySelectorAll('.preview__info_check-content__icon'), productCheck_Icon)
 
     SetSvgIcons(document.querySelectorAll('.rule-order__icon'), del_icons_arr)
 
@@ -226,11 +298,16 @@ function Functions(){
 
     SetSrcImg(document.querySelectorAll('.menu-icon'), menu_icons_array)
 
+    SetSrcImg(document.querySelectorAll('.product__item_img'), catalog_previews);
+
     SetSrcOnlyOnceImg(document.querySelectorAll('.trace-img'), traced_img)
 
     SetSrcOnlyOnceImg(document.querySelectorAll('.item__content_img img'), paint)
 
     SetSrcOnlyOnceImg(document.querySelectorAll('.input-icon'), search_icon);
+    SetSrcOnlyOnceImg(document.querySelectorAll('.optionsBrands__icon'), search_icon);
+
+    SetSrcOnlyOnceImg(document.querySelectorAll('.preview__product-img'), categProduct_Putty);
 
     SetSrcOnlyOnceImg(document.querySelectorAll('.img-geolocation'), img_geolocation);
     SetSrcOnlyOnceImg(document.querySelectorAll('.geolocation-img'), footer_geolocation);
@@ -267,6 +344,18 @@ function Functions(){
     BasketDescription_Item(document.querySelectorAll('.basket-list__panel_description'), basket_icons_array);
 
     ProductItem(document.querySelectorAll('.products-container__cards_content'), product_img_array);
+
+    Catalog_Product(document.querySelectorAll('.catalog-list__container_products-content'), catalog_previews, geolocation_arrow);
+
+    Catalog_Categories_Component(document.querySelectorAll('.categories-list__products_content'), catalogCategories_previews_img);
+
+    categoriesList_Brand_Component(document.querySelectorAll('.brands__list'));
+
+    categoriesList_Brands(document.querySelectorAll('.brands__list_chbox'), categList_BrandIcon2, categList_BrandIcon);
+
+    CategoriesList_Provider_Component(document.querySelectorAll('#categ__providers'));
+
+    Categories_Range_Inputs(document.querySelectorAll('#options__price_slider-1'), document.querySelectorAll('#options__price_slider-2'), document.querySelectorAll('#opt__inputs_price-1'), document.querySelectorAll('#opt__inputs_price-2'), document.querySelectorAll('.slider-track'));
 }
 
 export default Functions;
