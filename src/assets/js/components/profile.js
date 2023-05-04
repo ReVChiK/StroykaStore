@@ -115,7 +115,7 @@ class Profile{
                 if(signUp__Items[j].value != ''){
                     this.__userData.userName = signUp_Input_Name[j].value;
 
-                    this.__userData.userEmail = signUp_Input_Email[j].value;
+                    this.__userData.userEmail = Check_Email(signUp_Input_Email[j].value);
 
                     if(signUp_Input_NewPassword[j].value != signUp_Input_ConfirmPasswordd[j].value){
                         Swal.fire({
@@ -356,6 +356,20 @@ class Profile{
                 })
             }
         });
+    }
+}
+
+function Check_Email(value){
+    const EMAIL_REGEXP = /^(([^<>()[\].,;:\s@"]+(\.[^<>()[\].,;:\s@"]+)*)|(".+"))@(([^<>()[\].,;:\s@"]+\.)+[^<>()[\].,;:\s@"]{2,})$/iu;
+
+    if(EMAIL_REGEXP.test(value)!= false){
+        return value;
+    }else{
+        Swal.fire({
+            icon: 'error',
+            title: 'Эл. почта введена некорректно',
+            text: 'Пожалуйста, введите правильную почту'
+        })
     }
 }
 

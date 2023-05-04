@@ -1,14 +1,116 @@
 {
     products:[
         {
-            name: 'Tomato',
-            description: 'red, smile',
-            price: 349
+            id: 100,            
+            description: 'Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)',
+            category: 'Напольные покрытия',
+            category_kind: 'Ковролин',
+            price: 449
         },
         {
-            name: 'Potato',
-            description: 'dirty, but funny',
-            price: 129
+            id: 101,            
+            description: 'Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная',
+            category: 'Лакокрасочные материалы',
+            category_kind: 'Монтажные пены',
+            price: 495
+        },
+        {
+            id: 102,            
+            description: 'Сетка "Рабица" яч. 50х50/1,5х10 м-ОЦ',
+            category: 'Стройматериалы',
+            category_kind: 'Армирующие материалы',
+            price: 1499
+        },
+        {
+            id: 103,            
+            description: 'Металлочерепица, цвет коричневый, 1.18 х 1.15 м',
+            category: 'Стройматериалы',
+            category_kind: 'Кровля',
+            price: 769
+        },
+        {
+            id: 104,
+            description: 'Керамогранит Yasmin 598х185 коричневый C-YA4M112D',
+            category: 'Керамическая плитка',
+            category_kind: 'Керамогранит',
+            price: 899
+        },
+        {
+            id: 105,
+            description: 'Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг',
+            category: 'Керамическая плитка',
+            category_kind: 'Системы выравнивания плитки',
+            price: 275
+        },
+        {
+            id: 106,
+            description: 'Грунтовка Старатели 10л глубокого проникновения',
+            category: 'Лакокрасочные материалы',
+            category_kind: 'Грунтовки',
+            price: 839
+        },
+        {
+            id: 107,
+            description: 'Гипсокартон Волма, 2500 х 1200 х 12,5 мм',
+            category: 'Стройматериалы',
+            category_kind: 'Гипсокартон',
+            price: 335
+        },
+        {
+            id: 108,
+            description: 'Профиль 0,55мм для гипсокартона',
+            category: 'Стройматериалы',
+            category_kind: 'Профиль для гипсокартона',
+            price: 195
+        },
+        {
+            id: 109,
+            description: 'Рулетка 3м',
+            category: 'Инструменты',
+            category_kind: 'Измерительный инструмент',
+            price: 100
+        },
+        {
+            id: 110,
+            description: 'Кнауф Мп 75 штукатурка гипсовая МН 30кг',
+            category: 'Отделка стен и потолка',
+            category_kind: 'Декоративные молдинги, багеты',
+            price: 380
+        },
+        {
+            id: 111,
+            description: 'Уголок серый канализационный Д110 ГР90',
+            category: 'Сантехника',
+            category_kind: 'Раковины',
+            price: 335
+        },
+        {
+            id: 112,
+            description: 'Knauf Ротбанд, 30 кг',
+            category: 'Отделка стен и потолка',
+            category_kind: 'Декоративные молдинги, багеты',
+            price: 508
+        },
+        {
+            id: 113,
+            description: 'Саморез по металлу 3,5х25 мм для гипсокартона',
+            category: 'Крепеж и фурнитура',
+            category_kind: 'Саморезы',
+            price: 340
+        },
+        {
+            id: 114,
+            description: 'Шпатлевка универсальная Danogips SuperFinish 17 л',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 555
+        },
+        {
+            id: 115,
+            description: 'Клейкая лента металлизированная Изоспан FL 5х5000 см',
+            category: 'Стройматериалы',
+            category_kind: 'Ленты строительные',
+            price: 226
         }
     ]
 }

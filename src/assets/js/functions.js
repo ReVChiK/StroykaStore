@@ -170,6 +170,8 @@ import { Add_Category, Catalog_Categories_Component, categoriesList_Brands, cate
 import { BasketDescription_Item } from './components/basket';
 import { ProductItem } from './components/product';
 import { Catalog_Product } from './catalog';
+import { Geolocation_Component } from './components/geolocation';
+import { Stocks_Component } from './components/sockCard';
 // functions
 
 // Structure
@@ -253,12 +255,16 @@ function Add_Favicon(){
 }
 // Favicon
 
-function Functions(){
-    Add_Favicon();
-
+function Sign_in_up_IconClose(){
     SignIn_Button_Icon_Close();
     SignUp_Button_Icon_Close();
+}
 
+function Geo_fn(){
+    Geolocation_Component(document.querySelectorAll('.geolocation-content__list_content'), geolocation_arrow);
+}
+
+function SetSvg_fn(){
     SetSvgIcon(document.querySelectorAll('.geolocation-btn__close'), geo_btn_close);
 
     SetSvgIcon(document.querySelectorAll('.point__icon'), del_arrow);
@@ -287,14 +293,14 @@ function Functions(){
     SetSvgIcon(document.querySelectorAll('.preview__info_check-content__icon'), productCheck_Icon)
 
     SetSvgIcons(document.querySelectorAll('.rule-order__icon'), del_icons_arr)
+}
 
+function SetSrcImgs_fn(){
     SetSrcImg(document.querySelectorAll('.footer-card-img'), cards_imgs_array);
 
     SetSrcImg(document.querySelectorAll('.avatar-img'), avatars_array);
 
     SetSrcImg(document.querySelectorAll('.product-img'), product_img_array)
-
-    SetSrcImg(document.querySelectorAll('.card-img'), stock_icons_array)
 
     SetSrcImg(document.querySelectorAll('.menu-icon'), menu_icons_array)
 
@@ -307,7 +313,7 @@ function Functions(){
     SetSrcOnlyOnceImg(document.querySelectorAll('.input-icon'), search_icon);
     SetSrcOnlyOnceImg(document.querySelectorAll('.optionsBrands__icon'), search_icon);
 
-    SetSrcOnlyOnceImg(document.querySelectorAll('.preview__product-img'), categProduct_Putty);
+    // SetSrcOnlyOnceImg(document.querySelectorAll('.preview__product-img'), categProduct_Putty);
 
     SetSrcOnlyOnceImg(document.querySelectorAll('.img-geolocation'), img_geolocation);
     SetSrcOnlyOnceImg(document.querySelectorAll('.geolocation-img'), footer_geolocation);
@@ -331,19 +337,22 @@ function Functions(){
     SetBackgroundFon(document.querySelectorAll('.catalog-navigation__container'), catalogFon);
 
     Slider(document.querySelectorAll('.slider-container'), document.querySelectorAll('.slider-btn_left'), document.querySelectorAll('.slider-btn_right'), slide_1, slide_2);
+}
 
+function Docs_fn(){
+    Set_Link_Path_File(document.querySelectorAll('.politic'), linkFilePath);
+}
+
+function Logo_fn(){
     SetLogo(document.querySelectorAll('.menu-logo'), Logo)
     SetLogo(document.querySelectorAll('.footer-item__logo'), Footer_Logo)
+}
 
-    Set_Link_Path_File(document.querySelectorAll('.politic'), linkFilePath);
+function Catalog_Categories_fn(){
 
-    Add_Brand_Image(document.querySelectorAll('#brands'), array_brands_icon.length, array_brands_icon);
-
+    // Main Page
     Add_Category(document.querySelectorAll('#categories'), tab_img_array.length, tab_img_array);
-
-    BasketDescription_Item(document.querySelectorAll('.basket-list__panel_description'), basket_icons_array);
-
-    ProductItem(document.querySelectorAll('.products-container__cards_content'), product_img_array);
+    // Main Page
 
     Catalog_Product(document.querySelectorAll('.catalog-list__container_products-content'), catalog_previews, geolocation_arrow);
 
@@ -356,6 +365,38 @@ function Functions(){
     CategoriesList_Provider_Component(document.querySelectorAll('#categ__providers'));
 
     Categories_Range_Inputs(document.querySelectorAll('#options__price_slider-1'), document.querySelectorAll('#options__price_slider-2'), document.querySelectorAll('#opt__inputs_price-1'), document.querySelectorAll('#opt__inputs_price-2'), document.querySelectorAll('.slider-track'));
+}
+
+function Product_fn(){
+    ProductItem(document.querySelectorAll('.products-container__cards_content'), product_img_array);
+}
+
+function Socks(){
+    Stocks_Component(document.querySelectorAll('.stocks-container__cards_content'), stock_icons_array)
+}
+
+function Functions(){
+    Add_Favicon();
+    Logo_fn();
+
+    Sign_in_up_IconClose();
+
+    Geo_fn();
+
+    Catalog_Categories_fn();
+
+    SetSvg_fn();
+    SetSrcImgs_fn();
+
+    Docs_fn();
+
+    Product_fn();
+
+    Socks();
+
+    Add_Brand_Image(document.querySelectorAll('#brands'), array_brands_icon.length, array_brands_icon);
+
+    BasketDescription_Item(document.querySelectorAll('.basket-list__panel_description'), basket_icons_array);
 }
 
 export default Functions;

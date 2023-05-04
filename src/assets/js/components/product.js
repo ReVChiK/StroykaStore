@@ -1,4 +1,6 @@
 
+import data from '../../../resources/resource.json5';
+
 let productDescriptionTexts = [
     'Керамогранит Yasmin 598х185 коричневый C-YA4M112D',
     'Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг',
@@ -15,6 +17,7 @@ let productDescriptionTexts = [
 ]
 
 let productPrice = [899, 275, 839, 335, 195, 100, 380, 335, 508, 340, 555, 226]
+const product_id = [104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]
 
 export function ProductItem(parentSelector, imgs){
     for(let i = 0; i < imgs.length; i++){
@@ -38,7 +41,12 @@ export function ProductItem(parentSelector, imgs){
 
             const productItemData_description = document.createElement('div');
             productItemData_description.classList.add('product-description');
-            productItemData_description.textContent = productDescriptionTexts[i];
+
+            const productItemData_description_link = document.createElement('a');
+            productItemData_description_link.classList.add('data__link_product');
+            productItemData_description_link.setAttribute('data-id', product_id[i]);
+            productItemData_description_link.href = '#';
+            productItemData_description_link.textContent = productDescriptionTexts[i];
 
             const productItemdata_price = document.createElement('div');
             productItemdata_price.classList.add('product-price');
@@ -48,6 +56,8 @@ export function ProductItem(parentSelector, imgs){
             productPriceVallet.textContent = '₽';
 
             productItemdata_price.append(productPriceVallet);
+
+            productItemData_description.append(productItemData_description_link);
 
             productItemData.append(productItemData_description, productItemdata_price);
 
@@ -67,3 +77,33 @@ export function ProductItem(parentSelector, imgs){
         });
     }
 }
+
+export function Redirect_Product(){
+    let product_links = document.querySelectorAll('.data__link_product');
+
+    let product_data = {};
+
+    for(let i = 0; i<product_links.length; i++){
+        product_links[i].onclick = ()=>{
+            if(parseInt(product_links[i].getAttribute('data-id')) == data.products[i].id){
+                // if(localStorage.getItem('product')){
+                //     products_array = JSON.parse(localStorage.getItem('product'))
+                // }else{
+                //     var products_array = [];
+                // }
+
+                product_data.id = data.products[i].id;
+                product_data.description = data.products[i].description;
+                product_data.category = data.products[i].category;
+                product_data.category_kind = data.products[i].category_kind;
+                product_data.price = data.products[i].price;
+
+                // products_array.push(product_data);
+
+                localStorage.setItem('product', JSON.stringify(product_data));
+                product_links[i].href = '../../../catalog/categories/product/product.html'
+            }
+        }
+    }
+}
+

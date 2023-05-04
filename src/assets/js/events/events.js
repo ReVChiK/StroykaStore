@@ -4,8 +4,8 @@ import { Brands_List, Brand_Button_BottomMenu, Brand_Button_TopMenu, SortBrands 
 import { ReviewsCarousel } from "../components/carousel";
 import { Delivery_Info } from "../components/delivery";
 import { Choose_Geolocation_Cities, Close_Modal_Window, Open_Modal_Window, Search_Gelocation_Cities, SetCities_Geolocation } from "../components/geolocation";
-import GetData from "../components/resource";
-import { Socks_Card_Quantity } from "../components/sockCard";
+import { Redirect_Product } from "../components/product";
+import Resource_Product_Data from "../components/resource";
 
 function Home_Page(){
     let logotype = document.querySelectorAll('.menu-logo');
@@ -49,6 +49,10 @@ function Event_Catalog(){
     Hover_Elements(document.querySelectorAll('.catalog__list_item-product'), document.querySelectorAll('.catalog__list_item-arrow'));
 }
 
+function Products(){
+    Redirect_Product();
+}
+
 function Events(){
     Home_Page();
 
@@ -59,13 +63,13 @@ function Events(){
 
     Delivery_Info();
 
-    Socks_Card_Quantity();
-
-    ReviewsCarousel();
+    ReviewsCarousel(document.querySelectorAll('.btn-left'), document.querySelectorAll('.btn-right'), document.querySelectorAll('.reviews-container__listing_content'), document.querySelectorAll('.review-listing__item'));
 
     Event_Catalog();
 
-    //GetData();
+    Products();
+
+    Resource_Product_Data(document.querySelectorAll('.product__category'), document.querySelectorAll('.product__category_kind'), document.querySelectorAll('.product__description'), document.querySelectorAll('.preview__product-img'), document.querySelectorAll('.preview__info_title h1'), document.querySelectorAll('.preview__info_price'), document.querySelectorAll('.product__page_title'));
 }
 
 export default Events;
