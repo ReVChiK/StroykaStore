@@ -3,10 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <title>Стройка Стор - Главная</title>
-<script defer src="./assets/js/bd32407b5df617ecfbc9.js"></script><script defer src="./assets/js/d132df58d1d046d578aa.js"></script><script defer src="./assets/js/e96f3e397ddf028cabc2.js"></script><link href="./assets/css/9729609eb648ff1c5abe.css" rel="stylesheet"></head>
+<script defer src="./assets/js/bd32407b5df617ecfbc9.js"></script><script defer src="./assets/js/247ffdd2ad30f976b205.js"></script><script defer src="./assets/js/e5d08647f8e05ad23262.js"></script><link href="./assets/css/ecb1081c289b0a42b3fa.css" rel="stylesheet"></head>
 <body>
     <div id="page">
 
@@ -168,19 +168,28 @@
                 <div class="header-container__menu">
                     <div class="menu__content">
 
+                        <div class="menu__content_mobile">
+                            <div class="menu__content_mobile-icons">
+                                <div class="icon__open_menu"></div>
+                                <div class="icon__close_menu">
+                                    <img class="mobile-menu-close" src="">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="menu-logo"></div>
 
                         <div class="menu-search">
 
                             <div class="menu-search_button">
-                                <button id="btn-catalog">
+                                <a href="./catalog/catalog.html" id="btn-catalog">
                                     <div class="btn-catalog__content">
                                         <div class="btn-catalog__content_icon"></div>
                                         <div class="btn-catalog__content_text">
                                             Каталог
                                         </div>
                                     </div>
-                                </button>
+                                </a>
                             </div>
                             
                         </div>
@@ -195,7 +204,7 @@
                         <div class="menu-custom_panel">
                             <div class="menu-custom_panel__content">
 
-                                <div class="menu-item">
+                                <div class="menu-item menu-item__profile">
 
                                     <div class="menu-item__img">
                                         <img class="menu-icon menu-profile" src="" alt="profile">
@@ -206,7 +215,7 @@
 
                                 </div>
 
-                                <div class="menu-item">
+                                <div class="menu-item menu-item__orders">
                                     <div class="menu-item__img">
                                         <img class="menu-icon menu-orders" src="" alt="orders">
                                     </div>
@@ -215,7 +224,10 @@
                                     </div>
                                 </div>
 
-                                <div class="menu-item">
+                                <div class="menu-item menu-item__basket">
+                                    <div class="menu-item__count">
+                                        <p>2</p>
+                                    </div>
                                     <div class="menu-item__img">
                                         <img class="menu-icon menu-basket" src="" alt="basket">
                                     </div>
@@ -223,6 +235,7 @@
                                         <a class="item-link menu__link_basket" href="./pages/basket.html">Корзина</a>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -641,7 +654,7 @@
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="#" class="nav-item__link">Корзина</a>
+                                    <a href="./pages/basket.html" class="nav-item__link">Корзина</a>
                                 </li>
                             </div>
 
@@ -654,7 +667,7 @@
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="#" class="nav-item__link">Каталог</a>
+                                    <a href="./catalog/catalog.html" class="nav-item__link">Каталог</a>
                                 </li>
                             </div>
 
