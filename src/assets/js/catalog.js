@@ -1,3 +1,21 @@
+
+// catalog
+import catalog_plumbing from '../img/catalog/products/plumbing.png';
+import catalog_buildMaterials from '../img/catalog/products/building_materials.png';
+import catalog_floorCovering from '../img/catalog/products/floor_coverings.png';
+import catalog_cellingWallDecoration from '../img/catalog/products/ceiling_and_wall_decoration.png';
+import catalog_ceramicPlate from '../img/catalog/products/ceramic_plate.png';
+import catalog_doors_windows from '../img/catalog/products/doors_windows.png';
+import catalog_paintVarnishMaterails from '../img/catalog/products/paint_varnish_materials.png';
+import catalog_climate_heating from '../img/catalog/products/climate_heating.png';
+import catalog_tools from '../img/catalog/products/tools.png';
+import catalog_fasteners from '../img/catalog/products/fasteners_and_accessories.png';
+import catalog_light from '../img/catalog/products/light.png';
+import catalog_electro_tools from '../img/catalog/products/electro_tools.png';
+//catalog
+
+import geolocation_arrow from '../img/arrow.svg';
+
 import { TextContent } from "./abstract_components/text";
 
 let catalogProviders = [
@@ -18,15 +36,12 @@ let catalogProduct_Name = [
     'Тепловое оборудование', 'Котлы отопительные', 'Расширительные баки', 'Насосы циркуляционные', 'Электроинструмент', 'Расходные материалы', 'Малярный инструмент', 'Штукатурный инструмент', 'Шлифовальный инструмент', 'Измерительный инструмент', 'Шпатели', 'Спецодежда и средства защиты', 'Саморезы', 'Дюбель', 'Гвозди', 'Анкер', 'Болты', 'Гайки', 'Шуруп', 'Шайбы', 'Лампы', 'Люстры', 'Потолочные светильники', 'Светодиодные светильники', 'Подвесные светильники', 'Светодиодные панели', 'Бра', 'Настольные лампы', 'Розетки и выключатели', 'Кабели и комплектующие', 'Телекоммуникации', 'Счетчики электроэнергии', 'Автоматические выключатели', 'Электрические щитки', 'Тройники для розетки', 'Удлинители электрические'
 ]
 
-export function RedirectCatalog(){
-    const catalogBtn = document.querySelectorAll('#btn-catalog');
-
-    catalogBtn.forEach(btn => {
-        btn.onclick = ()=>{
-            window.open('../../catalog/catalog.html', '_self')
-        }
-    });
-}
+const catalog_previews = [
+    catalog_plumbing, catalog_buildMaterials, catalog_floorCovering,
+    catalog_cellingWallDecoration, catalog_ceramicPlate, catalog_doors_windows,
+    catalog_paintVarnishMaterails, catalog_climate_heating, catalog_tools,
+    catalog_fasteners, catalog_light, catalog_electro_tools
+]
 
 export function Catalog_Providers_Component(parentSelector){
     for(let i = 0; i < catalogProviders.length; i++){
@@ -43,6 +58,7 @@ export function Catalog_Providers_Component(parentSelector){
             const providerItem_link = document.createElement('a');
             providerItem_link.classList.add('provider__item_link');
             providerItem_link.href = '#';
+            providerItem_link.onclick = (e)=> e.preventDefault();
             providerItem_link.textContent = catalogProviders[i];
 
             providerItem.append(providerItem_link);
@@ -74,8 +90,8 @@ function Set_href_Product(){
     }
 }
 
-export function Catalog_Product(parentSelector, imgs, icon){
-    for(let i = 0; i < imgs.length; i++){
+export function Catalog_Product(parentSelector){
+    for(let i = 0; i < catalog_previews.length; i++){
         parentSelector.forEach(selector => {
             
             const catalogProduct_Item = document.createElement('div');
@@ -95,7 +111,7 @@ export function Catalog_Product(parentSelector, imgs, icon){
 
             const catalogImage_img = document.createElement('img');
             catalogImage_img.classList.add('product__item_img');
-            catalogImage_img.src = imgs[i];
+            catalogImage_img.src = catalog_previews[i];
             catalogImage_img.alt = 'Обложка продукта';
 
             catalogPreview_title.append(catalogPreview_title_text);
@@ -113,7 +129,7 @@ export function Catalog_Product(parentSelector, imgs, icon){
 
                 const catalogList_item_Arrow = document.createElement('div');
                 catalogList_item_Arrow.classList.add('catalog__list_item-arrow');
-                catalogList_item_Arrow.innerHTML = icon;
+                catalogList_item_Arrow.innerHTML = geolocation_arrow;
 
                 const catalogList_item_product = document.createElement('div');
                 catalogList_item_product.classList.add('catalog__list_item-product');

@@ -1,3 +1,44 @@
+// Main Page
+import shower from '../../img/categories_img/shower.png';
+import lumber from '../../img/categories_img/lumber.png';
+import linoleum from '../../img/categories_img/linoleum.png';
+import wallpapers from '../../img/categories_img/wallpaper.png';
+import tools from '../../img/categories_img/tools.png';
+import gfc from '../../img/categories_img/gfc.png';
+import windows from '../../img/categories_img/windows.png';
+import doors from '../../img/categories_img/doors.png';
+import plumbing from '../../img/categories_img/plumbing.png';
+import paints from '../../img/categories_img/paints.png';
+import eg from '../../img/categories_img/eg.png';
+import interior from '../../img/categories_img/interior.png';
+// Main Page
+
+// catalog_categories
+import catalogCategories_putty from '../../img/catalog/catalog_categories/categories_putty.png';
+import catalogCategories_plaster from '../../img/catalog/catalog_categories/categories_plaster.png';
+import catalogCategories_plaster2 from '../../img/catalog/catalog_categories/categories_plaster_2.png';
+import catalogCategories_glue from '../../img/catalog/catalog_categories/categories_glue.png';
+import catalogCategories_glue2 from '../../img/catalog/catalog_categories/categories_glue_2.png';
+import catalogCategories_knauf from '../../img/catalog/catalog_categories/categories_knauf.png';
+import catalogCategories_plaster3 from '../../img/catalog/catalog_categories/categories_plaster_3.png';
+import catalogCategories_grout from '../../img/catalog/catalog_categories/categories_grout.png';
+import catalogCategories_osnovit from '../../img/catalog/catalog_categories/categories_osnovit.png';
+import catalogCategories_glue3 from '../../img/catalog/catalog_categories/categories_glue_3.png';
+import catalogCategories_plaster4 from '../../img/catalog/catalog_categories/categories_plaster_4.png';
+import catalogCategories_knauf2 from '../../img/catalog/catalog_categories/categories_knauf_2.png';
+import catalogCategories_plaster5 from '../../img/catalog/catalog_categories/categories_plaster_5.png';
+import catalogCategories_putty2 from '../../img/catalog/catalog_categories/categories_putty_2.png';
+import catalogCategories_plaster6 from '../../img/catalog/catalog_categories/categories_plaster_6.png';
+import catalogCategories_plaster7 from '../../img/catalog/catalog_categories/categories_plaster_7.png';
+import catalogCategories_mixture from '../../img/catalog/catalog_categories/categories_mixture.png';
+import catalogCategories_glue4 from '../../img/catalog/catalog_categories/categories_glue_4.png';
+// catalog_categories
+
+// catalog_categories Check box icons
+import categList_BrandIcon from '../../img/catalog/catalog_categories/brands/brand_checked.png';;
+import categList_BrandIcon2 from '../../img/catalog/catalog_categories/brands/brand_not_checked.png';
+import { toDivide } from '../abstract_components/number';
+// catalog_categories Check box icons
 
 const categories_title = [
     'Душевые', 'Пиломатериалы', 'Линолеум', 'Обои',
@@ -11,7 +52,11 @@ const catalogcategories_Link_text = [
 
 const catalogCategories_Price = [
     212, 349, 229, 490, 470, 380, 295, 250, 320, 
-    425, 2200, 969, 315, 976, 502, 265, 289, 302
+    508, 2555, 969, 315, 976, 502, 265, 289, 302
+]
+
+const catalogcategories_id = [
+    116, 117, 118, 119, 120, 121, 122, 123, 124, 125, 126, 127, 128, 129, 130, 131, 132, 133
 ]
 
 const categoriesBrands_List = [
@@ -20,13 +65,29 @@ const categoriesBrands_List = [
     'mod_format', 'decra', 'engles'
 ]
 
+const categoriesBrands_attributes = [
+    'bever', 'braer', 'leonardo_stone', 'euro_block',
+    'perfekta', 'mstera', 'lcp', 'galen', 'recke', 
+    'mod_format', 'decra', 'engles', 'bever', 'lcp',
+    'galen', 'recke', 'mod_format', 'euro_block'
+]
+
 const categoriesProviders_List = [
     'Аксон', 'A-progress.ru', 'Дешево-Строй', 'ГдеМатериал', 'ГлавСнаб', 
     'Гермес Групп', 'Маркет-Строй', 'МосДоброСтрой', 'Сатурн', 'Ремонт 3000', 'Roof&Facade', 'Строительный двор', 'Skladom.ru', 'Smart Complect', 'Конструктор', 'RDS Строй', 'Строительный Онлайн', 'Стройкомплект', 'Строительный Мир', 'Stroimaterial Moskva', 'Стройландия', 'Stroy Shopper'
 ]
 
-export async function Add_Category(parentSelector, categories_len, arr_categories_img){
-    for(let i = 0; i < categories_len; i++){
+const tab_img_array = [
+    shower, lumber, linoleum, wallpapers, tools,
+    gfc, windows, doors, plumbing, paints, eg, interior
+];
+
+const catalogCategories_previews_img = [
+    catalogCategories_putty, catalogCategories_plaster, catalogCategories_plaster2, catalogCategories_glue, catalogCategories_glue2, catalogCategories_knauf, catalogCategories_plaster3, catalogCategories_grout, catalogCategories_osnovit, catalogCategories_glue3, catalogCategories_plaster4, catalogCategories_knauf2, catalogCategories_plaster5, catalogCategories_putty2, catalogCategories_plaster6, catalogCategories_plaster7, catalogCategories_mixture, catalogCategories_glue4
+]
+
+export async function Add_Category(parentSelector){
+    for(let i = 0; i < tab_img_array.length; i++){
 
         parentSelector.forEach(selector => {
             
@@ -45,7 +106,7 @@ export async function Add_Category(parentSelector, categories_len, arr_categorie
 
             const categoryImg_image = document.createElement('img');
             categoryImg_image.classList.add('tab-item__img_icon');
-            categoryImg_image.src = arr_categories_img[i];
+            categoryImg_image.src = tab_img_array[i];
             categoryImg_image.alt = categories_title[i];
 
             categoryTitle.append(categoryTitle_text);
@@ -60,19 +121,21 @@ export async function Add_Category(parentSelector, categories_len, arr_categorie
 }
 
 // Categories from Catalog
-export async function Catalog_Categories_Component(parentSelector, imgs){
-    for(let i = 0; i < imgs.length; i++){
+export async function Catalog_Categories_Component(parentSelector){
+    for(let i = 0; i < catalogCategories_previews_img.length; i++){
         parentSelector.forEach(selector=>{
 
             const categoriesItem = document.createElement('div');
             categoriesItem.classList.add('categories__item');
+            categoriesItem.setAttribute('categItem-brand', categoriesBrands_attributes[i]);
+            categoriesItem.setAttribute('categItem-price', catalogCategories_Price[i]);
 
             const categoriesItem_image = document.createElement('div');
             categoriesItem_image.classList.add('categories__item_image');
 
             const categoriesItem_img = document.createElement('img');
             categoriesItem_img.classList.add('categories__item_img');
-            categoriesItem_img.src = imgs[i];
+            categoriesItem_img.src = catalogCategories_previews_img[i];
             categoriesItem_img.alt = 'Продукт';
 
             const categoriesItem_data = document.createElement('div');
@@ -85,7 +148,18 @@ export async function Catalog_Categories_Component(parentSelector, imgs){
             categoriesContent_text.classList.add('categories__data_text');
 
             const categoriesContent_link = document.createElement('a');
-            categoriesContent_link.classList.add('categories__link');
+            categoriesContent_link.classList.add('categories__link', 'data__link_product');
+            if(i == 5){
+                categoriesContent_link.setAttribute('data-id', 110);
+            }else if(i == 7){
+                categoriesContent_link.setAttribute('data-id', 105);
+            }else if(i == 9){
+                categoriesContent_link.setAttribute('data-id', 112);
+            }else if(i == 10){
+                categoriesContent_link.setAttribute('data-id', 114);
+            }else{
+                categoriesContent_link.setAttribute('data-id', catalogcategories_id[i]);
+            }
             categoriesContent_link.href = '#';
             categoriesContent_link.textContent = catalogcategories_Link_text[i];
 
@@ -93,7 +167,7 @@ export async function Catalog_Categories_Component(parentSelector, imgs){
             categoriesContent_price.classList.add('categories__data_price');
 
             const categPrice_text = document.createElement('h6');
-            categPrice_text.textContent = catalogCategories_Price[i];
+            categPrice_text.textContent = toDivide(catalogCategories_Price[i]);
 
             const categPrice_textVallet = document.createElement('span');
             categPrice_textVallet.textContent = '₽';
@@ -105,7 +179,18 @@ export async function Catalog_Categories_Component(parentSelector, imgs){
             categories__itemButton_content.classList.add('categories__item_button-content');
 
             const categ_itemButton_btn = document.createElement('button');
-            categ_itemButton_btn.classList.add('categories-btn__buy');
+            categ_itemButton_btn.classList.add('categories-btn__buy', 'basket-btn');
+            if(i == 5){
+                categ_itemButton_btn.setAttribute('basket-id', 110);
+            }else if(i == 7){
+                categ_itemButton_btn.setAttribute('basket-id', 105);
+            }else if(i == 9){
+                categ_itemButton_btn.setAttribute('basket-id', 112);
+            }else if(i == 10){
+                categ_itemButton_btn.setAttribute('basket-id', 114);
+            }else{
+                categ_itemButton_btn.setAttribute('basket-id', catalogcategories_id[i])
+            }
             categ_itemButton_btn.textContent = 'В корзину';
 
             categoriesItem_image.append(categoriesItem_img);
@@ -143,6 +228,7 @@ export async function categoriesList_Brand_Component(parentSelector){
             brandItem_input.classList.add('brands__list_chbox');
             brandItem_input.type = 'checkbox';
             brandItem_input.name = 'chbox_' + categoriesBrands_List[i];
+            brandItem_input.setAttribute('input-brand', categoriesBrands_List[i]);
 
             const brandItem_brandName = document.createElement('div');
             brandItem_brandName.classList.add('checkBox__brand_name');
@@ -173,21 +259,7 @@ export async function CategoriesList_Provider_Component(parentSelector){
     }
 }
 
-export function categoriesList_Brands(categCheckBoxs, img_not_checked, img_checked){
 
-    categCheckBoxs.forEach(input => {
-        if(!input.checked){
-            input.style.background = `url(${img_not_checked})`;
-        }
-        input.onclick = ()=>{
-            if(!input.checked){
-                input.style.background = `url(${img_not_checked})`;
-            }else{
-                input.style.background = `url(${img_checked})`;
-            }
-        }
-    });
-}
 
 function capitalize_categ_Brand(brand){
     if(brand.length == 3){
@@ -250,4 +322,149 @@ export function Categories_Range_Inputs(sliderOne, sliderTwo, inputPrice1, input
             }
         }
     }
+}
+
+let brands = [];
+export function Categories_Panel_Manipulation(){
+
+    let checkBoxs_input = document.querySelectorAll('.brands__list_chbox');
+
+    let btn_accept = document.querySelector('.options__buttons_btn-accept');
+    let btn_reset = document.querySelector('.options__buttons_btn-reset');
+
+    let mobileModal_options = document.querySelector('.categories-list__options-modal');
+    let btn_accept_mobile = document.querySelector('.options__buttons_btn-accept__mobile');
+    let btn_reset_mobile = document.querySelector('.options__buttons_btn-reset__mobile');
+
+    checkBoxs_input.forEach(input=>{
+        if(!input.checked){
+            input.style.background = `url(${categList_BrandIcon2})`;
+        }
+
+        input.onclick = ()=>{
+            if(!input.checked){
+                input.style.background = `url(${categList_BrandIcon2})`;
+                
+            }else{
+                input.style.background = `url(${categList_BrandIcon})`;
+                brands.push(input.getAttribute('input-brand'));
+                brands = [...new Set(brands)];
+                console.log(brands);
+            }
+        }
+    })
+
+
+    if(btn_accept !== null){
+        btn_accept.onclick = ()=>{
+            Calculations();
+        }
+    }
+
+    if(btn_accept_mobile !== null){
+        btn_accept_mobile.onclick = ()=>{
+            Calculations_Mobile();
+            mobileModal_options.style.display = 'none';
+        }
+    }else{
+        return;
+    }
+
+    if(btn_reset !== null){
+        btn_reset.onclick = ()=>{
+            if(localStorage.getItem('provider') !== null){
+                localStorage.removeItem('provider');
+                window.location.reload();
+            }else{
+                window.location.reload();
+                return;
+            }
+        }
+    }else{
+        return;
+    }
+
+    if(btn_reset_mobile !== null){
+        btn_reset_mobile.onclick = ()=>{
+            if(localStorage.getItem('provider') !== null){
+                localStorage.removeItem('provider');
+                window.location.reload();
+            }else{
+                window.location.reload();
+                return;
+            }
+        }
+    }else{
+        return;
+    }
+}
+
+function Calculations(){
+    let categItems = document.querySelectorAll('.categories__item');
+
+    let price_value_1 = document.querySelector('.option__price_1');
+    let price_value_2 = document.querySelector('.option__price_2');
+
+    let minPrice = 0;
+    let maxPrice = 0;
+
+    let providers = document.querySelector('#categ__providers');
+
+    minPrice = parseInt(price_value_1.value);
+    maxPrice = parseInt(price_value_2.value);
+
+    for(let j = 0; j < categItems.length; j++){
+        if(parseInt(categItems[j].getAttribute('categitem-price')) >= minPrice && parseInt(categItems[j].getAttribute('categitem-price')) <= maxPrice){
+            categItems[j].style.display = 'block';
+        }else{
+            categItems[j].style.display = 'none';
+        }
+    }
+
+    localStorage.setItem('provider', providers.value);
+}
+
+function Calculations_Mobile(){
+    let categItems = document.querySelectorAll('.categories__item');
+
+    let price_value_1_mobile = document.querySelector('.option__price_mobile1');
+    let price_value_2_mobile = document.querySelector('.option__price_mobile2');
+
+    let minPrice = 0;
+    let maxPrice = 0;
+
+    let providers = document.querySelector('#categ__providers_mobile');
+
+    minPrice = parseInt(price_value_1_mobile.value);
+    maxPrice = parseInt(price_value_2_mobile.value);
+
+    for(let j = 0; j < categItems.length; j++){
+        if(parseInt(categItems[j].getAttribute('categitem-price')) >= minPrice && parseInt(categItems[j].getAttribute('categitem-price')) <= maxPrice){
+            categItems[j].style.display = 'block';
+        }else{
+            categItems[j].style.display = 'none';
+        }
+    }
+
+    localStorage.setItem('provider', providers.value);
+}
+
+export function Categories_Filters_Modal(){
+    let categFilters_Modal = document.querySelectorAll('.categories-list__options-modal');
+
+    let categFilters_Modal_BtnClose = document.querySelectorAll('.categories-list__options-modal__btnClose');
+
+    let categFilters_Button = document.querySelectorAll('.categFilters');
+
+    categFilters_Button.forEach((btn, index)=>{
+        btn.onclick = ()=>{
+            categFilters_Modal[index].style.display = 'block';
+        }
+    })
+
+    categFilters_Modal_BtnClose.forEach((closeBtn, i)=>{
+        closeBtn.onclick = ()=>{
+            categFilters_Modal[i].style.display = 'none';
+        }
+    })
 }

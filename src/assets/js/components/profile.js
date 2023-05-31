@@ -62,6 +62,8 @@ class Profile{
 
         let profile_link = document.querySelectorAll('.menu__link_profile');
 
+        let mobile_profile_link = document.querySelectorAll('.mobile__profile');
+
         let profile_signIn = document.querySelectorAll('.sign-in');
         let profile_signIn_button = document.querySelectorAll('.btn__sign_in');
 
@@ -95,7 +97,57 @@ class Profile{
                                     text: 'Пожалуйста, введите корректные данные.'
                                 })
                             }else{
-                                window.open('../../../pages/profile.html', '_self')
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Аккаунт создан!',
+                                    showConfirmButton: false
+                                })
+                                setTimeout(()=>{
+                                    window.open('../../../pages/profile.html', '_self')
+                                },1300)
+                                
+                            }
+                        }else{
+                            Swal.fire({
+                                icon: 'warning',
+                                title: 'Ошибка.',
+                                text: 'Вы не зарегистрированы. Пожалуйста, создайте учётную запись.'
+                            })
+                        }
+                    }
+
+                }
+            }
+        }
+
+        for(let k = 0; k < mobile_profile_link.length; k++){
+            if(localStorage.getItem('user') !== null){
+                mobile_profile_link[k].href = '../../../pages/profile.html';
+            }else{
+                mobile_profile_link[k].onclick = ()=>{
+
+                    profile_signIn[k].style.display = 'block';
+
+                    profile_signIn_button[k].onclick = ()=>{
+                        if(localStorage.getItem('user') != null){
+                            response = JSON.parse(localStorage.getItem('user'));
+
+                            if(signIn_Input_Email[k].value != response.userEmail || signIn_Input_Password[k].value != response.userPassword){
+                                Swal.fire({
+                                    icon: 'error',
+                                    title: 'Ошибка ввода данных.',
+                                    text: 'Пожалуйста, введите корректные данные.'
+                                })
+                            }else{
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: 'Аккаунт создан!',
+                                    showConfirmButton: false
+                                })
+                                setTimeout(()=>{
+                                    window.open('../../../pages/profile.html', '_self')
+                                },1300)
+                                
                             }
                         }else{
                             Swal.fire({

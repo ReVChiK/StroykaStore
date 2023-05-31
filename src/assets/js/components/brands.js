@@ -1,4 +1,20 @@
+
+import bever from '../../img/brands/bever.png';
+import braer from '../../img/brands/braer.png';
+import leonardo_stone from '../../img/brands/leonardo_stone.png';
+import euro_block from '../../img/brands/euro_block.png';
+import perfekta from '../../img/brands/perfekta.png';
+import mstera from '../../img/brands/mstera.png';
+import lcp from '../../img/brands/lcp.png';
+import galen from '../../img/brands/galen.png';
+import recke from '../../img/brands/recke.png';
+import mod_format from '../../img/brands/mod_format.png';
+import decra from '../../img/brands/decra.png';
+import engles from '../../img/brands/engels.png';
+
 import {SetAtrributes_BrandList, TextContent } from "../abstract_components/text";
+
+const deploy_path = 'https://revchik.github.io/Developing';
 
 let arr_letter = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
@@ -67,6 +83,13 @@ const brands_kind = [
     'mod_format', 'decra', 'engles'
 ]
 
+const array_brands_icon = [
+    bever, braer, leonardo_stone, 
+    euro_block, perfekta, mstera, 
+    lcp, galen, recke, mod_format, 
+    decra, engles
+];
+
 export function Brands_List(){
     
     TextContent(document.querySelectorAll('.brands-letter'), arr_letter);
@@ -116,9 +139,9 @@ export function SortBrands(selector_btn, selector_brands){
 
 }
 
-export function Add_Brand_Image(parentSelector, len, arr_img){
+export function Add_Brand_Image(parentSelector){
 
-    for(let i = 0; i < len; i++){
+    for(let i = 0; i < array_brands_icon.length; i++){
 
         parentSelector.forEach(selector=>{
 
@@ -128,7 +151,7 @@ export function Add_Brand_Image(parentSelector, len, arr_img){
 
             const brandImgItem = document.createElement('img');
             brandImgItem.classList.add('icons-item__brand');
-            brandImgItem.src = `${arr_img[i]}`;
+            brandImgItem.src = array_brands_icon[i];
             brandImgItem.alt = "brand";
 
             brandIconItem.append(brandImgItem);
@@ -195,4 +218,14 @@ export function Brand_Button_BottomMenu(parentSelector){
 
         })
     }
+}
+
+export function Brands_Icons_Link(icons){
+    icons.forEach(icon=>{
+        icon.onclick = ()=>{
+            window.open('../../../pages/brands.html', '_self');
+            // for deploy
+            // window.open(`${deploy_path}/pages/brands.html`, '_self');
+        }
+    })
 }

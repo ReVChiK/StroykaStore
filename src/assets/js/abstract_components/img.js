@@ -16,7 +16,19 @@ export function SetBackgroundFon(selector, backgroundImg){
         element.style.background = `url(${backgroundImg})`;
         element.style.backgroundRepeat = 'no-repeat';
         element.style.backgroundSize = 'cover';
+        element.style.backgroundPosition = `15% 0%`;
     });
+
+    Mobile_About_PageBackground();
+}
+
+function Mobile_About_PageBackground(){
+    let aboutBackground = document.querySelectorAll('.about-container');
+    if(window.screen.width < 768){
+        aboutBackground.forEach(element=>{
+            element.style.background = 'none';
+        })
+    }
 }
 
 export function Slider(selector_fon, selector_btn_left, selector_btn_right, slide_1_img, slide_2_img){

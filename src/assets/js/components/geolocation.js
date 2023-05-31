@@ -1,4 +1,6 @@
 
+import geolocation_arrow from '../../img/arrow.svg';
+
 let geolocationCities = [
     "Москва", "Екатеринбург", "Челябинск", "Уфа",
     "Воронеж", "Санкт-Петербург", "Казань", "Самара", "Омск",
@@ -13,11 +15,19 @@ export function Open_Modal_Window(){
 
     let modal_btn_open = document.querySelectorAll('.cities-name');
 
+    let modal_Mobilebtn_open = document.querySelectorAll('.Mobile__city-name');
+
     for(let i = 0; i < modal_btn_open.length; i++){
         modal_btn_open[i].addEventListener('click', ()=>{
             modal_window[i].style.display = 'block';
         })
     }
+
+    modal_Mobilebtn_open.forEach((btn, j)=>{
+        btn.onclick = ()=>{
+            modal_window[j].style.display = 'block';
+        }
+    })
 
 }
 
@@ -35,7 +45,7 @@ export function Close_Modal_Window(){
 
 }
 
-export async function Geolocation_Component(parenSelector, icon){
+export async function Geolocation_Component(parenSelector){
     for(let i = 0; i < (geolocationCities.length/5); i++){
         parenSelector.forEach(selector=>{
 
@@ -49,7 +59,7 @@ export async function Geolocation_Component(parenSelector, icon){
 
                 const geoList_Icon = document.createElement('div');
                 geoList_Icon.classList.add('list-item__content_icon');
-                geoList_Icon.innerHTML = icon;
+                geoList_Icon.innerHTML = geolocation_arrow;
 
                 const geoList_City = document.createElement('li');
                 geoList_City.classList.add('list-item__content_city');
@@ -96,7 +106,7 @@ export function Search_Gelocation_Cities(id_search_input,search_input_button, se
         }
     });
 
-    id_search_input.addEventListener('change', ()=>{
+    id_search_input.onchange = ()=>{
         if(geolocationCities.indexOf(capitalize(id_search_input.value)) == -1){
             selector_cities.forEach(el=>{
                 el.style.display = 'none'
@@ -109,8 +119,7 @@ export function Search_Gelocation_Cities(id_search_input,search_input_button, se
             selector_cities[0].children[0].textContent = geolocationCities[geolocationCities.indexOf(capitalize(id_search_input.value))]
             selector_cities[0].children[0].style.display = 'block';
         }
-
-    })
+    }
 
     id_search_input.addEventListener('input', ()=>{
         if(id_search_input.value === ""){
@@ -124,15 +133,25 @@ export function Search_Gelocation_Cities(id_search_input,search_input_button, se
 
 export function Choose_Geolocation_Cities(selector_city_name, selector_cities){
 
+    let modal_Mobilebtn_open = document.querySelectorAll('.Mobile__city-name');
+
     if(localStorage.length != 0){
         selector_city_name.forEach(el=>{
             el.textContent = localStorage.getItem('city')
+        })
+
+        modal_Mobilebtn_open.forEach(city=>{
+            city.textContent = localStorage.getItem('city');
         })
     }
 
     if(localStorage.getItem('city') == null){
         selector_city_name.forEach(el=>{
             el.textContent = 'Москва';
+        })
+
+        modal_Mobilebtn_open.forEach(city=>{
+            city.textContent = 'Москва';
         })
     }
 

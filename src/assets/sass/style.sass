@@ -1,6 +1,6 @@
 @import './reset/reset.sass'
 @import './fonts/fonts.sass'
-@import './media/media.sass'
+@import '../../../node_modules/vanillatoasts/vanillatoasts.css'
 
 #page
     width: 100%
@@ -345,6 +345,11 @@
                     align-items: center
                     max-width: 1160px
                     margin: 0 auto
+                    .menu__content_mobile
+                        &-icons
+                            .icon__open_menu, .icon__close_menu
+                                width: 24px
+                                display: none
                     .menu-logo
                         width: 180px
                         height: 46px
@@ -355,8 +360,11 @@
                         &_button
                             #btn-catalog
                                 font-family: 'Manrope', sans-serif
-                                outline: none
-                                border: none
+                                display: block
+                                width: 144px
+                                height: 48px
+                                padding: 0
+                                text-decoration: none
                                 background-color: #FCEC41
                                 padding: 12px 20.5px 12px 20.5px
                                 transition: background-color .2s linear
@@ -410,26 +418,45 @@
                     .menu-custom_panel
                         margin-left: 16px
                         &__content
+                            font-family: 'Manrope', sans-serif
                             display: flex
                             align-items: center
                             .menu-item
-                                font-family: 'Manrope', sans-serif
                                 width: 82px
                                 height: 48px
                                 text-align: center
+                                &__count
+                                    position: absolute
+                                    top: 0
+                                    right: 16px
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    width: 18px
+                                    height: 18px
+                                    font-weight: 500
+                                    font-size: 12px
+                                    line-height: 145%
+                                    background-color: #fc2d2d
+                                    border-radius: 50%
+                                    padding: 7px
+                                    display: none
+                                    p
+                                        color: #fff
                                 &__img
                                     display: block
                                     margin: 0 auto
                                 &__link
+                                    font-weight: 500
+                                    font-size: 15px
+                                    line-height: 145%
                                     .item-link
-                                        font-family: 'Manrope', sans-serif
                                         text-decoration: none
-                                        font-weight: 500
                                         color: #454950
-                                        font-size: 15px
-                                        line-height: 145%
                                         &:hover
                                             color: #2F323A
+                            .menu-item__basket
+                                position: relative
             &__bottom_menu
                 width: 100%
                 &::after
@@ -459,6 +486,77 @@
                                 &:hover
                                     cursor: pointer
                                     color: #171B24
+            &__mobile_menu
+                font-family: 'Manrope', sans-serif
+                margin-top: 14px
+                display: none
+                .mobile_menu__content
+                    max-width: 316px
+                    margin: 0 auto
+                    &-buttons
+                        &__item
+                            &:nth-last-child(n+2)
+                                margin-bottom: 10px
+                            .mob_menu__link
+                                display: block
+                                text-decoration: none
+                                border: 1px solid #D1D1D3
+                                box-sizing: border-box
+                                background-color: #fff
+                                height: 48px
+                                padding: 12px 100px
+                                &-content
+                                    display: flex
+                                    justify-content: center
+                                    align-items: center
+                                    &__icon
+                                        width: 24px
+                                        margin-right: 8px
+                                    &__text
+                                        font-weight: 500
+                                        font-size: 18px
+                                        line-height: 136%
+                                        p
+                                            color: #5D6066
+                                        .active
+                                            color: #171B24
+                            .mobile__catalog
+                                border: none
+                                background-color: #FCEC41
+                    &-geolocation
+                        margin-top: 20px
+                        &::after
+                            content: ""
+                            display: block
+                            width: 100%
+                            height: 1px
+                            background-color: #E8E9EA
+                            margin-top: 20px
+                        .geolocation__content
+                            display: flex
+                            align-items: center
+                            &_icon
+                                width: 20px
+                                margin-right: 8px
+                            &_text
+                                font-weight: 500
+                                font-size: 15px
+                                line-height: 145%
+                                p
+                                    color: #5D6066
+                    &-navigation
+                        margin-top: 14px
+                        &__container
+                            li
+                                &:nth-last-child(n+2)
+                                    margin-bottom: 14px
+                                a
+                                    text-decoration: none
+                                    display: block
+                                    font-weight: 500
+                                    font-size: 15px
+                                    line-height: 145%
+                                    color: #5D6066
     .profile
         width: 100%
         &-container
@@ -733,7 +831,10 @@
                                         p
                                             color: #333333
                                     &-text
+                                        display: flex
+                                        justify-content: flex-end
                                         width: 66px
+                                        white-space: nowrap
                                         text-align: right
                                         font-weight: 500
                                         font-size: 16px
@@ -741,6 +842,8 @@
                                         margin-left: 10px
                                         p
                                             color: #333333
+                                        span
+                                            margin-left: 2px
                             .summary__title
                                 font-weight: 700
                                 font-size: 18px
@@ -799,10 +902,10 @@
                             font-family: 'Manrope', sans-serif
                             display: flex
                             &-preview
+                                width: 278px
                                 height: 208px
                                 img
-                                    max-width: 278px
-                                    height: auto
+                                    width: 100%
                             &-data
                                 width: 294px
                                 height: 208px
@@ -816,15 +919,20 @@
                                         font-size: 16px
                                         line-height: 150%
                                         height: 72px
-                                        p
+                                        a
+                                            display: block
+                                            text-decoration: none
                                             color: #2F323A
                                     &_price
+                                        display: flex
                                         font-weight: 700
                                         font-size: 20px
                                         line-height: 140%
                                         margin-top: 12px
                                         p
                                             color: #171B24
+                                        span
+                                            margin-left: 4px
                                     &_quantity
                                         margin-top: 16px
                                         .quantity__content
@@ -859,6 +967,8 @@
                                                     font-size: 18px
                                                     line-height: 136%
                                                     color: #171B24
+                                                    &::-webkit-inner-spin-button
+                                                        -webkit-appearance: none
                             &-code
                                 width: 294px
                                 height: 208px
@@ -1011,11 +1121,35 @@
                 margin-top: 20px
                 h1
                     color: #171B24
-    .categories-list
+    .categories-list, .categories-list__options-modal
         width: 100%
         &__container
             max-width: 1160px
             margin: 0 auto
+            &_filterbtn
+                display: none
+                margin-top: 30px
+                .categFilters
+                    outline: none
+                    border: none
+                    padding: 0
+                    width: 100%
+                    height: 48px
+                    background-color: #fff
+                    border: 1px solid #D1D1D3
+                    &__content
+                        display: flex
+                        justify-content: center
+                        &_icon
+                            width: 24px
+                            margin-right: 8px
+                        &_text
+                            font-family: 'Manrope', sans-serif
+                            font-weight: 500
+                            font-size: 18px
+                            line-height: 136%
+                            p
+                                color: #171B24
             &_content
                 display: flex
                 margin-top: 40px
@@ -1026,6 +1160,7 @@
                     box-sizing: border-box
                     margin-right: 16px
                     position: relative
+                    background-color: #fff
                     &::after
                         content: ""
                         display: block
@@ -1205,55 +1340,28 @@
                                     cursor: pointer
                                 &:nth-last-child(n+2)
                                     margin-bottom: 12px
-                            .options__buttons_btn-accept
+                            .options__buttons_btn-accept, .options__buttons_btn-accept__mobile
                                 background-color: #FCEC41
                                 &:hover
                                     color: #fff
                                     background-color: #2F323A
-                            .options__buttons_btn-reset
+                            .options__buttons_btn-reset, .options__buttons_btn-reset__mobile
                                 border: 1px solid #D1D1D3
                                 box-sizing: border-box
                                 &:hover
                                     color: #fff
                                     background-color: #2F323A
                                     border: 1px solid transparent
-                                        
                         .options__price_item, .options__brands_item, .options__providers_item
                             &:nth-last-child(n+2)
                                 margin-bottom: 12px
                 .categories-list__products
                     max-width: 866px
-                    &_title
-                        &-content
-                            display: flex
-                            align-items: center
-                            button
-                                font-family: 'Manrope', sans-serif
-                                padding: 0
-                                display: block
-                                outline: none
-                                max-width: 98px
-                                height: 24px
-                                border: none
-                                font-weight: 500
-                                font-size: 16px
-                                line-height: 150%
-                                color: #8B8D92
-                                background-color: #fff
-                                transition: all .2s linear
-                                &:nth-last-child(n+2)
-                                    margin-right: 20px
-                                &:hover
-                                    color: #171B24
-                                    cursor: pointer
-                            .active
-                                color: #171B24
                     &_content
                         display: grid
                         grid-template-columns: repeat(3, 1fr)
                         grid-column-gap: 16px
                         grid-row-gap: 16px
-                        margin-top: 16px
                         .categories__item
                             max-width: 278px
                             height: 416px
@@ -1343,6 +1451,26 @@
                                     svg
                                         path                                  
                                             stroke: #fff
+    .categories-list__options-modal
+        width: 100%
+        height: 100%
+        background-color: rgba(23, 27, 36, 0.6)
+        position: fixed
+        z-index: 2000
+        display: none
+        &__btnClose
+            position: absolute
+            right: 20px
+            top: 20px
+            width: 52px
+            height: auto
+        &__container
+            max-width: 866px
+            margin: 0 auto
+            &_content
+                margin-top: 110px
+                .categories-list__options
+                    margin: auto
     .product-preview
         width: 100%
         &__container
@@ -1400,65 +1528,26 @@
                                 margin-left: 4px
                         .preview__info_manipulation
                             margin-top: 24px
-                            &-content
-                                display: flex
-                                button[id="product__preview_btn"]
-                                    font-family: 'Manrope', sans-serif
-                                    display: block
-                                    border: none
-                                    padding: 0
-                                    margin: 0
-                                    width: 246px
-                                    height: 48px
-                                    padding: 12px 80px
-                                    font-weight: 500
-                                    font-size: 18px
-                                    line-height: 136%
-                                    color: #171B24
-                                    background-color: #FCEC41
-                                    transition: all .2s linear
-                                    &:hover
-                                        background-color: #2F323A
-                                        color: #fff
-                                        cursor: pointer
-                                .manipulation__quantity
-                                    width: 144px
-                                    margin-left: 12px
-                                    &_content
-                                        display: flex
-                                        button
-                                            display: block
-                                            border: none
-                                            padding: 0
-                                            margin: 0
-                                            width: 48px
-                                            height: 48px
-                                            padding: 12px
-                                            border: 1px solid #D1D1D3
-                                            box-sizing: border-box
-                                            background-color: #fff
-                                            transition: all .2s linear
-                                            &:hover
-                                                cursor: pointer
-                                                border: 1px solid transparent
-                                                background-color: #2F323A
-                                            &:hover svg path
-                                                stroke: #fff
-                                        input
-                                            font-family: 'Manrope', sans-serif
-                                            outline: none
-                                            border: none
-                                            padding: 0
-                                            width: 48px
-                                            font-weight: 500
-                                            font-size: 18px
-                                            line-height: 136%
-                                            color: #171B24
-                                            text-align: center
-                                            border-top: 1px solid #D1D1D3
-                                            border-bottom: 1px solid #D1D1D3
-                                            &::-webkit-inner-spin-button
-                                                appearance: none
+                            .preview-btn
+                                font-family: 'Manrope', sans-serif
+                                display: block
+                                border: none
+                                padding: 0
+                                margin: 0
+                                width: 246px
+                                height: 48px
+                                padding: 12px 80px
+                                font-weight: 500
+                                font-size: 18px
+                                line-height: 136%
+                                color: #171B24
+                                background-color: #FCEC41
+                                transition: all .2s linear
+                                &:hover
+                                    background-color: #2F323A
+                                    color: #fff
+                                    cursor: pointer
+                               
                         .preview__info_providers
                             margin-top: 35px
                             &-content
@@ -1488,6 +1577,84 @@
                         .preview__info_child
                             &:nth-last-child(n+2)
                                 margin-bottom: 12px
+    .product-similar
+        width: 100%
+        margin-top: 80px
+        &__container
+            max-width: 1160px
+            margin: 0 auto
+            font-family: 'Manrope', sans-serif
+            &_title
+                font-weight: 600
+                font-size: 34px
+                line-height: 130%
+                h1
+                    color: #2F323A
+            &_content
+                display: flex
+                margin-top: 20px
+                overflow-x: auto
+                overflow-y: hidden
+                .product-similar__item
+                    width: 278px
+                    height: 416px
+                    border: 1px solid #E8E9EA
+                    box-sizing: border-box
+                    &:nth-last-child(n+2)
+                        margin-right: 16px
+                    &_preview
+                        height: 208px
+                        border-bottom: 1px solid #E8E9EA
+                        background-color: #fff
+                        img
+                            width: 100%
+                    &_data
+                        width: 278px
+                        height: 208px
+                        &-container
+                            max-width: 246px
+                            margin: 0 auto
+                            margin-top: 16px
+                            &__info
+                                font-weight: 500
+                                font-size: 16px
+                                line-height: 150%
+                                height: 72px
+                                overflow: auto
+                                a
+                                    display: block
+                                    text-decoration: none
+                                    color: #2F323A
+                            &__price
+                                display: flex
+                                font-weight: 700
+                                font-size: 20px
+                                line-height: 140%
+                                margin-top: 12px
+                                p, span
+                                    color: #171B24
+                                span
+                                    margin-left: 3px
+                            &__button
+                                margin-top: 16px
+                                button
+                                    font-family: 'Manrope', sans-serif
+                                    outline: none
+                                    border: none
+                                    padding: 0
+                                    width: 100%
+                                    height: 48px
+                                    padding: 12px 80px
+                                    font-weight: 500
+                                    font-size: 18px
+                                    line-height: 136%
+                                    color: #171B24
+                                    background-color: #FCEC41
+                                    transition: background-color .2s linear
+                                    &:hover
+                                        cursor: pointer
+                                        color: #fff
+                                        background-color: #2F323A
     .product-description
         width: 100%
         &__container
@@ -1526,16 +1693,18 @@
             &_content
                 width: 100%
                 &-item
+                    height: 134px
                     &:nth-last-child(n+2)
                         margin-bottom: 16px
-                    border: 1px solid #E8E9EA
                     .item__content
                         font-family: 'Manrope', sans-serif
                         display: flex
+                        border: 1px solid #E8E9EA
                         &_img
+                            width: 180px
+                            height: 134px
                             img
-                                width: 180px
-                                height: auto
+                                width: 100%
                         &_data
                             width: 588px
                             border-left: 1px solid #E8E9EA
@@ -1547,22 +1716,31 @@
                                     font-weight: 500
                                     font-size: 16px
                                     line-height: 150%
+                                    overflow: hidden
+                                    white-space: nowrap
+                                    text-overflow: ellipsis
                                     p
                                         color: #2F323A
                                 &_price
+                                    display: flex
                                     font-weight: 700
                                     font-size: 20px
                                     line-height: 140%
                                     margin-top: 12px
                                     h4
                                         color: #171B24
+                                    span
+                                        margin-left: 2px
                                 &_amount
+                                    display: flex
                                     font-weight: 500
                                     font-size: 16px
                                     line-height: 150%
                                     margin-top: 12px
                                     p
                                        color: #2F323A 
+                                    span
+                                        margin-left: 3px
                         &_info
                             width: 392px
                             border-left: 1px solid #E8E9EA
@@ -1628,16 +1806,16 @@
             font-family: 'Manrope', sans-serif
             margin-top: 80px
             &_title
+                font-weight: 600
+                font-size: 34px
+                line-height: 130%
                 h1
-                    font-weight: 600
-                    font-size: 34px
-                    line-height: 130%
                     color: #2F323A
             &_content
                 display: flex
                 margin-top: 32px
                 .rule-order
-                    max-width: 278px
+                    width: 278px
                     &:nth-last-child(n+2)
                         margin-right: 16px
                     &__icon
@@ -1647,8 +1825,9 @@
                         font-weight: 500
                         font-size: 16px
                         line-height: 150%
-                        color: #2F323A
                         margin-top: 12px
+                        p
+                            color: #2F323A
     .delivery-questions
         width: 100%
         &__container
@@ -1814,6 +1993,7 @@
                                     line-height: 140%
                                     color: #2F323A
                     &__bottom
+                        border-top: 1px solid #E8E9EA
                         &_content
                             max-width: 344px
                             margin: 0 auto
@@ -1866,10 +2046,10 @@
             margin-top: 80px
             font-family: 'Manrope', sans-serif
             &_title
+                font-weight: 600
+                font-size: 34px
+                line-height: 130%
                 h1
-                    font-weight: 600
-                    font-size: 34px
-                    line-height: 130%
                     color: #2F323A
             &_content
                 display: flex
@@ -2180,7 +2360,6 @@
                     grid-column-gap: 16px
                     grid-row-gap: 16px
                     margin-top: 20px
-                    flex-wrap: wrap
                     .product-card_item
                         max-width: 278px
                         border: 1px solid #E8E9EA
@@ -2361,8 +2540,7 @@
                             height: 1px 
                             margin: 0 auto
                             background-color: #E8E9EA
-                            margin-top: 28px
-                            
+                            margin-top: 28px                            
                         &_content
                             display: flex
                             .brands-letter

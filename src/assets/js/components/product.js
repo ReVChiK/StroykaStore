@@ -1,6 +1,27 @@
 
 import data from '../../../resources/resource.json5';
 
+// product images
+import stoneware from '../../img/products/stoneware.png';
+import grout from '../../img/products/grout.png';
+import primer from '../../img/products/primer.png';
+import drywall from '../../img/products/drywall.png';
+import profile_ from '../../img/products/profile.png';
+import roulette from '../../img/products/roulette.png';
+import package_ from '../../img/products/package.png';
+import angle from '../../img/products/angle.png';
+import knauf from '../../img/products/knauf.png';
+import screws from '../../img/products/screws.png';
+import putty from '../../img/products/putty.png';
+import tape from '../../img/products/tape.png';
+// product images
+
+// functions
+import { toDivide } from '../abstract_components/number';
+// functions
+
+const deploy_path = 'https://revchik.github.io/Developing';
+
 let productDescriptionTexts = [
     'Керамогранит Yasmin 598х185 коричневый C-YA4M112D',
     'Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг',
@@ -16,11 +37,17 @@ let productDescriptionTexts = [
     'Клейкая лента металлизированная Изоспан FL 5х5000 см'
 ]
 
-let productPrice = [899, 275, 839, 335, 195, 100, 380, 335, 508, 340, 555, 226]
+const product_img_array = [
+    stoneware, grout, primer, drywall, profile_,
+    roulette, package_, angle, knauf, screws,
+    putty, tape
+];
+
+let productPrice = [899, 275, 839, 335, 195, 100, 380, 335, 508, 340, 2555, 226]
 const product_id = [104, 105, 106, 107, 108, 109, 110, 111, 112, 113, 114, 115]
 
-export function ProductItem(parentSelector, imgs){
-    for(let i = 0; i < imgs.length; i++){
+export function ProductItem(parentSelector){
+    for(let i = 0; i < product_img_array.length; i++){
         parentSelector.forEach(selector => {
             
             const productItem = document.createElement('div');
@@ -31,7 +58,7 @@ export function ProductItem(parentSelector, imgs){
 
             const ImgLayer_img = document.createElement('img');
             ImgLayer_img.classList.add('product-img');
-            ImgLayer_img.src = imgs[i];
+            ImgLayer_img.src = product_img_array[i];
             ImgLayer_img.alt = 'Продукт';
 
             productImgLayer.append(ImgLayer_img);
@@ -50,7 +77,7 @@ export function ProductItem(parentSelector, imgs){
 
             const productItemdata_price = document.createElement('div');
             productItemdata_price.classList.add('product-price');
-            productItemdata_price.textContent = productPrice[i];
+            productItemdata_price.textContent = toDivide(productPrice[i]);
 
             const productPriceVallet = document.createElement('span');
             productPriceVallet.textContent = '₽';
@@ -65,7 +92,8 @@ export function ProductItem(parentSelector, imgs){
             productItemButton_Layer.classList.add('product-card_item__button');
 
             const productLayer_button = document.createElement('button');
-            productLayer_button.classList.add('btn-product-buy');
+            productLayer_button.classList.add('btn-product-buy', 'basket-btn');
+            productLayer_button.setAttribute('basket-id', product_id[i]);
             productLayer_button.textContent = 'В корзину';
 
             productItemButton_Layer.append(productLayer_button);
@@ -78,31 +106,28 @@ export function ProductItem(parentSelector, imgs){
     }
 }
 
-export function Redirect_Product(){
-    let product_links = document.querySelectorAll('.data__link_product');
+export function Redirect_Product(product_links){
 
     let product_data = {};
 
     for(let i = 0; i<product_links.length; i++){
         product_links[i].onclick = ()=>{
-            if(parseInt(product_links[i].getAttribute('data-id')) == data.products[i].id){
-                // if(localStorage.getItem('product')){
-                //     products_array = JSON.parse(localStorage.getItem('product'))
-                // }else{
-                //     var products_array = [];
-                // }
 
-                product_data.id = data.products[i].id;
-                product_data.description = data.products[i].description;
-                product_data.category = data.products[i].category;
-                product_data.category_kind = data.products[i].category_kind;
-                product_data.price = data.products[i].price;
+            data.products.findIndex(std=>{
+                if(std.id === parseInt(product_links[i].getAttribute('data-id'))){
+                    
+                    product_data.id = std.id;
+                    product_data.description = std.description;
+                    product_data.category = std.category;
+                    product_data.category_kind = std.category_kind;
+                    product_data.price = std.price;
 
-                // products_array.push(product_data);
-
-                localStorage.setItem('product', JSON.stringify(product_data));
-                product_links[i].href = '../../../catalog/categories/product/product.html'
-            }
+                    localStorage.setItem('product', JSON.stringify(product_data));
+                    product_links[i].href = '../../../catalog/categories/product/product.html';
+                    // for deploy
+                    // product_links[i].href = `${deploy_path}/catalog/categories/product/product.html`;
+                }
+            })
         }
     }
 }

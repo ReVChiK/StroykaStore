@@ -1,116 +1,304 @@
 {
     products:[
         {
-            id: 100,            
+            id: 100,   
+            title: 'Рубероид',
             description: 'Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)',
             category: 'Напольные покрытия',
             category_kind: 'Ковролин',
-            price: 449
+            price: 449,
+            amount: 0,
+            key: '34078988-0047'
         },
         {
-            id: 101,            
+            id: 101,       
+            title: 'Пена',
             description: 'Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная',
             category: 'Лакокрасочные материалы',
             category_kind: 'Монтажные пены',
-            price: 495
+            price: 495,
+            amount: 0,
+            key: '12033988-0541'
         },
         {
-            id: 102,            
+            id: 102,
+            title: 'Сетка',
             description: 'Сетка "Рабица" яч. 50х50/1,5х10 м-ОЦ',
             category: 'Стройматериалы',
             category_kind: 'Армирующие материалы',
-            price: 1499
+            price: 1499,
+            amount: 0,
+            key: '52033988-0141'
         },
         {
-            id: 103,            
+            id: 103,
+            title: 'Металлочерепица',
             description: 'Металлочерепица, цвет коричневый, 1.18 х 1.15 м',
             category: 'Стройматериалы',
             category_kind: 'Кровля',
-            price: 769
+            price: 769,
+            amount: 0,
+            key: '52012988-0049'
         },
         {
             id: 104,
+            title: 'Керамогранит',
             description: 'Керамогранит Yasmin 598х185 коричневый C-YA4M112D',
             category: 'Керамическая плитка',
             category_kind: 'Керамогранит',
-            price: 899
+            price: 899,
+            amount: 0,
+            key: '92712988-0012'
         },
         {
             id: 105,
+            title: 'Затирка',
             description: 'Затирка для узких швов Ceresit СЕ 33, цвет белый, 2 кг',
-            category: 'Керамическая плитка',
-            category_kind: 'Системы выравнивания плитки',
-            price: 275
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 275,
+            amount: 0,
+            key: '62712318-1012'
         },
         {
             id: 106,
+            title: 'Грунтовка',
             description: 'Грунтовка Старатели 10л глубокого проникновения',
             category: 'Лакокрасочные материалы',
             category_kind: 'Грунтовки',
-            price: 839
+            price: 839,
+            amount: 0,
+            key: '39715518-0072'
         },
         {
             id: 107,
+            title: 'Гипсокартон',
             description: 'Гипсокартон Волма, 2500 х 1200 х 12,5 мм',
             category: 'Стройматериалы',
             category_kind: 'Гипсокартон',
-            price: 335
+            price: 335,
+            amount: 0,
+            key: '40915518-0039'
         },
         {
             id: 108,
+            title: 'Профиль',
             description: 'Профиль 0,55мм для гипсокартона',
             category: 'Стройматериалы',
             category_kind: 'Профиль для гипсокартона',
-            price: 195
+            price: 195,
+            amount: 0,
+            key: '50989518-0069'
         },
         {
             id: 109,
+            title: 'Рулетка',
             description: 'Рулетка 3м',
             category: 'Инструменты',
             category_kind: 'Измерительный инструмент',
-            price: 100
+            price: 100,
+            amount: 0,
+            key: '52289518-0129'
         },
         {
             id: 110,
+            title: 'Кнауф',
             description: 'Кнауф Мп 75 штукатурка гипсовая МН 30кг',
-            category: 'Отделка стен и потолка',
-            category_kind: 'Декоративные молдинги, багеты',
-            price: 380
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 380,
+            amount: 0,
+            key: '83941518-0009'
         },
         {
             id: 111,
+            title: 'Уголок',
             description: 'Уголок серый канализационный Д110 ГР90',
             category: 'Сантехника',
             category_kind: 'Раковины',
-            price: 335
+            price: 335,
+            amount: 0,
+            key: '84947528-0001'
         },
         {
             id: 112,
+            title: 'Knauf',
             description: 'Knauf Ротбанд, 30 кг',
-            category: 'Отделка стен и потолка',
-            category_kind: 'Декоративные молдинги, багеты',
-            price: 508
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 508,
+            amount: 0,
+            key: '72947528-0891'
         },
         {
             id: 113,
+            title: 'Саморез',
             description: 'Саморез по металлу 3,5х25 мм для гипсокартона',
             category: 'Крепеж и фурнитура',
             category_kind: 'Саморезы',
-            price: 340
+            price: 340,
+            amount: 0,
+            key: '72341528-0881'
         },
         {
             id: 114,
+            title: 'Шпатлевка универсальная',
             description: 'Шпатлевка универсальная Danogips SuperFinish 17 л',
             category: 'Стройматериалы',
             category_kind: 'Сухие смеси',
-            price: 555
+            price: 2555,
+            amount: 0,
+            key: '35611528-0141'
         },
         {
             id: 115,
+            title: 'Клейкая лента',
             description: 'Клейкая лента металлизированная Изоспан FL 5х5000 см',
             category: 'Стройматериалы',
             category_kind: 'Ленты строительные',
-            price: 226
+            price: 226,
+            amount: 0,
+            key: '35551528-0141'
+        },
+        {
+            id: 116,
+            title: 'Шпатлевка',
+            description: 'Шпатлевка масляно-клеевая 3кг Л-С',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 212,
+            amount: 0,
+            key: '31231898-0931'
+        },
+        {
+            id: 117,
+            title: 'Штукатурка',
+            description: 'Штукатурка цементная толстослойная PLITONIT Т1+ 25 кг',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 349,
+            amount: 0,
+            key: '91221468-0361'
+        },
+        {
+            id: 118,
+            title: 'Штукатурка гипсовая',
+            description: 'Штукатурка гипсовая Волма Слой, 5 кг',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 229,
+            amount: 0,
+            key: '91561460-0369'
+        },
+        {
+            id: 119,
+            title: 'Клей',
+            description: 'Клей плиточный Дауэр Кварц Dauer Quartz 25кг',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 490,
+            amount: 0,
+            key: '98561289-0069'
+        },
+        {
+            id: 120,
+            title: 'Клей плиточный',
+            description: 'Клей плиточный Dauer Maxi Дауэр Макси 25кг толстослойный',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 470,
+            amount: 0,
+            key: '48543289-0769'
+        },
+        {
+            id: 122,
+            title: 'Основит',
+            description: 'Штукатурка гипсовая Основит Т-25 Гипсвэлл',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 295,
+            amount: 0,
+            key: '42843289-0260'
+        },
+        {
+            id: 124,
+            title: 'Основит PG',
+            description: 'Основит PG 35 W (Т-35) Экосилк Шпатлевка гипсовая белая (20 кг)',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 320,
+            amount: 0,
+            key: '22833289-0890'
+        },
+        {
+            id: 127,
+            title: 'Грунтовка Knauf',
+            description: 'Грунтовка Knauf Тифенгрунд морозостойкая 10 кг',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 969,
+            amount: 0,
+            key: '25833909-0450'
+        },
+        {
+            id: 128,
+            title: 'Штукатурка Gips',
+            description: 'Штукатурка гипсовая Megapolimer Gips Machine application 137 для машинного',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 315,
+            amount: 0,
+            key: '24812009-0710'
+        },
+        {
+            id: 129,
+            title: 'Шпатлевка финишная',
+            description: 'Шпатлевка финишная полимерная Litokol Litofinish Fine белая 20 кг',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 976,
+            amount: 0,
+            key: '24652049-0220'
+        },
+        {
+            id: 130,
+            title: 'Штукатурка Perfekta',
+            description: 'Штукатурка гипсовая Perfekta Гипстар серая 30 кг',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 502,
+            amount: 0,
+            key: '29633049-0200'
+        },
+        {
+            id: 131,
+            title: 'Штукатурка высокопрочная',
+            description: 'Штукатурка цементная высокопрочная Hands Socle PRO, 24 кг',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 265,
+            amount: 0,
+            key: '34133049-1250'
+        },
+        {
+            id: 132,
+            title: 'Смесь',
+            description: 'Смесь М-200 монтажно-кладочная, Baumax (50 кг)',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 289,
+            amount: 0,
+            key: '75893049-0220'
+        },
+        {
+            id: 133,
+            title: 'Клей КП',
+            description: 'Клей плиточный (C0) BUILDER КП-500 25 кг.',
+            category: 'Стройматериалы',
+            category_kind: 'Сухие смеси',
+            price: 302,
+            amount: 0,
+            key: '75293099-0800'
         }
     ]
 }

@@ -1,4 +1,10 @@
 
+import foarm from '../../img/cards_socks/foam.png';
+import grid from '../../img/cards_socks/grid.png';
+import metal_tile from '../../img/cards_socks/metal_tile.png';
+import paint from '../../img/cards_socks/paint.png';
+import { toDivide } from '../abstract_components/number';
+
 const stocks_data = [
     'Рубероид РКП-350 ТУ, размер материала 1 х 10 м (10м2, 1 рулон)',
     'Пена монтажная ТЕХНОНИКОЛЬ MASTER 65 профессиональная всесезонная',
@@ -6,12 +12,14 @@ const stocks_data = [
     'Металлочерепица, цвет коричневый, 1.18 х 1.15 м'
 ]
 
+const stock_icons_array = [paint, foarm, grid, metal_tile];
+
 const stocks_id = [100, 101, 102, 103]
 
 const stocks_newPrice = [449, 495, 1499, 769]
 const stocks_oldPrice = [499, 660, 1890, 999]
 export async function Stocks_Component(parentSelector, imgs){
-    for(let i = 0; i < imgs.length; i++){
+    for(let i = 0; i < stock_icons_array.length; i++){
         parentSelector.forEach(selector => {
             
             // Stock Item
@@ -43,7 +51,7 @@ export async function Stocks_Component(parentSelector, imgs){
             // Stocks Image Layer img -> Stocks Image Layer
             const Stocks_imgLayer_Image = document.createElement('img');
             Stocks_imgLayer_Image.classList.add('card-img');
-            Stocks_imgLayer_Image.src = imgs[i];
+            Stocks_imgLayer_Image.src = stock_icons_array[i];
             Stocks_imgLayer_Image.alt = 'Товар';
             // Stocks Image Layer img -> Stocks Image Layer
 
@@ -89,7 +97,7 @@ export async function Stocks_Component(parentSelector, imgs){
 
             // Stocks new Price text -> Stocks new Price
             const Data_newPrice_text = document.createElement('h4');
-            Data_newPrice_text.textContent = stocks_newPrice[i];
+            Data_newPrice_text.textContent = toDivide(stocks_newPrice[i]);
             // Stocks new Price text -> Stocks new Price
 
             // Stocks new Price Vallet -> Stocks new Price text
@@ -123,7 +131,8 @@ export async function Stocks_Component(parentSelector, imgs){
 
             // Stocks Data Button btn -> Stocks Data Button
             const buttonLayer_btn = document.createElement('button');
-            buttonLayer_btn.classList.add('card-buy');
+            buttonLayer_btn.classList.add('card-buy', 'basket-btn');
+            buttonLayer_btn.setAttribute('basket-id', stocks_id[i]);
             buttonLayer_btn.textContent = 'В корзину';
             // Stocks Data Button btn -> Stocks Data Button
 

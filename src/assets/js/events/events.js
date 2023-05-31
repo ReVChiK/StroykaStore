@@ -1,11 +1,16 @@
 import { Hover_Elements } from "../abstract_components/hover";
 import { Catalog_Providers_Component, Choose_Provider, Catalog_Product_Name } from "../catalog";
-import { Brands_List, Brand_Button_BottomMenu, Brand_Button_TopMenu, SortBrands } from "../components/brands";
+import { Add_to_Basket } from "../components/basket";
+import { Brands_Icons_Link, Brands_List, Brand_Button_BottomMenu, Brand_Button_TopMenu, SortBrands } from "../components/brands";
 import { ReviewsCarousel } from "../components/carousel";
-import { Delivery_Info } from "../components/delivery";
+import { Delivery_Info, Delivery_RuleOrder_Component } from "../components/delivery";
 import { Choose_Geolocation_Cities, Close_Modal_Window, Open_Modal_Window, Search_Gelocation_Cities, SetCities_Geolocation } from "../components/geolocation";
+import { Mobile_Manipulation_Menu } from "../components/mobileManipulation";
+import { Order_Component } from "../components/order";
 import { Redirect_Product } from "../components/product";
-import Resource_Product_Data from "../components/resource";
+import Resource_Product_Data, { Reserve_Product } from "../components/resource";
+
+const deploy_path = 'https://revchik.github.io/Developing';
 
 function Home_Page(){
     let logotype = document.querySelectorAll('.menu-logo');
@@ -13,6 +18,8 @@ function Home_Page(){
     for(let i = 0; i < logotype.length; i++){
         logotype[i].addEventListener('click', ()=>{
             window.open('../../../index.html', '_self');
+            // for deploy
+            // window.open(`${deploy_path}/index.html`, '_self');
         })
     }
 }
@@ -24,6 +31,8 @@ function Brands(){
     Brand_Button_BottomMenu(document.querySelectorAll('#brands-bottom-menu'));
 
     SortBrands(document.querySelectorAll('.kind'), document.querySelectorAll('.brands-list__item'));
+
+    Brands_Icons_Link(document.querySelectorAll('.icons-item'))
 }
 
 function Geo(){
@@ -50,7 +59,7 @@ function Event_Catalog(){
 }
 
 function Products(){
-    Redirect_Product();
+    Redirect_Product(document.querySelectorAll('.data__link_product'));
 }
 
 function Events(){
@@ -63,13 +72,23 @@ function Events(){
 
     Delivery_Info();
 
+    Delivery_RuleOrder_Component(document.querySelectorAll('.delivery-rules__container_content'));
+
     ReviewsCarousel(document.querySelectorAll('.btn-left'), document.querySelectorAll('.btn-right'), document.querySelectorAll('.reviews-container__listing_content'), document.querySelectorAll('.review-listing__item'));
 
     Event_Catalog();
 
+    Reserve_Product(document.querySelectorAll('.product-similar__container_content'));
+
     Products();
 
     Resource_Product_Data(document.querySelectorAll('.product__category'), document.querySelectorAll('.product__category_kind'), document.querySelectorAll('.product__description'), document.querySelectorAll('.preview__product-img'), document.querySelectorAll('.preview__info_title h1'), document.querySelectorAll('.preview__info_price'), document.querySelectorAll('.product__page_title'));
+
+    Add_to_Basket(document.querySelectorAll('.basket-btn'), document.querySelectorAll('.menu-item__count'));
+
+    Order_Component(document.querySelectorAll('.order-list__container_content'));
+
+    Mobile_Manipulation_Menu();
 }
 
 export default Events;

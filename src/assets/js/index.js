@@ -1,10 +1,11 @@
 import '../sass/style.sass';
+import '../sass/media/media.sass';
 
 import Events from './events/events';
 import Functions from './functions.js';
 
 import Profile from './components/profile';
-import { RedirectCatalog } from './catalog';
+import { Search_Product } from './components/globalSearch';
 
 function IndexProfile(){
     let profile = new Profile()
@@ -25,8 +26,7 @@ function Index(){
     Events();
 
     IndexProfile();
-
-    RedirectCatalog();
+    Search_Product();
 }
 
 window.addEventListener('DOMContentLoaded', Index);

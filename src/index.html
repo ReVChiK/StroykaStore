@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="" type="image/x-icon">
     <title>Стройка Стор - Главная</title>
 </head>
@@ -168,19 +168,28 @@
                 <div class="header-container__menu">
                     <div class="menu__content">
 
+                        <div class="menu__content_mobile">
+                            <div class="menu__content_mobile-icons">
+                                <div class="icon__open_menu"></div>
+                                <div class="icon__close_menu">
+                                    <img class="mobile-menu-close" src="">
+                                </div>
+                            </div>
+                        </div>
+
                         <div class="menu-logo"></div>
 
                         <div class="menu-search">
 
                             <div class="menu-search_button">
-                                <button id="btn-catalog">
+                                <a href="./catalog/catalog.html" id="btn-catalog">
                                     <div class="btn-catalog__content">
                                         <div class="btn-catalog__content_icon"></div>
                                         <div class="btn-catalog__content_text">
                                             Каталог
                                         </div>
                                     </div>
-                                </button>
+                                </a>
                             </div>
                             
                         </div>
@@ -195,7 +204,7 @@
                         <div class="menu-custom_panel">
                             <div class="menu-custom_panel__content">
 
-                                <div class="menu-item">
+                                <div class="menu-item menu-item__profile">
 
                                     <div class="menu-item__img">
                                         <img class="menu-icon menu-profile" src="" alt="profile">
@@ -206,7 +215,7 @@
 
                                 </div>
 
-                                <div class="menu-item">
+                                <div class="menu-item menu-item__orders">
                                     <div class="menu-item__img">
                                         <img class="menu-icon menu-orders" src="" alt="orders">
                                     </div>
@@ -215,7 +224,10 @@
                                     </div>
                                 </div>
 
-                                <div class="menu-item">
+                                <div class="menu-item menu-item__basket">
+                                    <div class="menu-item__count">
+                                        <p>2</p>
+                                    </div>
                                     <div class="menu-item__img">
                                         <img class="menu-icon menu-basket" src="" alt="basket">
                                     </div>
@@ -223,6 +235,7 @@
                                         <a class="item-link menu__link_basket" href="./pages/basket.html">Корзина</a>
                                     </div>
                                 </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -262,6 +275,93 @@
                             </li>
                         </ul>
                         
+                    </div>
+                </div>
+
+                <div class="header-container__mobile_menu">
+                    <div class="mobile_menu__content">
+
+                        <div class="mobile_menu__content-buttons">
+
+                            <div class="mobile_menu__content-buttons__item">
+                                <a class="mob_menu__link mobile__catalog" href="./catalog/catalog.html">
+                                    <div class="mob_menu__link-content">
+                                        <div class="mob_menu__link-content__icon catalog_icons_menu"></div>
+                                        <div class="mob_menu__link-content__text">
+                                            <p class="active">Каталог</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="mobile_menu__content-buttons__item">
+                                <a class="mob_menu__link mobile__profile" href="#">
+                                    <div class="mob_menu__link-content">
+                                        <div class="mob_menu__link-content__icon">
+                                            <img class="mobile_icons_menu" src="#" alt="">
+                                        </div>
+                                        <div class="mob_menu__link-content__text">
+                                            <p>Профиль</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mobile_menu__content-buttons__item">
+                                <a class="mob_menu__link mobile__orders" href="./pages/order.html">
+                                    <div class="mob_menu__link-content">
+                                        <div class="mob_menu__link-content__icon">
+                                            <img class="mobile_icons_menu" src="#" alt="">
+                                        </div>
+                                        <div class="mob_menu__link-content__text">
+                                            <p>Заказы</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="mobile_menu__content-geolocation">
+                            <div class="geolocation__content">
+                                <div class="geolocation__content_icon">
+                                    <img class="geo_img" src="#" alt="">
+                                </div>
+                                <div class="geolocation__content_text">
+                                    <p class="Mobile__city-name">Москва</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile_menu__content-navigation">
+                            <ul class="mobile_menu__content-navigation__container">
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./pages/brands.html">
+                                        Бренды
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./pages/delivery.html">
+                                        Доставка
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./pages/refund.html">
+                                        Возврат
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./pages/documentation.html">
+                                        Документация
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./pages/contacts.html">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
                     </div>
                 </div>
 
@@ -641,7 +741,7 @@
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="#" class="nav-item__link">Корзина</a>
+                                    <a href="./pages/basket.html" class="nav-item__link">Корзина</a>
                                 </li>
                             </div>
 
@@ -654,7 +754,7 @@
                             <div class="footer-nav__content">
                                 <div class="footer-nav__content_icon"></div>
                                 <li class="footer-nav__content_item">
-                                    <a href="#" class="nav-item__link">Каталог</a>
+                                    <a href="./catalog/catalog.html" class="nav-item__link">Каталог</a>
                                 </li>
                             </div>
 
