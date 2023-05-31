@@ -20,7 +20,7 @@ import tape from '../../img/products/tape.png';
 import { toDivide } from '../abstract_components/number';
 // functions
 
-const deploy_path = 'https://revchik.github.io/Developing';
+const deploy_path = 'https://revchik.github.io/StroykaStore';
 
 let productDescriptionTexts = [
     'Керамогранит Yasmin 598х185 коричневый C-YA4M112D',
@@ -123,9 +123,9 @@ export function Redirect_Product(product_links){
                     product_data.price = std.price;
 
                     localStorage.setItem('product', JSON.stringify(product_data));
-                    product_links[i].href = '../../../catalog/categories/product/product.html';
+                    // product_links[i].href = '../../../catalog/categories/product/product.html';
                     // for deploy
-                    // product_links[i].href = `${deploy_path}/catalog/categories/product/product.html`;
+                    product_links[i].href = `${deploy_path}/catalog/categories/product/product.html`;
                 }
             })
         }

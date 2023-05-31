@@ -10,16 +10,16 @@ import { Order_Component } from "../components/order";
 import { Redirect_Product } from "../components/product";
 import Resource_Product_Data, { Reserve_Product } from "../components/resource";
 
-const deploy_path = 'https://revchik.github.io/Developing';
+const deploy_path = 'https://revchik.github.io/StroykaStore';
 
 function Home_Page(){
     let logotype = document.querySelectorAll('.menu-logo');
 
     for(let i = 0; i < logotype.length; i++){
         logotype[i].addEventListener('click', ()=>{
-            window.open('../../../index.html', '_self');
+            // window.open('../../../index.html', '_self');
             // for deploy
-            // window.open(`${deploy_path}/index.html`, '_self');
+            window.open(`${deploy_path}/`, '_self');
         })
     }
 }

@@ -259,8 +259,6 @@ export async function CategoriesList_Provider_Component(parentSelector){
     }
 }
 
-
-
 function capitalize_categ_Brand(brand){
     if(brand.length == 3){
         return brand.toUpperCase();

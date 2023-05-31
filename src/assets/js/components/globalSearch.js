@@ -1,7 +1,7 @@
 import Swal from 'sweetalert2';
 import data from '../../../resources/resource.json5';
 
-const deploy_path = 'https://revchik.github.io/Developing';
+const deploy_path = 'https://revchik.github.io/StroykaStore';
 
 export function Search_Product(){
     let global_input = document.querySelector('input[id="search"]');
@@ -25,9 +25,9 @@ export function Search_Product(){
                     product_data.price = std.price;
     
                     localStorage.setItem('product', JSON.stringify(product_data));
-                    window.open('../../../catalog/categories/product/product.html', '_self');
+                    // window.open('../../../catalog/categories/product/product.html', '_self');
                     // for deploy
-                    // window.open(`${deploy_path}/catalog/categories/product/product.html`, '_self');
+                    window.open(`${deploy_path}/catalog/categories/product/product.html`, '_self');
     
                 }else{
                     const Toast = Swal.mixin({
@@ -69,9 +69,9 @@ export function Search_Product(){
 
                 localStorage.setItem('product', JSON.stringify(product_data));
 
-                window.open('../../../catalog/categories/product/product.html', '_self');
+                // window.open('../../../catalog/categories/product/product.html', '_self');
                 // for deploy
-                // window.open(`${deploy_path}/catalog/categories/product/product.html`, '_self');
+                window.open(`${deploy_path}/catalog/categories/product/product.html`, '_self');
 
             }else{
                 const Toast = Swal.mixin({

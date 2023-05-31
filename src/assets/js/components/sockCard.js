@@ -18,6 +18,7 @@ const stocks_id = [100, 101, 102, 103]
 
 const stocks_newPrice = [449, 495, 1499, 769]
 const stocks_oldPrice = [499, 660, 1890, 999]
+
 export async function Stocks_Component(parentSelector, imgs){
     for(let i = 0; i < stock_icons_array.length; i++){
         parentSelector.forEach(selector => {

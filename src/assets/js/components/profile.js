@@ -1,5 +1,7 @@
 import Swal from "sweetalert2";
 
+const deploy_path = 'https://revchik.github.io/StroykaStore';
+
 class Profile{
 
     __userData = {
@@ -81,7 +83,8 @@ class Profile{
 
         for(let i = 0; i < profile_link.length; i++){
             if(localStorage.getItem('user') != null){
-                profile_link[i].href = '../../../pages/profile.html';
+                profile_link[i].href = `${deploy_path}/pages/profile.html`;
+                // profile_link[i].href = '../../../pages/profile.html';
             }else{
                 profile_link[i].onclick = ()=>{
                     profile_signIn[i].style.display = 'block';
@@ -103,7 +106,8 @@ class Profile{
                                     showConfirmButton: false
                                 })
                                 setTimeout(()=>{
-                                    window.open('../../../pages/profile.html', '_self')
+                                    window.open(`${deploy_path}/pages/profile.html`, '_self');
+                                    // window.open('../../../pages/profile.html', '_self')
                                 },1300)
                                 
                             }
@@ -122,7 +126,8 @@ class Profile{
 
         for(let k = 0; k < mobile_profile_link.length; k++){
             if(localStorage.getItem('user') !== null){
-                mobile_profile_link[k].href = '../../../pages/profile.html';
+                mobile_profile_link[k].href = `${deploy_path}/pages/profile.html`;
+                // mobile_profile_link[k].href = '../../../pages/profile.html';
             }else{
                 mobile_profile_link[k].onclick = ()=>{
 
@@ -145,7 +150,8 @@ class Profile{
                                     showConfirmButton: false
                                 })
                                 setTimeout(()=>{
-                                    window.open('../../../pages/profile.html', '_self')
+                                    window.open(`${deploy_path}/pages/profile.html`, '_self');
+                                    // window.open('../../../pages/profile.html', '_self')
                                 },1300)
                                 
                             }
@@ -403,7 +409,8 @@ class Profile{
                 }).then(result=>{
                     if(result.isConfirmed){
                         localStorage.removeItem('user');
-                        window.open('../../../index.html', '_self')
+                        window.open(`${deploy_path}/`, '_self');
+                        // window.open('../../../index.html', '_self')
                     }
                 })
             }

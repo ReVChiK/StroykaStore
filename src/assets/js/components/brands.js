@@ -14,7 +14,7 @@ import engles from '../../img/brands/engels.png';
 
 import {SetAtrributes_BrandList, TextContent } from "../abstract_components/text";
 
-const deploy_path = 'https://revchik.github.io/Developing';
+const deploy_path = 'https://revchik.github.io/StroykaStore';
 
 let arr_letter = [
     'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J',
@@ -223,9 +223,9 @@ export function Brand_Button_BottomMenu(parentSelector){
 export function Brands_Icons_Link(icons){
     icons.forEach(icon=>{
         icon.onclick = ()=>{
-            window.open('../../../pages/brands.html', '_self');
+            // window.open('../../../pages/brands.html', '_self');
             // for deploy
-            // window.open(`${deploy_path}/pages/brands.html`, '_self');
+            window.open(`${deploy_path}/pages/brands.html`, '_self');
         }
     })
 }

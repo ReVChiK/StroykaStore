@@ -95,7 +95,6 @@ const avatars_array = [
     avatar_1, avatar_2, avatar_3, avatar_4
 ];
 
-
 const menu_icons_array = [profile, order, basket];
 
 const mobile_icons_menu = [profile, order]

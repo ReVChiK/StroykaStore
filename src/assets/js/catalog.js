@@ -43,6 +43,8 @@ const catalog_previews = [
     catalog_fasteners, catalog_light, catalog_electro_tools
 ]
 
+const deploy_path = 'https://revchik.github.io/StroykaStore';
+
 export function Catalog_Providers_Component(parentSelector){
     for(let i = 0; i < catalogProviders.length; i++){
         parentSelector.forEach(selector=>{
@@ -85,7 +87,8 @@ function Set_href_Product(){
 
     for(let i = 0; i < porductItem.length; i++){
         if(i == 8){
-            porductItem[i].href = '../../catalog/categories/categories.html';
+            // porductItem[i].href = '../../catalog/categories/categories.html';
+            porductItem[i].href = `${deploy_path}/catalog/categories/categories.html`;
         }
     }
 }

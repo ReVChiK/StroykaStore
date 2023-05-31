@@ -89,7 +89,7 @@ const imageFull_Size = [
     {id: 133, image: categProduct_Kley3}
 ]
 
-const deploy_path = 'https://revchik.github.io/Developing';
+const deploy_path = 'https://revchik.github.io/StroykaStore';
 
 export function BasketDescription_Item(parentSelector){
     for(let i = 0; i < basket_icons_array.length; i++){
@@ -591,7 +591,8 @@ export function Place_an_Order(order_btn){
                             cancelButtonColor: '#d33'
                         }).then(result=>{
                             if(result.isConfirmed){
-                                window.open('../../../pages/order.html', '_self');
+                                window.open(`${deploy_path}/pages/order.html`, '_self');
+                                // window.open('../../../pages/order.html', '_self');
                             }else{
                                 window.location.reload();
                             }
@@ -625,9 +626,9 @@ export function Redirect_Mobile_Basket(basket_icon){
     if(window.screen.width < 768){
         basket_icon.forEach(icon=>{
             icon.onclick = ()=>{
-                window.open('../../../pages/basket.html', '_self');
+                // window.open('../../../pages/basket.html', '_self');
                 // for deploy
-                // window.open(`${deploy_path}/pages/basket.html`, '_self');
+                window.open(`${deploy_path}/pages/basket.html`, '_self');
             }
         })
     }
