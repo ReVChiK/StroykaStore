@@ -73,11 +73,11 @@ import MobileOpen_Icon from '../icons/mobile_menu_open.svg';
 // svg
 
 // functions
-import { SetLogo, SetSvgIcon, SetSvgIcons } from './abstract_components/svg';
+import { SetLogo, SetSvgIcon} from './abstract_components/svg';
 import { SetBackgroundFon, SetSrcImg, SetSrcOnlyOnceImg, Slider } from './abstract_components/img';
 import Set_Link_Path_File from './abstract_components/file';
 import { Add_Brand_Image } from './components/brands';
-import { Add_Category, Catalog_Categories_Component, categoriesList_Brands, categoriesList_Brand_Component, CategoriesList_Provider_Component, Categories_Filters_Modal, Categories_Panel_Manipulation, Categories_Range_Inputs } from './components/categories';
+import { Add_Category, Catalog_Categories_Component, categoriesList_Brand_Component, CategoriesList_Provider_Component, Categories_Filters_Modal, Categories_Panel_Manipulation, Categories_Range_Inputs } from './components/categories';
 import { BasketDescription_Item, Basket_Item_Component, Basket_Item_Maipulation, Place_an_Order, Redirect_Mobile_Basket } from './components/basket';
 import { ProductItem } from './components/product';
 import { Catalog_Product } from './catalog';
