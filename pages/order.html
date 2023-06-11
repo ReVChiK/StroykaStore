@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="" type="image/x-icon">
+    <title>Стройка Стор - Заказы</title>
+<script defer src=".././assets/js/bd32407b5df617ecfbc9.js"></script><script defer src=".././assets/js/247ffdd2ad30f976b205.js"></script><script defer src=".././assets/js/1d3d432e2f0e7c583a4a.js"></script><link href=".././assets/css/3afd80bf6226ecff9142.css" rel="stylesheet"></head>
+<body>
+    <div id="page">
+
+        <div class="geolocation">
+            <div class="geolocation-btn__close"></div>
+            <div class="geolocation-content">
+
+                <div class="geolocation-content__title">
+                    <h3>Выберите ваш город</h3>
+                </div>
+
+                <div class="geolocation-content__input">
+                    <input id="geo-choose-cities" class="search" type="text" placeholder="Поиск">
+                    <div class="geo-input_icon geo-input__search">
+                        <img class="input-icon" src="" alt="search-icon">
+                    </div>
+                </div>
+
+                <div class="geolocation-content__list">
+                    <div class="geolocation-content__list_content">
+                       
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="sign-in">
+            <div class="sign-in__btn_close"></div>
+            <div class="sign-in__content">
+
+                <div class="sign-in__content_container">
+
+                    <div class="sign-in__content_container-title">
+                        <h1>Вход</h1>
+                    </div>
+
+                    <div class="sign-in__content_container-data">
+
+                        <div class="sign-in__content_container-data__email">
+                            <label for="email">E-mail</label>
+                            <input id="sign-in__data_email" class="input__email sign-in__input_email" name="email" type="email" placeholder="youmail@mail.com" required>
+                        </div>
+
+                        <div class="sign-in__content_container-data__password">
+                            <label for="password">Пароль</label>
+                            <input id="sign-in__data_password" class="input__password sign-in__input_password" name="password" type="password" 
+                            min="8"
+                            max="16"
+                            placeholder="****************" required>
+                            <div class="button__password_forget">
+                                <a href="#" class="btn__forget_password">Забыли пароль?</a>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="sign-in__content_container-buttons">
+                        <button class="btn btn__sign_in">
+                            Войти
+                        </button>
+                        <button class="btn btn__create_account">
+                            Создать учетную запись
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <div class="sign-up">
+            <div class="sign-up__btn_close"></div>
+            <div class="sign-up__content">
+
+                <div class="sign-up__content_container">
+
+                    <div class="sign-up__content_container-title">
+                        <h1>Регистрация</h1>
+                    </div>
+
+                    <div class="sign-up__content_container-data">
+
+                        <div class="sign-up__content_container-data__name data__item">
+                            <label for="name">Имя</label>
+                            <input id="sign-up__data_name" class="input__name sign-up__input_name sign-up__input" name="name" type="text" placeholder="Богдан" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__email data__item">
+                            <label for="email">E-mail</label>
+                            <input id="sign-up__data_email" class="input__email sign-up__input_email sign-up__input" name="email" type="email" 
+                            placeholder="youmail@mail.com" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__password data__item">
+                            <label for="password">Новый пароль</label>
+                            <input id="sign-up__data_password" class="input__password sign-up__inputNew_password sign-up__input" name="password" type="password" 
+                            placeholder="****************" required>
+                        </div>
+
+                        <div class="sign-up__content_container-data__confirm-password data__item">
+                            <label for="confirm-password">Подтверждение пароля</label>
+                            <input id="sign-up__data_confirm-password"class="input__confirm_password sign-up__inputConfirm_password sign-up__input" name="confirm-password" type="password" 
+                            placeholder="****************" required>
+                        </div>
+                        
+                    </div>
+
+                    <div class="sign-up__content_container-buttons">
+                        <button class="btn btn__sign_up">
+                            Зарегистрироваться
+                        </button>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+        <header class="header">
+            <div class="header-container">
+
+                <div class="header-container__top_menu">
+
+                    <div class="top-menu__content">
+
+                        <div class="top-menu_geo">
+                            <div class="geo-img">
+                                <img src="" class="img-geolocation" alt="geolocation">
+                            </div>
+                            <div class="geo-cities">
+                                <p class="cities-name">Москва</p>
+                            </div>
+                        </div>
+
+                        <div class="top-menu_listing">
+                            <ul class="top-menu_listing__content">
+                                <li class="listing-item">
+                                    <a href="./brands.html" class="listing-item_link">Бренды</a>
+                                </li>
+                                <li class="listing-item">
+                                    <a href="./delivery.html" class="listing-item_link">Доставка</a>
+                                </li>
+                                <li class="listing-item">
+                                    <a href="./refund.html" class="listing-item_link">Возврат</a>
+                                </li>
+                                <li class="listing-item">
+                                    <a href="./documentation.html" class="listing-item_link">Документация</a>
+                                </li>
+                                <li class="listing-item">
+                                    <a href="./contacts.html" class="listing-item_link">Контакты</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="header-container__menu">
+                    <div class="menu__content">
+
+                        <div class="menu__content_mobile">
+                            <div class="menu__content_mobile-icons">
+                                <div class="icon__open_menu"></div>
+                                <div class="icon__close_menu">
+                                    <img class="mobile-menu-close" src="">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="menu-logo"></div>
+
+                        <div class="menu-search">
+
+                            <div class="menu-search_button">
+                                <a href="../catalog/catalog.html" id="btn-catalog">
+                                    <div class="btn-catalog__content">
+                                        <div class="btn-catalog__content_icon">
+                                            <div class="line line-top"></div>
+                                            <div class="line line-middle"></div>
+                                            <div class="line line-bottom"></div>
+                                        </div>
+                                        <div class="btn-catalog__content_text">
+                                            Каталог
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            
+                        </div>
+
+                        <div class="search-input">
+                            <input id="search" type="text" placeholder="Поиск">
+                            <div class="search-input_icon">
+                                <img class="input-icon" src="" alt="search-icon">
+                            </div>
+                        </div>
+
+                        <div class="menu-custom_panel">
+                            <div class="menu-custom_panel__content">
+
+                                <div class="menu-item menu-item__profile">
+
+                                    <div class="menu-item__img">
+                                        <img class="menu-icon menu-profile" src="" alt="profile">
+                                    </div>
+                                    <div class="menu-item__link">
+                                        <a class="item-link menu__link_profile" href="#">Профиль</a>
+                                    </div>
+
+                                </div>
+
+                                <div class="menu-item menu-item__orders">
+                                    <div class="menu-item__img">
+                                        <img class="menu-icon menu-orders" src="" alt="orders">
+                                    </div>
+                                    <div class="menu-item__link">
+                                        <a class="item-link menu__link_order" href="./order.html">Заказы</a>
+                                    </div>
+                                </div>
+
+                                <div class="menu-item menu-item__basket">
+                                    <div class="menu-item__count">
+                                        <p>2</p>
+                                    </div>
+                                    <div class="menu-item__img">
+                                        <img class="menu-icon menu-basket" src="" alt="basket">
+                                    </div>
+                                    <div class="menu-item__link">
+                                        <a class="item-link menu__link_basket" href="./basket.html">Корзина</a>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="header-container__bottom_menu">
+
+                    <div class="menu__content">
+
+                        <ul class="menu-navigation">
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Акции</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Строительные материалы</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Керамическая плитка</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Краски</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Сантехника</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Напольные покрытия</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Инструменты</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Обои</a>
+                            </li>
+                            <li class="menu-navigation__item">
+                                <a href="#" class="nav-item__link">Окна</a>
+                            </li>
+                        </ul>
+                        
+                    </div>
+                </div>
+
+                <div class="header-container__mobile_menu">
+                    <div class="mobile_menu__content">
+
+                        <div class="mobile_menu__content-buttons">
+
+                            <div class="mobile_menu__content-buttons__item">
+                                <a class="mob_menu__link mobile__catalog" href="../catalog/catalog.html">
+                                    <div class="mob_menu__link-content">
+                                        <div class="mob_menu__link-content__icon catalog_icons_menu"></div>
+                                        <div class="mob_menu__link-content__text">
+                                            <p class="active">Каталог</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+    
+                            <div class="mobile_menu__content-buttons__item">
+                                <a class="mob_menu__link mobile__profile" href="#">
+                                    <div class="mob_menu__link-content">
+                                        <div class="mob_menu__link-content__icon">
+                                            <img class="mobile_icons_menu" src="#" alt="">
+                                        </div>
+                                        <div class="mob_menu__link-content__text">
+                                            <p>Профиль</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="mobile_menu__content-buttons__item">
+                                <a class="mob_menu__link mobile__orders" href="./order.html">
+                                    <div class="mob_menu__link-content">
+                                        <div class="mob_menu__link-content__icon">
+                                            <img class="mobile_icons_menu" src="#" alt="">
+                                        </div>
+                                        <div class="mob_menu__link-content__text">
+                                            <p>Заказы</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+
+                        </div>
+
+                        <div class="mobile_menu__content-geolocation">
+                            <div class="geolocation__content">
+                                <div class="geolocation__content_icon">
+                                    <img class="geo_img" src="#" alt="">
+                                </div>
+                                <div class="geolocation__content_text">
+                                    <p class="Mobile__city-name">Москва</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="mobile_menu__content-navigation">
+                            <ul class="mobile_menu__content-navigation__container">
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./brands.html">
+                                        Бренды
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./delivery.html">
+                                        Доставка
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./refund.html">
+                                        Возврат
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./documentation.html">
+                                        Документация
+                                    </a>
+                                </li>
+                                <li class="navigation__item">
+                                    <a class="navigation__item_link" href="./contacts.html">
+                                        Контакты
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </header>
+
+        <div class="order-navigation">
+            <div class="order-navigation__container">
+                <div class="order-navigation__container_content">
+
+                    <div class="order_content__nav">
+                        <p>Главная → Все заказы</p>
+                    </div>
+
+                    <div class="order_content__title">
+                        <h1>Заказы</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="order-list">
+            <div class="order-list__container">
+                <div class="order-list__container_content">
+
+                </div>
+            </div>
+        </div>
+
+        <footer class="footer">
+            <div class="footer-container">
+
+                <div class="footer-container__content">
+
+                    <div class="footer-item">
+
+                        <div class="footer-item__logo"></div>
+
+                        <div class="footer-item__email">
+                            <div class="footer-item__email_content">
+
+                                <div class="email-icon">
+                                    <img class="email-img" src="" alt="email">
+                                </div>
+
+                                <div class="email-text">
+                                    <p>info@stroykastore.ru</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="footer-item__geolocation">
+                            <div class="footer-item__geolocation_content">
+
+                                <div class="geolocation-icon">
+                                    <img class="geolocation-img" src="" alt="geolocation">
+                                </div>
+
+                                <div class="geolocation-text">
+                                    <p>Москва, ул. Камушкина 10</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="footer-item header-items">
+                        <ul class="footer-nav">
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="#" class="nav-item__link">Личный кабинет</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="./order.html" class="nav-item__link">Заказы</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="#" class="nav-item__link">Избранное</a>
+                                </li>
+                            </div>
+                            
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="./basket.html" class="nav-item__link">Корзина</a>
+                                </li>
+                            </div>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer-item header-items">
+                        <ul class="footer-nav">
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="../catalog/catalog.html" class="nav-item__link">Каталог</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="#" class="nav-item__link">Акции</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="./brands.html" class="nav-item__link">Бренды</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="./contacts.html" class="nav-item__link">Контакты</a>
+                                </li>
+                            </div>
+
+                        </ul>
+                    </div>
+
+                    <div class="footer-item header-items">
+                        <ul class="footer-nav">
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="#" class="nav-item__link">Стать продавцов</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="./delivery.html" class="nav-item__link">Доставка</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="./refund.html" class="nav-item__link">Возврат</a>
+                                </li>
+                            </div>
+
+                            <div class="footer-nav__content">
+                                <div class="footer-nav__content_icon"></div>
+                                <li class="footer-nav__content_item">
+                                    <a href="./documentation.html" class="nav-item__link">Документация</a>
+                                </li>
+                            </div>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="footer-container__under">
+                    <div class="footer-container__under_content">
+
+                        <div class="under-item">
+                            <div class="under-item__title">
+                                <h3>© СтройкаСтор</h3>
+                            </div>
+                        </div>
+
+                        <div class="under-item">
+                            <div class="under-item__paycards">
+                                <div class="under-item__paycards_content">
+                                    <img class="footer-card-img" src="" alt="card">
+                                    <img class="footer-card-img" src="" alt="card">
+                                    <img class="footer-card-img" src="" alt="card">
+                                    <img class="footer-card-img" src="" alt="card">
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="under-item">
+                            <div class="under-item__created">
+                                <h3>Cделано в KRUGLOV STUDIO</h3>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+    </div>
+</body>
+</html>
